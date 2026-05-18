@@ -32,25 +32,12 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 	- [Grammar Restrained Chain-of-Thought Support](#grammar-restrained-chain-of-thought-support)
 	- [Automatic Character Generation](#automatic-character-generation)
 	- [Supported Games](#supported-games)
-- [Installation](#installation)
+- [Installation (Launcher)](#installation-launcher)
 	- [0 - Prerequisites - Things to Consider Before Installing...](#0---prerequisites---things-to-consider-before-installing)
 		- [Hardware Requirements](#hardware-requirements)
 		- [Storage Requirements](#storage-requirements)
-		- [Software Requirements](#software-requirements)
-			- [Install Git (Optional but Recommended)](#install-git-optional-but-recommended)
-				- [Install Git for Windows](#install-git-for-windows)
-				- [Install Git for Linux](#install-git-for-linux)
-			- [Install FFmpeg for Windows (Required for FNV players)](#install-ffmpeg-for-windows-required-for-fnv-players)
-			- [Install FFmpeg for Linux(debian) (Required for FNV players)](#install-ffmpeg-for-linuxdebian-required-for-fnv-players)
-			- [Install Microsoft C++ Build Tools](#install-microsoft-c-build-tools)
-				- [Install Microsoft C++ Build Tools for Windows](#install-microsoft-c-build-tools-for-windows)
-				- [Install Microsoft C++ Build Tools for Linux](#install-microsoft-c-build-tools-for-linux)
-			- [CUDA (Recommended) - Requires NVIDIA GPU](#cuda-recommended---requires-nvidia-gpu)
-				- [Install CUDA](#install-cuda)
 		- [Compatibility](#compatibility)
 		- [Game Install Location](#game-install-location)
-		- [Do you want to use xVASynth? (Optional)](#do-you-want-to-use-xvasynth-optional)
-		- [Install Requirements in Game](#install-requirements-in-game)
 		- [Picking Your Inference Engine and Language Model (Optional)](#picking-your-inference-engine-and-language-model-optional)
 			- [OpenAI Compatible APIs](#openai-compatible-apis)
 				- [OpenAI (First $5 Free, but terrible quality)](#openai-first-5-free-but-terrible-quality)
@@ -58,18 +45,34 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 				- [text-generation-webui (Free Local Models)](#text-generation-webui-free-local-models)
 				- [koboldcpp (Free Local Models)](#koboldcpp-free-local-models)
 				- [koboldcpp Google Colab Notebook (Free Cloud Service, Potentially Spotty Access / Availablity)](#koboldcpp-google-colab-notebook-free-cloud-service-potentially-spotty-access--availablity)
-			- [Local LLMs (llama-cpp-python, transformers...)](#local-llms-llama-cpp-python-transformers)
+			- [Local LLMs (llama-cpp-python)](#local-llms-llama-cpp-python)
+		- [0.1 - Install Git (Optional but Recommended)](#01---install-git-optional-but-recommended)
+		- [0.2w - Install Git for Windows](#02w---install-git-for-windows)
+		- [0.2l - Install Git for Linux](#02l---install-git-for-linux)
+		- [0.3w - Install FFmpeg for Windows (Required for FNV players)](#03w---install-ffmpeg-for-windows-required-for-fnv-players)
+		- [0.3l - Install FFmpeg for Linux(debian) (Required for FNV players)](#03l---install-ffmpeg-for-linuxdebian-required-for-fnv-players)
+		- [0.4 - Install Microsoft C++ Build Tools](#04---install-microsoft-c-build-tools)
+			- [0.4w - Install Microsoft C++ Build Tools for Windows](#04w---install-microsoft-c-build-tools-for-windows)
+			- [0.4l - Install Microsoft C++ Build Tools for Linux](#04l---install-microsoft-c-build-tools-for-linux)
+		- [0.5 - CUDA (Recommended) - Requires NVIDIA GPU](#05---cuda-recommended---requires-nvidia-gpu)
+			- [0.5 - Install CUDA](#05---install-cuda)
+		- [0.6 - Do you want to use xVASynth? (Optional)](#06---do-you-want-to-use-xvasynth-optional)
+		- [0.7 - Install Requirements in Game](#07---install-requirements-in-game)
 	- [1 - Getting Started - Installing the Launcher](#1---getting-started---installing-the-launcher)
 	- [2 - Configuring the Launcher](#2---configuring-the-launcher)
 		- [Launcher File Structure Overview](#launcher-file-structure-overview)
 		- [Pantella File Structure Overview](#pantella-file-structure-overview)
-	- [3 - Configuring Pantella - Games](#3---configuring-pantella---games)
-	- [4 - Run Pantella](#4---run-pantella)
-		- [4.1 - Configure LLM Settings](#41---configure-llm-settings)
-		- [4.2 - Configure Speech Recognition Settings](#42---configure-speech-recognition-settings)
-		- [4.3 - Configure TTS Settings (Optional)](#43---configure-tts-settings-optional)
-		- [4.4 - Configure Vision Settings (Optional)](#44---configure-vision-settings-optional)
-	- [5 - Have Fun!](#5---have-fun)
+	- [3 - Run Pantella](#3---run-pantella)
+		- [3.1 - Configure LLM Settings](#31---configure-llm-settings)
+		- [3.2 - Configure Speech Recognition Settings](#32---configure-speech-recognition-settings)
+		- [3.3 - Configure TTS Settings (Optional)](#33---configure-tts-settings-optional)
+		- [3.4 - Configure Vision Settings (Optional)](#34---configure-vision-settings-optional)
+	- [4 - Have Fun!](#4---have-fun)
+- [Installation (Development)](#installation-development)
+	- [Adding New NPCs](#adding-new-npcs)
+	- [Running with Conda (recommended)](#running-with-conda-recommended)
+	- [Running with venv](#running-with-venv)
+	- [Running without venv (generally not recommended)](#running-without-venv-generally-not-recommended)
 - [Addons](#addons)
 	- [Skyrim SE/AE/VR Addons](#skyrim-seaevr-addons)
 	- [TTS Addons](#tts-addons)
@@ -89,11 +92,6 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 	- [xVASynth Issues](#xvasynth-issues)
 		- [RuntimeError('PytorchStreamReader failed reading zip archive: failed finding central directory')](#runtimeerrorpytorchstreamreader-failed-reading-zip-archive-failed-finding-central-directory)
 		- [Loading voice model... xVASynth Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))](#loading-voice-model-xvasynth-error-connection-aborted-remotedisconnectedremote-end-closed-connection-without-response)
-- [Development](#development)
-	- [Adding New NPCs](#adding-new-npcs)
-	- [Running with venv](#running-with-venv)
-	- [Running without venv](#running-without-venv)
-	- [Running with the Launcher (For developers)](#running-with-the-launcher-for-developers)
 - [FAQ](#faq)
 	- [Why does the requirements.txt file include your own forks of existing modules?](#why-does-the-requirementstxt-file-include-your-own-forks-of-existing-modules)
 - [Attributions](#attributions)
@@ -119,18 +117,18 @@ Almost every part of Pantella, including the inference engines(LLM backends), th
 <b>Note</b>: There is still some work to be done to make the game_interface more generic, but it's a start. The character_manager class is also a bit of a mess and could use some work to make it more generic for example, this is definitely still an in progress change still due to the scope of the project.
 
 ## New LLM Backends
-No more just OpenAI API compatible servers, if you have the computer to run it, you can run the LLM directly in Pantella itself. No 3rd party software or setup required, it works out of the box. llama-cpp-python is built in and allows running GGUF models natively in Pantella. There's also support for running transformers models directly through Pantella. If someone wanted to add vLLM support, or exllama, or any other LLM backend, it would be as easy as adding one new file containing all the inference code, updating the requirements.txt with any new packages that are required and adjusting the config_loader.py file to add any new config settings. Feel free to ask in the Discord if you have a backend you want to add and I can help you get started and help troubleshoot any issues you may have. Additionally, there is support for vision based LLMs now as well.
+No more just OpenAI API compatible servers, if you have the computer to run it, you can run the LLM directly in Pantella itself. No 3rd party software or setup required, it works out of the box. llama-cpp-python is built in and allows running GGUF models natively in Pantella. If someone wanted to add vLLM support, or exllama, or any other LLM backend, it would be as easy as adding one new file containing all the inference code, updating the requirements.txt with any new packages that are required and adjusting the config_loader.py file to add any new config settings. Feel free to ask in the Discord if you have a backend you want to add and I can help you get started and help troubleshoot any issues you may have. Additionally, there is support for vision based LLMs now as well.
 
 ## New TTSes
 Pantella comes with added support for several new TTSes compared to Mantella. Additionally, multiple TTSes can be loaded at once and used in a fallback order. Including the ones in Mantella v0.12, here is a list of all available TTSes in Pantella with their pros and cons:
-- <b>PiperTTS</b>(<b style="color:green">Also Available for Mantella</b>) is a fast and really easy to run on most computers. It doesn't require special hardware like a CUDA enabled GPU, runs on CPU, and I've ever managed to run it on my phone via Winlator. It's not the highest quality TTS in my opinion, but it's enabled by default because everything needed to run it is included with Pantella and it's the easiest to run in general.
-- <b>xVASynth</b>(<b style="color:green">Also Available for Mantella</b>) is a TTS that uses the xVASynth engine to generate voices. It's a bit more complicated to set up than the other TTSes, but it's a very good TTS that can run on CPU or GPU fast enough to actually use, and it's the most powerful and flexible TTS available for Pantella. Training new voices does required a really decent GPU, but it's possible to train new voices with xVASynth and use them in Pantella pretty easily if you have the hardware. Good for Skyrim, but doesn't have all of the voices for Fallout 3 or New Vegas to properly support Fallout TTW. If you're planning to use Pantella for Fallout TTW, xVASynth is pretty much incompatible with it at this time due to the lack of voice models, less than half of the voice models for Fallout TTW are available for xVASynth at this time. But if you're using Pantella for Skyrim, xVASynth is a very good option for a TTS, especially if you don't have much extra VRAM to spare for TTSes, as it can run on CPU pretty well.
+- <b>PiperTTS</b>(<b style="color:green">Also Available for Mantella</b>) is a fast and really easy to run on most computers. It doesn't require special hardware like a CUDA enabled GPU, runs on CPU, and I've ever managed to run it on my phone via Winlator. It's not the highest quality TTS in my opinion, but it's enabled by default because everything needed to run it is included with Pantella and it's the easiest to run in general. Note: Does not have any voices for Fallout New Vegas or Fallout 3, so it's not recommended to use PiperTTS for Fallout NV/TTW.
+- <b>xVASynth</b>(<b style="color:green">Also Available for Mantella</b>) is a TTS that uses the xVASynth engine to generate voices. It's a bit more complicated to set up than the other TTSes, but it's a very good TTS that can run on CPU or GPU fast enough to actually use, and it's the most powerful and flexible TTS available for Pantella. Training new voices does require a pretty decent GPU, but it's possible to train new voices with xVASynth and use them in Pantella pretty easily if you have the hardware. Good for Skyrim, but doesn't have all of the voices for Fallout 3 or New Vegas to properly support Fallout TTW. If you're planning to use Pantella for Fallout TTW, xVASynth is pretty much incompatible with it at this time due to the lack of voice models, less than half of the voice models for Fallout TTW are available for xVASynth at this time. But if you're using Pantella for Skyrim, xVASynth is a very good option for a TTS, especially if you don't have much extra VRAM to spare for TTSes, as it can run on CPU pretty well.
 - <b>xTTS 2</b>(<b style="color:green">Also Available for Mantella</b>) is a really good TTS for human sounding voices, but it struggles for dragons, robots, etc. It also is basically unusable on CPU and requires an additional 4GB of VRAM usage on top of your game to run it. And it's slower than xVASynth and PiperTTS. But for the voices it's better for, it's a <b>lot</b> better than xVASynth or PiperTTS. It can be sampled on a short sample between 5-10 seconds with decent quality. It also has an English accent by default, but you can actually change the accent to any of the other supported languages in the settings and override specific characters/races to use specific accents with the prompt_style/character JSON files. 
 - <b>StyleTTS2</b> is very similar to xTTS 2, but it's a bit more robotic sounding and has pronounciation issues sometimes. But higher pitch voices, like some female voices, sound a bit better with StyleTTS2 than xTTS 2. It's also a bit faster than xTTS 2, and doesn't require as much VRAM, hovering closer to 3GB of usage. It can be sampled on a short sample between 15-25 seconds with decent quality.
 - <b>F5-TTS</b> is a new diffusion based TTS that was released alongside E2 TTS. It only requires like 1-1.5GB of VRAM, and sounds as good or better than xTTS for a lot of voices. It's about the same speed, maybe a little slower, but I could see a few characters getting this one over xTTS or StyleTTS2. It can be sampled on a short sample between 10-15 seconds with decent quality. F5 sounds less robotic than E2.
 - <b>E2-TTS</b> is a new Unet based TTS that was released alongside F5 TTS. It only requires like 1-1.5GB of VRAM, and sounds as good or better than xTTS for a lot of voices. It's about the same speed, maybe a little slower than F5-TTS, but I could see a few characters getting this one over xTTS or StyleTTS2. It can be sampled on a short sample between 10-15 seconds with decent quality. E2 sounds more robotic than F5.
 - <b>GPT-SoVITS</b> is a Chinese based TTS/voice conversion model that's *very* good for the compute required for it. It only requires 1GB of VRAM, and sounds <i>fantastic</i> on a lot of voices. Anything with a heavy accent seems to be a struggle for it, like Nords and some of the Elves. And it has some pronunciation issues at times. But for the voices and words it's good at, it's genuinely unparalleled in the local space in my opinion and easily surpasses xTTS for those voices.
-- <b>Chatterbox</b>(<b style="color:red">new</b>) is a "production-grade open source TTS model. Licensed under MIT, Chatterbox has been benchmarked against leading closed-source systems like ElevenLabs, and is consistently preferred in side-by-side evaluations." Very good emotional tinting in speaking, can do a lot of different voices very well, and isn't unusably slow, though it is a bit slower than xTTS 2 on the same hardware. It needs 6GB of VRAM to run on GPU, but it can run on CPU as well, albiet, very slowly, about five times slower than the GPU(2080 ti) on a Ryzen 9 5950X with DDR4. It's more stable than xTTS and I personally prefer it over most of the other TTSes so far. But it can add strange accents to some voices, likely due to the way it was trained. It can be sampled on a short sample between 5-10 seconds with very good quality, and I haven't had a bad time giving it longer samples either but they rarely seemed to do significantly different and sometimes trended to be worse overall. Consistency is better than xTTS, less modem noises coming out of NPCs. Overall a very good TTS if you can run it.
+- <b>Chatterbox</b>(<b style="color:red">new</b>) is a "production-grade open source TTS model. Licensed under MIT, Chatterbox has been benchmarked against leading closed-source systems like ElevenLabs, and is consistently preferred in side-by-side evaluations." Very good emotional tinting in speaking, can do a lot of different voices very well, and isn't unusably slow, though it is a bit slower than xTTS 2 on the same hardware. It needs 6GB of VRAM to run on GPU, but it can run on CPU as well--albiet, very slowly, about five times slower than the GPU(2080 ti) on a Ryzen 9 5950X with DDR4. It's more stable than xTTS and I personally prefer it over most of the other TTSes so far. But it can add strange accents to some voices, likely due to the way it was trained. It can be sampled on a short sample between 5-10 seconds with very good quality, and I haven't had a bad time giving it longer samples either but they rarely seemed to do significantly different and sometimes trended to be worse overall. Consistency is better than xTTS, less modem noises coming out of NPCs. Overall a very good TTS if you can run it.
 
 ### <b>TTSes tl;dr</b>
 In summary <b>xTTS 2</b> and <b>StyleTTS2</b> are both very good TTSes for a lot of voices, but they require a decent amount of VRAM and are slower than the other options. <b>F5-TTS</b> and <b>E2-TTS</b> are both very good diffusion based TTSes that require much less VRAM and are about the same speed as xTTS, but they can be a bit inconsistent with some voices. <b>GPT-SoVITS</b> is a Chinese based TTS that is very good for the compute required for it, but it struggles with heavy accents and has some pronunciation issues. <b>Chatterbox</b> is a new TTS that is very good for emotional tinting and consistency, but it can add strange accents to some voices and is slower than xTTS on the same hardware. <b>PiperTTS</b> is the easiest to run and included with Pantella by default, but it's not the highest quality TTS. <b>xVASynth</b> is a very good TTS that can run on CPU or GPU, but it doesn't have all the voice models for Fallout TTW so it's not recommended for use with Fallout TTW at this time.
@@ -151,62 +149,17 @@ When a character is first encountered, if a character entry is not found in the 
 Pantella currently supports Skyrim Special Edition, Skyrim Anniversary Edition, Skyrim VR, Fallout New Vegas and (technically) Fallout 3 via Tale of Two Wastelands. Support for other games can be added by adding another game_interface module and adding the appropriate character entries to the characters directory. If you want to add support for another game and don't know where to start or what help, feel free to reach out to me on Discord or open an issue on GitHub and we can discuss how to do it. Enderal is also somewhat supported, but there are no character entries for Enderal included with Pantella at this time.
 
 
-# Installation
+# Installation (Launcher)
 ## 0 - Prerequisites - Things to Consider Before Installing...
 ### Hardware Requirements
 There are no discovered minimum requirements at the time of writing for Pantella. Pantella needs a certain amount of hardware allocation to run successfully for specific setups though, and if this is being soaked up by other hardware intensive mods, it may crash.
 
 The minimum requirements for xVASynth can be found on its [Steam page](https://store.steampowered.com/app/1765720/xVASynth/). It runs in CPU mode by default, using a single CPU core/thread. Only supports GPU acceleration on NVIDIA cards that have CUDA. Using the same GPU as the game will produce stutter, especially if it can't allocate ~2 GB of VRAM. You may try using an older NVIDIA card that has CUDA on another free PCI-Express slot of your PC and run any CUDA enabled services on that.
 
-If you're trying to minimize the amount of compute needed to run Pantella, I'd advise using xVASynth or PiperTTS and using Open Router. This should provide the easiest to run experience.
+If you're trying to minimize the amount of compute needed to run Pantella, I'd advise using xVASynth or PiperTTS (if your selected game supports these TTSes) and using Open Router. This should provide the easiest to run experience.
 
 ### Storage Requirements
 Pantella requires around 4-6 GB of storage space and includes the voice models/latents for PiperTTS, and xTTS_api out of the box. xVASynth requires around 4 GB of storage space for the software itself and after downloading all the voice models for Skyrim and Fallout New Vegas I have used around 38 GB of storage space. If you're using a local language model, you'll have to factor in the size of the model you're using yourself. But suffice to say, you'll need a fair amount of storage space to run Pantella with all the bells and whistles.
-
-### Software Requirements
-
-For the most basic setup, you won't need most of this software. However to get the most out of Pantella, you will need to install the following software:
-
-#### Install Git (Optional but Recommended)
-Pantella optionally requires git to be installed to perform all updates correctly. If you don't intend to update your installation, you can skip this step. This is required even if using the launcher. If you try to run the `./install_pantella_requirements.bat` script without git installed, it will fail immediately without an error message(unless you run the bat file in the terminal).
-
-##### Install Git for Windows
-1. Download the latest version of Git for Windows from [here](https://git-scm.com/download/win).
-2. Run the installer and follow the instructions. The default settings should be fine.
-
-##### Install Git for Linux
-Hah! You're probably already done with this part! Git is installed by default on most Linux distributions. If you don't have it, you can install it with `sudo apt install git` or `sudo yum install git` or `sudo pacman -S git` depending on your distribution.
-
-#### Install FFmpeg for Windows (Required for FNV players)
-The easiest way to install FFmpeg on Windows is to install it via Chocolatey. You can certainly download the compiled build from ffmpegs site and add it to the system path, but I feel like that's not exactly approachable to everyone.
-
-1. To install Chocolatey, follow their Individual Use installation guide over here: [Install Chocolatey](https://chocolatey.org/install) You should just have to run the command they recommend.
-2. Then to install ffmpeg with chocolatey, run `choco install ffmpeg` in the same terminal you just used to install Chocolatey.
-3. Restart your computer to ensure the changes take effect and are usable by Pantella.
-
-#### Install FFmpeg for Linux(debian) (Required for FNV players)
-This is super simple. It might already come installed on your distro of choice, but if it doesn't, simply run `sudo apt install ffmpeg`.
-
-#### Install Microsoft C++ Build Tools
-Pantella requires the Microsoft C++ Build Tools to be installed to build some of the required Python packages to install/reinstall them. If you don't have this installed, you can install it by following the instructions below. However if the requirements change over time, and you continue to receive updates for Pantella, you may need to install the Build Tools to keep up with the changes. It will try to automatically update your requirements whenever new requirements are added, but if it fails to do so, you may see error messages and no longer be able to run Pantella until you install the Build Tools. If you try to run the `./install_pantella_requirements.bat` script without the Build Tools installed, it will fail immediately with an error message about the Build Tools not being installed.
-
-##### Install Microsoft C++ Build Tools for Windows
-1. Download the latest version of the Microsoft C++ Build Tools from [here](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
-2. Follow the instructions to install the Build Tools from the top answer over here: [Install Build Tools](https://stackoverflow.com/questions/64261546/how-to-solve-error-microsoft-visual-c-14-0-or-greater-is-required-when-inst)
-2. Run the installer and follow the instructions. The default settings should be fine.
-
-##### Install Microsoft C++ Build Tools for Linux
-You're probably already done with this part too. Microsoft C++ Build Tools are not required on Linux.
-
-#### CUDA (Recommended) - Requires NVIDIA GPU
-
-If you want to use F5-TTS, E2 TTS, StyleTTS2, OuteTTS, ParlerTTS, ChatTTS, or xTTS 2 with GPU acceleration, you will need to have CUDA installed on your system. If you don't have CUDA installed, you can skip this step and use PiperTTS or xVASynth instead.
-
-##### Install CUDA
-1. Download CUDA 12.8 from [here](https://developer.nvidia.com/cuda-12-8-2-download-archive). 
-2. Run the installer and follow the instructions. The default settings should be fine.
-
-Newer versions of CUDA may work, but you'll have to test them yourself and install torch for your CUDA version. Newer versions of torch may not work with Pantella, so it's recommended to stick with CUDA 12.8 for now as it's the most tested version of CUDA with Pantella at this time. Long term I'd love to support newer versions of CUDA, but for now, if you want to use CUDA acceleration with Pantella, it's recommended to use CUDA 12.8. Make sure to select the correct version for your operating system and architecture. If you are trying to use a newer version of CUDA, you can try it out and see if it works with Pantella, and if you have any issues, feel free to reach out to me on Discord or GitHub and I can try to help you troubleshoot any issues you may have with using a newer version of CUDA with Pantella.
 
 ### Compatibility
 - Pantella works on Windows 10, Windows 11 and Debian Linux (it is yet unconfirmed whether it works on Windows 7)
@@ -216,7 +169,70 @@ As Pantella accesses and writes to files within your game if choice's folder, it
 
 If you use the Steam version of Skyrim or Fallout New Vegas, then note that Steam does not allow to move the old or create a new Steam Game Library on the same disk partition by simply ignoring the attempt to do so. You either move the whole Steam client outside [as described on this Steam Support page](https://help.steampowered.com/en/faqs/view/4BD4-4528-6B2E-8327) or use [LostDragonist/steam-library-setup-tool](https://github.com/LostDragonist/steam-library-setup-tool/wiki/Usage-Guide) to create a Steam Game Library besides another.
 
-### Do you want to use xVASynth? (Optional)
+### Picking Your Inference Engine and Language Model (Optional)
+There are a number of different LLMs to choose from, ranging from small local models to expensive externally hosted models. Note that some smaller models may struggle to handle long term conversations or may say the wrong thing at the wrong time. If you just want to get started without thinking too much about it / explore alternative options later and are new to Pantella, skip to the [next step](#1---getting-started---installing-the-launcher).
+
+#### OpenAI Compatible APIs
+##### OpenAI (First $5 Free, but terrible quality)
+Copy your OpenAI secret API key (see [here](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) if you need help finding it (you will need to set up an account if you haven't already) and paste into `PantellaSoftware/addons/openai_api/OPENAI_API_SECRET_KEY.txt`. Do not share this key with anyone. While there is a free trial, you will need to set up your payment details for the API to work. OpenAI is NOT recommended, their API is very limited, and their content policy is utterly draconian. Please use any other option, literally any other option.
+
+##### OpenRouter (First $1 Free, Free Models Often Available)
+Create an account with OpenRouter. Go to the "Keys" tab and generate a new key, saving its value to `PantellaSoftware/addons/openai_api/OPENAI_API_SECRET_KEY.txt`. Do not share this secret key with anyone. In your associated `[game_id]_config.json`, set `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1" (without quotes).
+
+##### text-generation-webui (Free Local Models)
+Install text-generation-webui from [here](https://github.com/oobabooga/text-generation-webui). Place a local model into the `text-generation-webui\models folder` (to get started, you can download `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true)). Paste the text "--extensions openai --auto-launch" (as well as "--cpu" for CPU users) into the installed folder's CMD_FLAGS.txt file. Start text-generation-webui and wait for the UI to open in your web browser. Navigate to the "Model" tab, select your model from the drop-down list, and click "Load". In your `[game_id]_config.json` file, set `alternative_openai_api_base` to "http://127.0.0.1:5000/v1" (without quotes). Just to note, you need to make sure text-generation-webui is running when running Pantella!
+
+##### koboldcpp (Free Local Models)
+Install koboldcpp's latest release from here: https://github.com/LostRuins/koboldcpp/releases.  If you have an nvidia gpu with cuda support, download the koboldcpp.exe file.  If you do not or do not want to use cuda support, download the koboldcpp_nocuda.exe.  Download it outside of your Skyrim, Fallout New Vegas, xVASynth or pantella folders.  Download a local large language model, such as `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true).  Save that somewhere you can easily find it, again outside of Skyrim, Fallout New Vegas, xVASynth or pantella.  Run the koboldcpp.exe.  When presented with the launch window, drag the "Context Size" slider to 4096.  Click the "Browse" button next to the "Model:" field and select the model you downloaded.  Under the presets drop down at the top, choose either Use CLBlas, or Use CuBlas (if using Cuda).  You will then see a field for GPU Layers. If you want to use CPU only leave it at 0.  If you want to use your GPU, you can experiement with how many "layers" to offload to your GPU based on your system.  Then click "Launch" in the bottom right corner.  In your `[game_id]_config.json` file, set `alternative_openai_api_base` to "http://localhost:5001/v1" (without quotes).  Just to note, you need to make sure koboldcpp is running when running Pantella!
+
+##### koboldcpp Google Colab Notebook (Free Cloud Service, Potentially Spotty Access / Availablity)
+This option does not require a powerful computer to run a large language model, because it runs in the google cloud.  It is free and easy to use, and can handle most .gguf models that are up to 13B parameters with Q4_K_M quantization all on the free T4 GPU you get with google colab.  The downside is Google controls dynamically when the GPUs are available and could throttle your access at any time, so it may not always work / be available.  To use this method, go to this web page: https://colab.research.google.com/github/LostRuins/koboldcpp/blob/concedo/colab.ipynb.  Click the play button that appears below the text "Enter your model below and then click this to start Koboldcpp."  Wait until text stops generating (probably will take a minute or two).  You should see a URL link near the end of the text after a statement like "Connect to the link below," with a silly name, in a format like https://its-taking-time-indeed.trycloudflare.com.  You may want to click on the link just to ensure koboldcpp pops up to ensure its ready before proceeding.  Select that link and copy it with CTRL+C.  In your `[game_id]_config.json` file, set `alternative_openai_api_base` to that URL by pasting it, and then add /v1 at the end. So it will look something like alternative_openai_api_base = https://its-taking-time-indeed.trycloudflare.com/v1.  Make sure to keep your browser open to the koboldcpp colab notebook while using Pantella so it does not turn off.  If you want to choose a different llm model to use with this method, make sure it is a .gguf model and follow the instructions on the colab to do so.  Be sure to close your browser tab once you've finished your Pantella session, to free up the GPU and help avoid hitting Google's usage limits.
+
+#### Local LLMs (llama-cpp-python)
+If you have a powerful computer, you can run a local LLM. This is the most powerful and flexible option, but it requires a lot of resources. For example, you can run a local LLM using the llama-cpp-python backend. To do this, you will need to install the llama-cpp-python backend by running the script included with the launcher for your specific setup/hardware. You will also need to download a local model, such as `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true). Once you have the model, set `model_path` to the path to the model in your `[game_id]_config.json` file, and it should be good to go.
+
+### 0.1 - Install Git (Optional but Recommended)
+Pantella optionally requires git to be installed to perform all updates correctly. If you don't intend to update your installation, you can skip this step. This is required even if using the launcher. If you try to run the `./install_pantella_requirements.bat` script without git installed, it will fail immediately without an error message(unless you run the bat file in the terminal). If you failed an update because you don't have git installed, simply install git and then run the `./install_pantella_requirements.bat` script to fix your installation and get the latest updates.
+
+### 0.2w - Install Git for Windows
+1. Download the latest version of Git for Windows from [here](https://git-scm.com/download/win).
+2. Run the installer and follow the instructions. The default settings should be fine.
+
+### 0.2l - Install Git for Linux
+Hah! You're probably already done with this part! Git is installed by default on most Linux distributions. If you don't have it, you can install it with `sudo apt install git` or `sudo yum install git` or `sudo pacman -S git` depending on your distribution.
+
+### 0.3w - Install FFmpeg for Windows (Required for FNV players)
+The easiest way to install FFmpeg on Windows is to install it via Chocolatey. You can certainly download the compiled build from ffmpegs site and add it to the system path, but I feel like that's not exactly approachable to everyone.
+
+1. To install Chocolatey, follow their Individual Use installation guide over here: [Install Chocolatey](https://chocolatey.org/install) You should just have to run the command they recommend.
+2. Then to install ffmpeg with chocolatey, run `choco install ffmpeg` in the same terminal you just used to install Chocolatey.
+3. Restart your computer to ensure the changes take effect and are usable by Pantella.
+
+### 0.3l - Install FFmpeg for Linux(debian) (Required for FNV players)
+This is super simple. It might already come installed on your distro of choice, but if it doesn't, simply run `sudo apt install ffmpeg`.
+
+### 0.4 - Install Microsoft C++ Build Tools
+Pantella requires the Microsoft C++ Build Tools to be installed to build some of the required Python packages to install/reinstall them. If you don't have this installed, you can install it by following the instructions below. If the requirements change over time, and you continue to receive updates for Pantella, you will need to install the Build Tools to keep up with the changes. It will try to automatically update your requirements whenever new requirements are added, but if it fails to do so, you may see error messages and no longer be able to run Pantella until you install the Build Tools and install the latest requirements. If you try to run the `./install_pantella_requirements.bat` script without the Build Tools installed, it will fail immediately with an error message about the Build Tools not being installed. If you failed an update because you don't have the Build Tools installed, simply install the Build Tools and then run the `./install_pantella_requirements.bat` script to fix your installation and get the latest updates.
+
+#### 0.4w - Install Microsoft C++ Build Tools for Windows
+1. Download the latest version of the Microsoft C++ Build Tools from [here](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+2. Follow the instructions to install the Build Tools from the top answer over here: [Install Build Tools](https://stackoverflow.com/questions/64261546/how-to-solve-error-microsoft-visual-c-14-0-or-greater-is-required-when-inst)
+2. Run the installer and follow the instructions. The default settings should be fine.
+
+#### 0.4l - Install Microsoft C++ Build Tools for Linux
+You're probably already done with this part too. Microsoft C++ Build Tools are not required on Linux.
+
+### 0.5 - CUDA (Recommended) - Requires NVIDIA GPU
+
+If you want to use F5-TTS, E2 TTS, StyleTTS2, OuteTTS, ParlerTTS, ChatTTS, or xTTS 2 with GPU acceleration, you will need to have CUDA installed on your system. If you don't have CUDA installed, you can skip this step and use PiperTTS or xVASynth instead.
+
+#### 0.5 - Install CUDA
+1. Download CUDA 12.8 from [here](https://developer.nvidia.com/cuda-12-8-2-download-archive). 
+2. Run the installer and follow the instructions. The default settings should be fine.
+
+Newer versions of CUDA may work, but you'll have to test them yourself and install torch for your CUDA version. Newer versions of torch may not work with Pantella, so it's recommended to stick with CUDA 12.8 for now as it's the most tested version of CUDA with Pantella at this time. Long term I'd love to support newer versions of CUDA, but for now, if you want to use CUDA acceleration with Pantella, it's recommended to use CUDA 12.8. Make sure to select the correct version for your operating system and architecture. If you are trying to use a newer version of CUDA, you can try it out and see if it works with Pantella, and if you have any issues, feel free to reach out to me on Discord or GitHub and I can try to help you troubleshoot any issues you may have with using a newer version of CUDA with Pantella.
+
+### 0.6 - Do you want to use xVASynth? (Optional)
 xVASynth is a very good Text-To-Speech software that can be used by Pantella for Skyrim and partially for Fallout New Vegas. It is available on [Steam](https://store.steampowered.com/app/1765720/xVASynth/) and [Nexus](https://www.nexusmods.com/skyrimspecialedition/mods/44184). It is recommended to download it via Steam, as it is easier to update and manage. If you are using the Nexus version, do not store xVASynth in your Skyrim folder. It is NOT recommended to use xVASynth for Fallout New Vegas or Tale of Two Wastelands at this time due to the lack of voice models for Fallout, which will result in a lot of NPCs sounding the same and not having the correct voices. There are *some* voices for Fallout New Vegas, but it's less than half of the voices needed to properly support Fallout TTW. For Fallout, it's recommended to use a voice cloning TTS like xTTS 2, StyleTTS2, etc. and pair that with voice samples for all the voice models for Fallout New Vegas/Fallout 3 to get the best experience. For Skyrim, xVASynth is a very good option for a TTS, especially if you don't have much extra VRAM to spare for TTSes, as it can run on CPU pretty well and has voice models for almost every character in the game.
 1. Download xVASynth via [Steam](https://store.steampowered.com/app/1765720/xVASynth/) or [Nexus](https://www.nexusmods.com/skyrimspecialedition/mods/44184). Do not store xVASynth in your Skyrim folder.
 
@@ -226,7 +242,7 @@ xVASynth is a very good Text-To-Speech software that can be used by Pantella for
 	<summary><b>xVASynth Model Installation Options</b></summary>  
 
    	#### 💎 Nexus Premium (Quickest)  
-   	If you are subscribed to Nexus Premium, open the xVASynth UI and select "Get More Voices" from the bottom left corner. Unselect all games except for Skyrim and download all models. Note that this may require restarting a few times for the downloads to properly complete.  
+   	If you are subscribed to Nexus Premium, open the xVASynth UI and select "Get More Voices" from the bottom left corner. Unselect all games except for Skyrim/Fallout NV/3, hit check now and download all models. Note that this may require restarting xVASynth, re-check nowing, and restarting the download a few times for the downloads to properly complete, they like to just stop downloading for no discernable reason and then restarting the download seems to fix it.
 
    	#### 🌊 Torrent (Slowest, Easiest)  
    	Voice models can be downloaded via a single torrent. Torrents can be downloaded via Bittorent clients such as [qBittorent](https://www.qbittorrent.org/download). Note that download speeds vary depending on the time of day. Paste the below magnet link in your browser to receive a popup to open it via your Bittorent client, and set the download location to your_xVASynth_folder/resources/app/models/skyrim:  
@@ -249,34 +265,13 @@ xVASynth is a very good Text-To-Speech software that can be used by Pantella for
 
 Make absolutely sure xVASynth isn't already running when Pantella starts unless it's running in headless mode. It will error out if it's already running when Pantella tries to start it in headless mode. If you want to use the xVASynth UI, you can start it after Pantella has started and it should work fine.
 
-### Install Requirements in Game
+### 0.7 - Install Requirements in Game
 
 Depending on which game you want to get Pantella working for, you will need to install the required mods for the in-game plugin to function. You can see the required mods for each plugin on the plugin github page:
 
 - [PantellaNV](https://github.com/Pathos14489/PantellaNV) for Fallout New Vegas
 - [Pantella Spell](https://github.com/Pathos14489/Pantella-Spell) for Skyrim SE/AE/VR
 
-### Picking Your Inference Engine and Language Model (Optional)
-There are a number of different LLMs to choose from, ranging from small local models to expensive externally hosted models. Note that some smaller models may struggle to handle long term conversations or may say the wrong thing at the wrong time. If you just want to get started without thinking too much about it / explore alternative options later and are new to Pantella, skip to the [Installtion](#installation) section.
-
-#### OpenAI Compatible APIs
-##### OpenAI (First $5 Free, but terrible quality)
-Copy your OpenAI secret API key (see [here](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) if you need help finding it (you will need to set up an account if you haven't already) and paste into `PantellaSoftware/addons/openai_api/OPENAI_API_SECRET_KEY.txt`. Do not share this key with anyone. While there is a free trial, you will need to set up your payment details for the API to work. OpenAI is NOT recommended, their API is very limited, and their content policy is utterly draconian. Please use any other option, literally any other option.
-
-##### OpenRouter (First $1 Free, Free Models Often Available)
-Create an account with OpenRouter. Go to the "Keys" tab and generate a new key, saving its value to `PantellaSoftware/addons/openai_api/OPENAI_API_SECRET_KEY.txt`. Do not share this secret key with anyone. In your associated `[game_id]_config.json`, set `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1" (without quotes).
-
-##### text-generation-webui (Free Local Models)
-Install text-generation-webui from [here](https://github.com/oobabooga/text-generation-webui). Place a local model into the `text-generation-webui\models folder` (to get started, you can download `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true)). Paste the text "--extensions openai --auto-launch" (as well as "--cpu" for CPU users) into the installed folder's CMD_FLAGS.txt file. Start text-generation-webui and wait for the UI to open in your web browser. Navigate to the "Model" tab, select your model from the drop-down list, and click "Load". In your `[game_id]_config.json` file, set `alternative_openai_api_base` to "http://127.0.0.1:5000/v1" (without quotes). Just to note, you need to make sure text-generation-webui is running when running Pantella!
-
-##### koboldcpp (Free Local Models)
-Install koboldcpp's latest release from here: https://github.com/LostRuins/koboldcpp/releases.  If you have a nvidia gpu with cuda support, download the koboldcpp.exe file.  If you do not or do not want to use cuda support, download the koboldcpp_nocuda.exe.  Download it outside of your Skyrim, Fallout New Vegas, xVASynth or pantella folders.  Download a local large language model, such as `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true)).  Save that somewhere you can easily find it, again outside of Skyrim, Fallout New Vegas, xVASynth or pantella.  Run the koboldcpp.exe.  When presented with the launch window, drag the "Context Size" slider to 4096.  Click the "Browse" button next to the "Model:" field and select the model you downloaded.  Under the presets drop down at the top, choose either Use CLBlas, or Use CuBlas (if using Cuda).  You will then see a field for GPU Layers. If you want to use CPU only leave it at 0.  If you want to use your GPU, you can experiement with how many "layers" to offload to your GPU based on your system.  Then click "Launch" in the bottom right corner.  In your `[game_id]_config.json` file, set `alternative_openai_api_base` to "http://localhost:5001/v1" (without quotes).  Just to note, you need to make sure koboldcpp is running when running Pantella!
-
-##### koboldcpp Google Colab Notebook (Free Cloud Service, Potentially Spotty Access / Availablity)
-This option does not require a powerful computer to run a large language model, because it runs in the google cloud.  It is free and easy to use, and can handle most .gguf models that are up to 13B parameters with Q4_K_M quantization all on the free T4 GPU you get with google colab.  The downside is Google controls dynamically when the GPUs are available and could throttle your access at any time, so it may not always work / be available.  To use this method, go to this web page: https://colab.research.google.com/github/LostRuins/koboldcpp/blob/concedo/colab.ipynb.  Click the play button that appears below the text "Enter your model below and then click this to start Koboldcpp."  Wait until text stops generating (probably will take a minute or two).  You should see a URL link near the end of the text after a statement like "Connect to the link below," with a silly name, in a format like https://its-taking-time-indeed.trycloudflare.com.  You may want to click on the link just to ensure koboldcpp pops up to ensure its ready before proceeding.  Select that link and copy it with CTRL+C.  In your `[game_id]_config.json` file, set `alternative_openai_api_base` to that URL by pasting it, and then add /v1 at the end. So it will look something like alternative_openai_api_base = https://its-taking-time-indeed.trycloudflare.com/v1.  Make sure to keep your browser open to the koboldcpp colab notebook while using Pantella so it does not turn off.  If you want to choose a different llm model to use with this method, make sure it is a .gguf model and follow the instructions on the colab to do so.  Be sure to close your browser tab once you've finished your Pantella session, to free up the GPU and help avoid hitting Google's usage limits.
-
-#### Local LLMs (llama-cpp-python, transformers...)
-If you have a powerful computer, you can run a local LLM. This is the most powerful and flexible option, but it requires a lot of resources. For example, you can run a local LLM using the llama-cpp-python backend. To do this, you will need to install the llama-cpp-python backend by running the script included with the launcher for your specific setup/hardware. You will also need to download a local model, such as `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true). Once you have the model, set `model_path` to the path to the model in your `[game_id]_config.json` file, and it should be good to go.
 ## 1 - Getting Started - Installing the Launcher
 
 First things first, you'll need the latest launcher. You can find that here: https://github.com/Pathos14489/Pantella-Launcher/releases
@@ -308,7 +303,7 @@ If your plugins haven't appeared with a deploy button, please restart the launch
 <img src="./img/step_2_image_4.png" alt="Pantella logo" style="float: left; margin-left:00%; margin-right:100%;"/>
 
 If you're using Vortex, tough luck, restart your mod manager and get yelled at for not using it the way they wanted you to.
-If your plugin doesn't appear in your mod manager, again this is a bug, please reach out. you can test this by either checking the folder directly, or check if the plugin deploy button is available to click on a launcher restart. if it is, it's failing to deploy the plugin and again we want to help you.
+If your plugin doesn't appear in your mod manager, again this is a bug, please reach out. You can test this by either checking the folder directly, or check if the plugin deploy button is available to click on a launcher restart. If it is, it's failing to deploy the plugin and again we want to help you, so please reach out about this.
 
 ### Launcher File Structure Overview
 
@@ -316,7 +311,7 @@ Next I'd like to explain the basic structure of the launcher directory. Your fin
 
 <img src="./img/step_2_image_5.png" alt="Pantella logo" style="float: left; margin-left:00%; margin-right:100%;"/>
 
-This is your launcher's root directory. If you're using llama-cpp-python, or LLaVA, you'll want to install the correct version using the included bat files now. If you have Show Debug Console enabled in settings, it will open a console that lets you read alon with Pantella as it processes your requests. Useful for debugging. Then click start for Pantella in the launcher. If you have Automatic Crash Recovery enabled in the launcher settings page. the console window that opens will always restart if it closes for any reason. This is an intentional feature, not a flaw. If you don't like it, turn it off. The first launcher of Pantella will error out, but it has to generate some config files for you, first. So please let it error out once.
+This is your launcher's root directory. If you're using llama-cpp-python, or LLaVA, you'll want to install the correct version using the included bat files now. If you have Show Debug Console enabled in settings, it will open a console that lets you read along with Pantella as it processes your requests. Useful for debugging. Then click start for Pantella in the launcher. If you have Automatic Crash Recovery enabled in the launcher settings page. The console window that opens will always restart if it closes for any reason. This is an intentional feature, not a flaw. If you don't like it, turn it off. The first launcher of Pantella will error out, but it has to generate some config files for you, first. So please let it error out once.
 
 Now navigate from your launcher directory, to `./repositories/Pathos14489_Pantella/` where we can finally start configuring Pantella itself for how you intend to use it!
 
@@ -327,54 +322,63 @@ First, another look to make sure our Pantella repository folders look the same. 
 <img src="./img/step_2_image_6.png" alt="Pantella logo" align="left" style="float: left; margin-left:0%; margin-right:100%;"/>
 <br clear="both"/>
 
-## 3 - Configuring Pantella - Games
+Note from pre-tester: This is a good time to get a bagel to reward yourself.
 
-First thing you need to do is go to `launcher_dir/repositories/Pathos14489_Pantella/interface_configs` and set up the interface_config json for the game you wish to play.
-
-`skyrim` - Skyrim Special Edition/Enderal
-`skyrimvr` - Skyrim VR
-`falloutnv` - Fallout New Vegas
-`fallout4` - Fallout 4
-`fallout4vr` - Fallout 4 VR
-
-Make a note of the game IDs you see here, you'll need these in just a moment. My skyrim.json looks like this for example after being set up:
-```json
-{
-    "game_path": "Z:\\SteamLibrary\\steamapps\\common\\Skyrim Special Edition",
-    "mod_path": "Z:\\Modded\\SkyData\\mods\\Pathos14489_Pantella-Spell",
-    "conversation_manager_type": "creation_engine_file_buffers",
-    "interface_type": "creation_engine_file_buffers",
-    "behavior_manager": "default_behavior_manager"
-    "chat_manager": "creation_engine"
-}
-```
-After that, you'll want to open your `[game_id]_config.json` and set the game_id under "Game" to the ID of the game you want to play Pantella with.
-
-<img src="./img/step_3_image_1.png" align="left" alt="Pantella logo" style="float: left; margin-left:0%; margin-right:100%"/>
-<br clear="both"/>
-
-## 4 - Run Pantella
+## 3 - Run Pantella
 
 Now just click start for Pantella and let it perform first time set up. It will popup a bunch of windows and ask you to input a lot of stuff, this is expected, just follow the instructions on the windows and input the requested information. If you have any issues, please reach out on the Discord. We're here to help.
 
-### 4.1 - Configure LLM Settings
+### 3.1 - Configure LLM Settings
 
-After you decide on type of LLM you want to use, we're going to assume you left it on the default, OpenRouter with Toppy-M 7B. If you want to use a different LLM, you can change the `model` and `alternative_openai_api_base` settings in your `[game_id]_config.json` file. If you want to change the inference engine, you can set `inference_engine` in your `[game_id]_config.json` file to either `koboldcpp` or `text-generation-webui`. If you're using a local model, you'll need to set the path to the model in your `[game_id]_config.json` file. If you're using OpenRouter, you'll need to set the `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1/" (it's already set by default, so if you haven't changed it, you shouldn't have to do anything here.)
+After you decide on type of LLM you want to use, we're going to assume you left it on the default, which is `openai_api` with the OpenRouter API using `meta-llama/llama-3.3-70b-instruct:free`. If you want to use a different LLM from OpenRouter, you can change the `model` and `alternative_openai_api_base` settings in your `[game_id]_config.json` file or set it during first time setup. If you want to change the inference engine, you can set `inference_engine` in your `[game_id]_config.json` file to either `koboldcpp` or `text-generation-webui`. If you're using a local model, you'll need to set the path to the model in your `[game_id]_config.json` file. If you're using OpenRouter, you'll need to set the `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1/" (it's already set by default, so if you haven't changed it, you shouldn't have to do anything here.)
 If you're using OpenRouter, you'll need to create an account with OpenRouter. Go to the "Keys" tab when you hover over your user icon at the top right while logged in and generate a new key, saving its value to `./GPT_SECRET_KEY.txt`. Do not share this secret key with anyone as it's effectively your login information for OpenRouter.
 
-### 4.2 - Configure Speech Recognition Settings
+### 3.2 - Configure Speech Recognition Settings
 
 Do you intend to use Speech-To-Text? If so, you'll need to set up your speech recognition settings as it's disabled by default. Set `stt_enabled` to `true` to enable the speech to text. Then in game in the MCM menu, if this is your first time running Pantella on a save, you will have to toggle the microphone off/on again. I'm not sure why, will fix later. It's somehow bugged halfway on and off such that neither will work. Toggling it will reset it to the correct state and then you may use the microphone as intended or use text input if you prefer.
 
-### 4.3 - Configure TTS Settings (Optional)
-By default PiperTTS is set to be used, and it can cover 90% of the voices in Skyrim. If you want to use a different TTS, you can change the `tts_engine` setting in your `[game_id]_config.json` file to either `xtts_api`, `style_tts_2`, `xvasynth`, etc. Check the available TTS options. If you're using xVASynth, you'll need to set the path to the xVASynth executable in your `[game_id]_config.json` file. If you're using PiperTTS, you don't need to do anything here. Read about the pros and cons of the various TTS options [here](#new-ttses).
+### 3.3 - Configure TTS Settings (Optional)
+By default PiperTTS is set to be used, and it can cover 90% of the voices in Skyrim. If you want to use a different TTS, you can change the `tts_engine` setting in your `[game_id]_config.json` file to either `xtts_api`, `style_tts_2`, `xvasynth`, etc., or select a TTS during first time setup. Check the available TTS options. If you're using xVASynth, you'll need to set the path to the xVASynth executable in your `[game_id]_config.json` file. If you're using PiperTTS, you don't need to do anything here. Read about the pros and cons of the various TTS options [here](#new-ttses).
 
-### 4.4 - Configure Vision Settings (Optional)
+### 3.4 - Configure Vision Settings (Optional)
 
 Normally you won't be using this. Most cloud based models are not very good at vision. OpenAI compatible chat completion with vision is supported, but the LLaVA support via `llama-cpp-python` is far better and I recommend using it instead if you want to use vision. If you're trying to use it, set `vision_enabled` to `true` in your `[game_id]_config.json` file. If you're using LLaVA, you'll need to set the inference engine to `llama-cpp-python`
 
-## 5 - Have Fun!
+## 4 - Have Fun!
 You should be good to go! Whenever you want to use Pantella, please start the launcher, and click start for Pantella. If you have any issues, please reach out on the Discord. We're here to help. Note: Vision support has to be started after the game Window is already open, and might depend on windowed/windowed borderless mode to work correctly. It's not completely solid yet, and might have some bugs. If you're having issues with vision, try changing your game to windowed mode or reach out in the Discord. On the first time you load Pantella into your save, even on a new game, load in, save, and reload the save you just made to initialize the plugin.
+
+# Installation (Development)
+The source code for Pantella is included in this repo. Here are the quick steps to get set up:
+
+## Adding New NPCs
+Pantella allows you to talk to any NPC, but expects you to make sure they're set up(Or use a model that supports character generation!). If you start a Pantella conversation with an unknown/unsupported NPC (eg a modded NPC), Pantella will typically error and you will be asked to fill out the character information for this character.
+
+Of course, if you are unhappy with Pantella's assumptions, you can add full support for modded NPCs to `./characters/[game_id]/` by adding a new JSON file containing the NPC's name (`name`), `base_id`, `ref_id`(the IDs are optional but very recommended!) background description (`bio`), and voice model (`voice_model`). You can also add this as an addon pack released seperate from Pantella, and users can download it and place it in the `./addons/` folder to add support for the modded NPC. Check the Developer Documentation for more information on how to do this and for the format of the JSON file.
+
+Note that if the modded NPC is custom voiced there may not be a model available, and you will either need to assign the NPC a vanilla voice, or use a voice sampling TTS and provide a voice sample in `./data/voice_samples/`.
+
+For further support and examples of how other users have added modded NPCs, ask in the [Discord](https://discord.gg/M7Zw8mBY6r).
+
+## Running with Conda (recommended)
+1. Clone the repo to your machine
+2. Create a conda environment via `conda create -n pantella python=3.10` in your console
+3. Start the environment in your console (`conda activate pantella`)
+4. Install the required packages via `pip install -r requirements.txt`
+5. Run Pantella via `main.py` in the parent directory and follow the first time setup instructions like normal.
+
+## Running with venv
+1. Clone the repo to your machine
+2. Create a virtual environment via `py -3.10 -m venv PantellaEnv` in your console (Pantella requires Python 3.10.11, I've not had a chance to test it with 3.11 yet)
+3. Start the environment in your console (`.\PantellaEnv\Scripts\Activate`)
+4. Install the required packages via `pip install -r requirements.txt`
+5. Run Pantella via `main.py` in the parent directory and follow the first time setup instructions like normal.
+
+## Running without venv (generally not recommended)
+1. Clone the repo to your machine
+2. Install the required packages via `pip install -r requirements.txt`
+3. Run Pantella via `main.py` in the parent directory and follow the first time setup instructions like normal.
+
+If you have any trouble in getting the repo set up, please reach out on [Discord](https://discord.gg/M7Zw8mBY6r)!
 
 # Addons
 
@@ -458,41 +462,6 @@ If this xVASynth Error occurs after the "Loading voice model..." message (as can
 
 If this does not resolve your issue, please share the text found in your xVASynth/server.log file on the [Discord's #i-need-help forum channel](https://discord.gg/M7Zw8mBY6r) for further support.
 </details>
-
-# Development
-The source code for Pantella is included in this repo. Here are the quick steps to get set up:
-
-## Adding New NPCs
-Pantella allows you to talk to any NPC, but expects you to make sure they're set up(Or use a model that supports character generation!). If you start a Pantella conversation with an unknown/unsupported NPC (eg a modded NPC), Pantella will typically error and you will be asked to fill out the character information for this character.
-
-Of course, if you are unhappy with Pantella's assumptions, you can add full support for modded NPCs to `./characters/` by adding a new JSON file containing the NPC's name (`name`), `base_id`, `ref_id`(the IDs are optional but recommended!) background description (`bio`), and voice model (`voice_model`). The rest of the column entries can be left blank. You can also add this as an addon pack released seperate from Pantella, and users can download it and place it in the `./addons/` folder to add support for the modded NPC.
-
-Note that if the modded NPC is custom voiced there may not be a model available, and you will either need to assign the NPC a vanilla voice, or use a voice sampling TTS and provide a voice sample in `./data/voice_samples/`.
-
-For further support and examples of how other users have added modded NPCs, ask in the [Discord](https://discord.gg/M7Zw8mBY6r).
-
-## Running with venv
-1. Clone the repo to your machine
-2. Create a virtual environment via `py -3.11 -m venv PantellaEnv` in your console (Pantella requires Python 3.10.11, I've not had a chance to test it with 3.11 yet)
-3. Start the environment in your console (`.\PantellaEnv\Scripts\Activate`)
-4. Install the required packages via `pip install -r requirements.txt`
-5. Set up your paths / any other required settings in the `[game_id]_config.json` and your chosen `interface_configs` file
-6. Run Pantella via `main.py` in the parent directory
-
-## Running without venv
-1. Clone the repo to your machine
-2. Install the required packages via `pip install -r requirements.txt`
-3. Set up your paths / any other required settings in the `[game_id]_config.json` and your chosen `interface_configs` file
-4. Run Pantella via `main.py` in the parent directory
-
-## Running with the Launcher (For developers)
-1. Clone the repo to your launcher's repositories folder under the name `Pathos14489_Pantella`
-2. Set up your paths / any other required settings in the `[game_id]_config.json` and your chosen `interface_configs` file
-3. That should be it! You can now run the source code via the launcher using the same start button as the main Pantella repe. I do not advise using the built in update feature though, use `git pull` instead.
-
-If you have any trouble in getting the repo set up, please reach out on [Discord](https://discord.gg/M7Zw8mBY6r)!
-
-The source code/latest version for the Pantella Spell plugin can be found [here](https://github.com/Pathos14489/Pantella-Spell). Updates made on one repo can be intertwined with the other, so it is best to ensure you have the latest versions of each. Typically the launcher will handle this, but if you're running the source code directly, you'll need to do this manually.
 
 # FAQ
 

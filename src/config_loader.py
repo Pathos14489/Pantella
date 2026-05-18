@@ -317,7 +317,7 @@ class ConfigLoader:
         if self.web_configurator is None:
             def enable_web_configurator():
                 root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-                dlg = OptionDialog(root, "Enable Web Configurator?", "The web configurator is a web interface that allows you to change your config settings in real time without having to edit the config file manually. It can be accessed by going to http://localhost:8000 in your web browser while Pantella is running. Do you want to enable the web configurator? Warning: It is not feature complete and you may have to still manually edit your current config file manually for all settings changes.", ["Yes", "No"])
+                dlg = OptionDialog(root, "Enable Web Configurator?", "The web configurator is a web interface that allows you to change your config settings in without having to edit the config file manually.\nIt can be accessed by going to http://localhost:8000 in your web browser while Pantella is running.\nDo you want to enable the web configurator?\nWarning: It is not feature complete and you may still have to manually edit your current config file manually for all settings changes.", ["Yes", "No"])
                 root.withdraw() # hide the root window again after the dialog is closed
                 return dlg.result
             self.web_configurator = enable_web_configurator() == "Yes"

@@ -20,23 +20,23 @@ from src.ui import root, OptionDialog, MessageBox
 def get_interface():
     root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
     available_interfaces = config_loader.interface_configs.keys()
-    dlg = OptionDialog(root, "Select Interface", "Select the game interface to use with Pantella. You can change this later in the [game_id]_config.json file or by using the web configurator.", available_interfaces)
+    dlg = OptionDialog(root, "Select Interface", "Select the game interface to use with Pantella.\nYou can change this later in the [game_id]_config.json file or by using the web configurator.", available_interfaces)
     root.withdraw() # hide the root window again after the dialog is closed
     return dlg.result
 def ask_always_open_interface_selection():
     root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-    dlg = OptionDialog(root, "Always Open Interface Selection?", "Do you want to always open the interface selection dialog on startup? You can change this later in the startup.json file.", ["Yes", "No"])
+    dlg = OptionDialog(root, "Always Open Interface Selection?", "Do you want to always open the interface selection dialog on startup?\nYou can change this later in the startup.json file.", ["Yes", "No"])
     root.withdraw() # hide the root window again after the dialog is closed
     return dlg.result == "Yes"
 def get_default_interface():
     root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
     available_interfaces = config_loader.interface_configs.keys()
-    dlg = OptionDialog(root, "Select Default Interface", "Select the default game interface to use with Pantella. This will be the default interface used on startup if 'Always Open Interface Selection' is set to false. You can change this later in the startup.json file.", available_interfaces)
+    dlg = OptionDialog(root, "Select Default Interface", "Select the default game interface to use with Pantella.\nThis will be the default interface used on startup if 'Always Open Interface Selection' is set to false. You can change this later in the startup.json file.", available_interfaces)
     root.withdraw() # hide the root window again after the dialog is closed
     return dlg.result
 def show_message():
     root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-    dlg = MessageBox(root, "Welcome to Pantella!", "Welcome to Pantella! It looks like this is your first time running Pantella. We're going to walk you through a few first time setup steps. You may notice a small extra window open with this popup, that is nothing to be concerned about, just a quirk of how we're handling these popups that will hopefully be addressed and fixed later, but it's a relatively minor cosmetic issue so it isn't high on the agenda currently.\nAfter this initial setup, it's highly recommended that you please go through your generated config file for the selected interface and change any settings you'd like to customize.\nPlease remember that Pantella is developed by a small team and may have unexpected bugs. If you need help with configuring your settings, or you encounter a bug or error, please join the Discord server for support: https://discord.gg/pantella")
+    dlg = MessageBox(root, "Welcome to Pantella!", "Welcome to Pantella!\nIt looks like this is your first time running Pantella. We're going to walk you through a few first time setup steps.\nYou may notice a small extra window open with this popup, that is nothing to be concerned about, just a quirk of how we're handling these popups that will hopefully be addressed and fixed later, but it's a relatively minor cosmetic issue so it isn't high on the agenda currently.\nAfter this initial setup, it's highly recommended that you please go through your generated config file for the selected interface and change any settings you'd like to customize, but it should work when you're done provided you set it up correctly.\nPlease remember that Pantella is developed by a single developer and may have unexpected bugs.\nIf you need help with configuring your settings, or you encounter a bug or error, please join the Discord server for support: https://discord.gg/pantella")
     root.withdraw() # hide the root window again after the dialog is closed
 
 
