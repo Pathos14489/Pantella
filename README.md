@@ -60,6 +60,8 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 		- [0.7 - Install Requirements in Game](#07---install-requirements-in-game)
 	- [1 - Getting Started - Installing the Launcher](#1---getting-started---installing-the-launcher)
 	- [2 - Configuring the Launcher](#2---configuring-the-launcher)
+		- [2.1 - Setting Up Your Game and Mod Manager](#21---setting-up-your-game-and-mod-manager)
+		- [2.2 - Downloading the Repository and Deploying the Plugin](#22---downloading-the-repository-and-deploying-the-plugin)
 		- [Launcher File Structure Overview](#launcher-file-structure-overview)
 		- [Pantella File Structure Overview](#pantella-file-structure-overview)
 	- [3 - Run Pantella](#3---run-pantella)
@@ -284,19 +286,24 @@ First click on the latest release under Releases. And follow the installation in
 I recommend somewhere on the same drive as your game of choice, this will reduce latency caused by moving the voicelines from Pantella into the game directory, but somewhere like your desktop is also probably fine if you only use SSDs. Once you've unpackged the release, go open the launcher.
 
 ## 2 - Configuring the Launcher
+
+### 2.1 - Setting Up Your Game and Mod Manager
+
 When you first open the launcher, you'll see a bunch of repositories available to download. Don't touch them yet. First, click up here on the settings button:
 
-<img src="./img/step_2_image_1.png" alt="Pantella logo" width="float: left; margin-left:0%; margin-right:100%; clear:both;"/>
+<img src="./img/step_2_image_1.png" alt="Pantella logo" style="float: left; margin-left:0%; margin-right:100%; clear:both;"/>
 
 Enable a game and configure the settings for that game.  Here's an example of how my Mod Organizer 2 config looks in the launcher:
 
-<img src="./img/step_2_image_2.png" alt="Pantella logo" width="float: left; margin-left:0%; margin-right:100%;"/>
+<img src="./img/step_2_image_2.png" alt="Pantella logo" style="float: left; margin-left:0%; margin-right:100%;"/>
+
+### 2.2 - Downloading the Repository and Deploying the Plugin
 
 Close settings and download the repository of Mantella/Pantella you want to use(we're going to assume you want to use Pantella). For support using other forks, please go ask for it in their server(s) unless the problem is definitely an issue with the launcher. Note that the repositories are all subject to live updates, and may not run on a given update if the committer wasn't careful/they're not maintaining a stable main branch(guilty as charged). This is not the launcher's fault, this is not the other developers fault, this might be my fault, but this is just the pain of using the live updated source code. Please bear with us, change hurts(especially if you like throwing your spare change at people) and takes time. ❤️
 
 After it's done downloading, your front menu should look like this:
 
-<img src="./img/step_2_image_3.png" alt="Pantella logo" width="float: left; margin-left:0%; margin-right:100%;width:100%;"/>
+<img src="./img/step_2_image_3.png" alt="Pantella logo" style="float: left; margin-left:0%; margin-right:100%;width:100%;"/>
 
 If your plugins haven't appeared with a deploy button, please restart the launcher. If they still don't appear, reach out for support, that's a bug with the launcher and we want to help fix it. If they have appeared, please click deploy on the plugin of your choice. If you're using Mod Organizer 2, you might have to click this button to refresh your modslist:
 
