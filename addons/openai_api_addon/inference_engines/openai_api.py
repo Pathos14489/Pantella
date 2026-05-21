@@ -78,7 +78,7 @@ class LLM(base_LLM):
         def get_api_base():
             options_list = ["OpenRouter API", "Custom API Base"]
             with root_context_manager as root:
-                popup = OptionDialog(root, "Select API Base", "Please select the API base to use for the OpenAI API. If you want to use the OpenRouter API, select 'OpenRouter API'. If you want to use a custom API base, select 'Custom API Base' and enter the URL for the API base in the next prompt. If you're not sure, select 'OpenRouter API'.", options_list)
+                popup = OptionDialog(root, "Select API Base", "Please select the API base to use for the OpenAI API. If you want to use the OpenRouter API, select 'OpenRouter API'.\nIf you want to use a custom API base, select 'Custom API Base' and enter the URL for the API base in the next prompt. If you're not sure, select 'OpenRouter API'.", options_list)
             if popup.result == "OpenRouter API":
                 return "https://openrouter.ai/api/v1"
             elif popup.result == "Custom API Base":
@@ -97,7 +97,7 @@ class LLM(base_LLM):
 
         if self.config.openai_model is None:
             with root_context_manager as root:
-                popup = StringInputPopup(root, "Enter OpenAI Model Name", "Please enter the name of the OpenAI model you want to use for completions. This should be the name of a model that is compatible with the OpenAI API format. If you're not sure, check the documentation for your API or use a common model name like 'meta-llama/llama-3.3-70b-instruct:free'. If you're using the OpenRouter API base, you can use any model that is can do multiple system messages scattered throughout the context and that is available on OpenRouter. If you input nothing, the default will be 'meta-llama/llama-3.3-70b-instruct:free' for the OpenRouter API base.", hide_input=False)
+                popup = StringInputPopup(root, "Enter OpenAI Model Name", "Please enter the name of the OpenAI model you want to use for completions.\nThis should be the name of a model that is compatible with the OpenAI API format.\nIf you're not sure, check the documentation for your API or use a common model name like 'meta-llama/llama-3.3-70b-instruct:free'.\nIf you're using the OpenRouter API base, you can use any model that is can do multiple system messages scattered throughout the context and that is available on OpenRouter.\nIf you input nothing, the default will be 'meta-llama/llama-3.3-70b-instruct:free' for the OpenRouter API base.", hide_input=False)
             self.config.openai_model = popup.result.strip()
             save_config = True
         if save_config:
@@ -160,7 +160,7 @@ class LLM(base_LLM):
             logging.error(f"OpenAI API key file not found at {self.config.openai_api_key_path}! Creating file now...")
             def get_key_from_user():
                 with root_context_manager as root:
-                    popup = StringInputPopup(root, "Enter OpenAPI API Key", "Please enter your OpenAI API provider key. If you don't have one, you can get one for free at https://openrouter.ai/. Note: This is not an OpenAI key, those will not work, it must be an OpenRouter key by default without changing the base URL. This is needlessly confusing because OpenAI named their API standard the OpenAI API standard, and because everyone uses it and calls it that, it's very confusing if you don't know that it's the name of the standard and not the name of the service. This key is required to use the OpenAI API inference engine in Pantella when using an inference provider. If you're using a local API, you can probably put whatever you want here and it'll work fine.", hide_input=True)
+                    popup = StringInputPopup(root, "Enter OpenAPI API Key", "Please enter your OpenAI API provider key. If you don't have one, you can get one for free at https://openrouter.ai/.\nNote: This is not an OpenAI key, those will not work, it must be an OpenRouter key by default without changing the base URL.\nThis is needlessly confusing because OpenAI named their API standard the OpenAI API standard, and because everyone uses it and calls it that, it's very confusing if you don't know that it's the name of the standard and not the name of the service.\nThis key is required to use the OpenAI API inference engine in Pantella when using an inference provider.\nIf you're using a local API, you can probably put whatever you want here and it'll work fine.", hide_input=True)
                 return popup.result
             api_key = get_key_from_user()
             with open(self.config.openai_api_key_path, 'w') as f:
