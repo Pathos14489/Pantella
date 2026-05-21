@@ -262,7 +262,7 @@ class ConfigLoader:
             def select_python_binary():
                 root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
                 available_binaries = ["python", "python3", "../../python-3.10.11-embed/python.exe"]
-                dlg = OptionDialog(root, "Select Python Binary", f"Select the python binary to use with Pantella. If you have python added to your system path and want to use it, you can select 'python' or 'python3'. If you want to use the embedded python installation that comes with the launcher, select '../../python-3.10.11-embed/python.exe'. You can change this later in your {self.config_path} file. If you are running Windows 10/11 using the Pantella Launcher, you should choose '../../python-3.10.11-embed/python.exe'", available_binaries)
+                dlg = OptionDialog(root, "Select Python Binary", f"Select the python binary to use with Pantella. If you have python added to your system path and want to use it, you can select 'python' or 'python3'.\nIf you want to use the embedded python installation that comes with the launcher, select '../../python-3.10.11-embed/python.exe'.\nYou can change this later in your {self.config_path} file.\n\nIf you are running Windows 10/11 using the Pantella Launcher, you should choose '../../python-3.10.11-embed/python.exe'", available_binaries)
                 root.withdraw() # hide the root window again after the dialog is closed
                 return dlg.result
             self.python_binary = select_python_binary()
