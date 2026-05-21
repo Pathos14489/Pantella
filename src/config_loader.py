@@ -70,7 +70,7 @@ for addon_dir in os.listdir(addons_path):
 logging.info("Imported all interface configs, ready to use them!")
 
 class ConfigLoader:
-    def __init__(self, config_path='config.json', selected_interface=None):
+    def __init__(self, config_path, selected_interface=None):
         self.conversation_manager = None
         self.selected_interface = selected_interface
         self.game_id = ""
