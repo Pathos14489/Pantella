@@ -276,7 +276,7 @@ Pantella supports Mod Organizer 2 and Vortex. If you don't have a mod manager, y
 
 ### Mod Organizer 2 (Recommended)
 
-MOD2 can be downloaded from [here](https://www.nexusmods.com/skyrimspecialedition/mods/6194).
+MO2 can be downloaded from [here](https://www.nexusmods.com/skyrimspecialedition/mods/6194).
 
 ### Vortex (Not Recommended)
 Vortex can be downloaded from [here](https://www.nexusmods.com/site/mods/1).
