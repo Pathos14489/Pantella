@@ -32,7 +32,7 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 	- [Grammar Restrained Chain-of-Thought Support](#grammar-restrained-chain-of-thought-support)
 	- [Automatic Character Generation](#automatic-character-generation)
 	- [Supported Games](#supported-games)
-- [Requirements \& Recommendations](#requirements--recommendations)
+- [Requirements](#requirements)
 	- [Hardware Requirements](#hardware-requirements)
 	- [Storage Requirements](#storage-requirements)
 	- [Compatibility](#compatibility)
@@ -45,6 +45,7 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 			- [koboldcpp (Free Local Models)](#koboldcpp-free-local-models)
 			- [koboldcpp Google Colab Notebook (Free Cloud Service, Potentially Spotty Access / Availablity)](#koboldcpp-google-colab-notebook-free-cloud-service-potentially-spotty-access--availablity)
 		- [Local LLMs (llama-cpp-python)](#local-llms-llama-cpp-python)
+- [Installing Prerequisites](#installing-prerequisites)
 	- [1 - Install Git (Optional but Recommended)](#1---install-git-optional-but-recommended)
 	- [2w - Install Git for Windows](#2w---install-git-for-windows)
 	- [2l - Install Git for Linux](#2l---install-git-for-linux)
@@ -59,6 +60,7 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 		- [Mod Organizer 2 (Recommended)](#mod-organizer-2-recommended)
 		- [Vortex (Not Recommended)](#vortex-not-recommended)
 	- [8 - Install Requirements in Game](#8---install-requirements-in-game)
+	- [9 - Restart Your Computer](#9---restart-your-computer)
 - [Installation (Launcher)](#installation-launcher)
 	- [1 - Getting Started - Installing the Launcher](#1---getting-started---installing-the-launcher)
 	- [2 - Configuring the Launcher](#2---configuring-the-launcher)
@@ -156,13 +158,15 @@ When a character is first encountered, if a character entry is not found in the 
 
 Pantella currently supports Skyrim Special Edition, Skyrim Anniversary Edition, Skyrim VR, Fallout New Vegas and (technically) Fallout 3 via Tale of Two Wastelands. Support for other games can be added by adding another game_interface module and adding the appropriate character entries to the characters directory. If you want to add support for another game and don't know where to start or what help, feel free to reach out to me on Discord or open an issue on GitHub and we can discuss how to do it. Enderal is also somewhat supported, but there are no character entries for Enderal included with Pantella at this time.
 
-# Requirements & Recommendations
+# Requirements
 ## Hardware Requirements
 There are no discovered minimum requirements at the time of writing for Pantella. Pantella needs a certain amount of hardware allocation to run successfully for specific setups though, and if this is being soaked up by other hardware intensive mods, it may crash.
 
 The minimum requirements for xVASynth can be found on its [Steam page](https://store.steampowered.com/app/1765720/xVASynth/). It runs in CPU mode by default, using a single CPU core/thread. Only supports GPU acceleration on NVIDIA cards that have CUDA. Using the same GPU as the game will produce stutter, especially if it can't allocate ~2 GB of VRAM. You may try using an older NVIDIA card that has CUDA on another free PCI-Express slot of your PC and run any CUDA enabled services on that.
 
 If you're trying to minimize the amount of compute needed to run Pantella, I'd advise using xVASynth or PiperTTS (if your selected game supports these TTSes) and using Open Router. This should provide the easiest to run experience.
+
+It's highly recommended to have at least 16 GB of RAM to run Pantella even with an inference provider, and to install it on an SSD if possible. It will have major latency issues if installed on an HDD, but it should still work. If you're using a local LLM, the hardware requirements will depend on the model you're using, but generally, you'll want a pretty powerful GPU with a good amount of VRAM to run local models, especially if you're using one of the larger models. Running local models on CPU is generally not recommended unless you have a very powerful CPU and are using a smaller model, and even then, it may struggle to keep up with the pace of a conversation in game.
 
 ## Storage Requirements
 Pantella requires around 4-6 GB of storage space and includes the voice models/latents for PiperTTS, and xTTS_api out of the box. xVASynth requires around 4 GB of storage space for the software itself and after downloading all the voice models for Skyrim and Fallout New Vegas I have used around 38 GB of storage space. If you're using a local language model, you'll have to factor in the size of the model you're using yourself. But suffice to say, you'll need a fair amount of storage space to run Pantella with all the bells and whistles.
@@ -183,7 +187,7 @@ There are a number of different LLMs to choose from, ranging from small local mo
 Copy your OpenAI secret API key (see [here](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) if you need help finding it (you will need to set up an account if you haven't already) and paste into `PantellaSoftware/addons/openai_api/OPENAI_API_SECRET_KEY.txt`. Do not share this key with anyone. While there is a free trial, you will need to set up your payment details for the API to work. OpenAI is NOT recommended, their API is very limited, and their content policy is utterly draconian. Please use any other option, literally any other option.
 
 #### OpenRouter (First $1 Free, Free Models Often Available)
-Create an account with OpenRouter. Go to the "Keys" tab and generate a new key, saving its value to `PantellaSoftware/addons/openai_api/OPENAI_API_SECRET_KEY.txt`. Do not share this secret key with anyone. In your associated `[game_id]_config.json`, set `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1" (without quotes).
+Create an account with OpenRouter. Go to the "Keys" tab and generate a new key, saving its value to `PantellaSoftware/addons/openai_api/OPENAI_API_SECRET_KEY.txt`. Do not share this secret key with anyone. In your associated `[game_id]_config.json`, set `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `meta-llama/llama-3.3-70b-instruct:free`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1" (without quotes).
 
 #### text-generation-webui (Free Local Models)
 Install text-generation-webui from [here](https://github.com/oobabooga/text-generation-webui). Place a local model into the `text-generation-webui\models folder` (to get started, you can download `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true)). Paste the text "--extensions openai --auto-launch" (as well as "--cpu" for CPU users) into the installed folder's CMD_FLAGS.txt file. Start text-generation-webui and wait for the UI to open in your web browser. Navigate to the "Model" tab, select your model from the drop-down list, and click "Load". In your `[game_id]_config.json` file, set `alternative_openai_api_base` to "http://127.0.0.1:5000/v1" (without quotes). Just to note, you need to make sure text-generation-webui is running when running Pantella!
@@ -196,6 +200,8 @@ This option does not require a powerful computer to run a large language model, 
 
 ### Local LLMs (llama-cpp-python)
 If you have a powerful computer, you can run a local LLM. This is the most powerful and flexible option, but it requires a lot of resources. For example, you can run a local LLM using the llama-cpp-python backend. To do this, you will need to install the llama-cpp-python backend by running the script included with the launcher for your specific setup/hardware. You will also need to download a local model, such as `toppy-m-7b.Q4_K_S.gguf` from [here](https://huggingface.co/TheBloke/Toppy-M-7B-GGUF/tree/main?not-for-all-audiences=true). Once you have the model, set `model_path` to the path to the model in your `[game_id]_config.json` file, and it should be good to go.
+
+# Installing Prerequisites
 
 ## 1 - Install Git (Optional but Recommended)
 Pantella optionally requires git to be installed to perform all updates correctly. If you don't intend to update your installation, you can skip this step. This is required even if using the launcher. If you try to run the `./install_pantella_requirements.bat` script without git installed, it will fail immediately without an error message(unless you run the bat file in the terminal). If you failed an update because you don't have git installed, simply install git and then run the `./install_pantella_requirements.bat` script to fix your installation and get the latest updates.
@@ -290,17 +296,21 @@ Depending on which game you want to get Pantella working for, you will need to i
 
 Note: Don't install the plugins from the above pages yet, just the requirements. The plugins themselves will be installed via the launcher in the next steps. You can install them manually, but the launcher will automatically install them for you and keep them updated, so it's recommended to just install the requirements manually and let the launcher handle the plugins themselves.
 
+## 9 - Restart Your Computer
+
+After installing the above requirements, it's required to restart your computer to ensure all the changes take effect and are usable by Pantella. If you don't restart your computer, you may encounter errors when trying to run Pantella, and it may not work correctly until you do. Especially for FFmpeg and the Microsoft C++ Build Tools, a restart is required for them to work correctly with Pantella.
+
 # Installation (Launcher)
 ## 1 - Getting Started - Installing the Launcher
 
 First things first, you'll need the latest launcher. You can find that here: https://github.com/Pathos14489/Pantella-Launcher/releases
 
 First click on the latest release under Releases. And follow the installation instructions for the launcher on the release. The instructions will likely be something like this:
-1. Download `PL-v0.0.6.7z` and extract it where you want Pantella to be installed.
+1. Download `PL-v0.0.7.7z` and extract it where you want Pantella to be installed.
 2. Download the Python environment necessary for your repo of choice. You can download only one or both, but at least one of them is necessary for the launcher to uh, do anything.
 	- **Pantella** requires `python-3.10.11-embed.7z`.
 	- **Mantella** requires `python-3.11.6-embed.7z`. 
-I recommend somewhere on the same drive as your game of choice, this will reduce latency caused by moving the voicelines from Pantella into the game directory, but somewhere like your desktop is also probably fine if you only use SSDs. Once you've unpackged the release, go open the launcher.
+I recommend somewhere on the same drive as your game of choice, this will reduce latency caused by moving the voicelines from Pantella into the game directory, and also likely reduce how many writes are occurring to your drives, but somewhere like your desktop is also probably fine if you only use SSDs. Once you've unpacked the release, go open the launcher.
 
 ## 2 - Configuring the Launcher
 
@@ -354,7 +364,7 @@ Now just click start for Pantella and let it perform first time set up. It will 
 
 ### 3.1 - Configure LLM Settings
 
-After you decide on type of LLM you want to use, we're going to assume you left it on the default, which is `openai_api` with the OpenRouter API using `meta-llama/llama-3.3-70b-instruct:free`. If you want to use a different LLM from OpenRouter, you can change the `model` and `alternative_openai_api_base` settings in your `[game_id]_config.json` file or set it during first time setup. If you want to change the inference engine, you can set `inference_engine` in your `[game_id]_config.json` file to either `koboldcpp` or `text-generation-webui`. If you're using a local model, you'll need to set the path to the model in your `[game_id]_config.json` file. If you're using OpenRouter, you'll need to set the `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `undi95/toppy-m-7b`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1/" (it's already set by default, so if you haven't changed it, you shouldn't have to do anything here.)
+After you decide on type of LLM you want to use, we're going to assume you left it on the default, which is `openai_api` with the OpenRouter API using `meta-llama/llama-3.3-70b-instruct:free`. If you want to use a different LLM from OpenRouter, you can change the `model` and `alternative_openai_api_base` settings in your `[game_id]_config.json` file or set it during first time setup. If you want to change the inference engine, you can set `inference_engine` in your `[game_id]_config.json` file to either `koboldcpp` or `text-generation-webui`. If you're using a local model, you'll need to set the path to the model in your `[game_id]_config.json` file. If you're using OpenRouter, you'll need to set the `model` to a model from the list [here](https://openrouter.ai/docs#models) (eg `meta-llama/llama-3.3-70b-instruct:free`). Set `alternative_openai_api_base` to "https://openrouter.ai/api/v1/" (it's already set by default, so if you haven't changed it, you shouldn't have to do anything here.)
 If you're using OpenRouter, you'll need to create an account with OpenRouter. Go to the "Keys" tab when you hover over your user icon at the top right while logged in and generate a new key, saving its value to `./GPT_SECRET_KEY.txt`. Do not share this secret key with anyone as it's effectively your login information for OpenRouter.
 
 ### 3.2 - Configure Speech Recognition Settings
