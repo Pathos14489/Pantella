@@ -55,7 +55,10 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 		- [4l - Install Microsoft C++ Build Tools for Linux](#4l---install-microsoft-c-build-tools-for-linux)
 	- [5 - CUDA (Recommended) - Requires NVIDIA GPU](#5---cuda-recommended---requires-nvidia-gpu)
 	- [6 - Do you want to use xVASynth? (Optional)](#6---do-you-want-to-use-xvasynth-optional)
-	- [7 - Install Requirements in Game](#7---install-requirements-in-game)
+	- [7 - Pick a Mod Manager](#7---pick-a-mod-manager)
+		- [Mod Organizer 2 (Recommended)](#mod-organizer-2-recommended)
+		- [Vortex (Not Recommended)](#vortex-not-recommended)
+	- [8 - Install Requirements in Game](#8---install-requirements-in-game)
 - [Installation (Launcher)](#installation-launcher)
 	- [1 - Getting Started - Installing the Launcher](#1---getting-started---installing-the-launcher)
 	- [2 - Configuring the Launcher](#2---configuring-the-launcher)
@@ -267,7 +270,18 @@ xVASynth is a very good Text-To-Speech software that can be used by Pantella for
 
 Make absolutely sure xVASynth isn't already running when Pantella starts unless it's running in headless mode. It will error out if it's already running when Pantella tries to start it in headless mode. If you want to use the xVASynth UI, you can start it after Pantella has started and it should work fine.
 
-## 7 - Install Requirements in Game
+## 7 - Pick a Mod Manager
+
+Pantella supports Mod Organizer 2 and Vortex. If you don't have a mod manager, you can download one of these. Mod Organizer 2 is generally recommended because it doesn't argue with you about how Pantella Launcher deploys the plugins into it's mod directories. Vortex on the other hand, you will have to restart Vortex after each update/deployment, and when you do so it's going to show a popup scolding you for letting the Launcher touch it's precious files. If you have a mod manager already, make sure to set it up in the launcher settings before deploying the plugin, but just be aware that Vortex is going to be very angry with you and there's not a single thing I or you can do about it.
+
+### Mod Organizer 2 (Recommended)
+
+MOD2 can be downloaded from [here](https://www.nexusmods.com/skyrimspecialedition/mods/6194).
+
+### Vortex (Not Recommended)
+Vortex can be downloaded from [here](https://www.nexusmods.com/site/mods/1).
+
+## 8 - Install Requirements in Game
 
 Depending on which game you want to get Pantella working for, you will need to install the required mods for the in-game plugin to function. You can see the required mods for each plugin on the plugin github page:
 
