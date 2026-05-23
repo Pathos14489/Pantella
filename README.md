@@ -46,7 +46,7 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 			- [koboldcpp Google Colab Notebook (Free Cloud Service, Potentially Spotty Access / Availablity)](#koboldcpp-google-colab-notebook-free-cloud-service-potentially-spotty-access--availablity)
 		- [Local LLMs (llama-cpp-python)](#local-llms-llama-cpp-python)
 - [Installing Prerequisites](#installing-prerequisites)
-	- [1 - Install Git (Optional but Recommended)](#1---install-git-optional-but-recommended)
+	- [1 - Install Git](#1---install-git)
 	- [2w - Install Git for Windows](#2w---install-git-for-windows)
 	- [2l - Install Git for Linux](#2l---install-git-for-linux)
 	- [3w - Install FFmpeg for Windows (Required for FNV players)](#3w---install-ffmpeg-for-windows-required-for-fnv-players)
@@ -203,8 +203,8 @@ If you have a powerful computer, you can run a local LLM. This is the most power
 
 # Installing Prerequisites
 
-## 1 - Install Git (Optional but Recommended)
-Pantella optionally requires git to be installed to perform all updates correctly. If you don't intend to update your installation, you can skip this step. This is required even if using the launcher. If you try to run the `./install_pantella_requirements.bat` script without git installed, it will fail immediately without an error message(unless you run the bat file in the terminal). If you failed an update because you don't have git installed, simply install git and then run the `./install_pantella_requirements.bat` script to fix your installation and get the latest updates.
+## 1 - Install Git
+Pantella requires git to be installed to perform all updates correctly. This is required even if using the launcher. If you try to run the `./install_pantella_requirements.bat` script without git installed, it will fail immediately without an error message(unless you run the bat file in the terminal). If you failed an update because you don't have git installed, simply install git and then run the `./install_pantella_requirements.bat` script to fix your installation and get the latest updates.
 
 ## 2w - Install Git for Windows
 1. Download the latest version of Git for Windows from [here](https://git-scm.com/download/win).
