@@ -103,7 +103,7 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 	- [Why does the requirements.txt file include your own forks of existing modules?](#why-does-the-requirementstxt-file-include-your-own-forks-of-existing-modules)
 	- [Why do I have to launch the Pantella backend from the launcher and not just start the game like Mantella?](#why-do-i-have-to-launch-the-pantella-backend-from-the-launcher-and-not-just-start-the-game-like-mantella)
 		- [But isn't the launcher an exe you're distributing? What's the difference?](#but-isnt-the-launcher-an-exe-youre-distributing-whats-the-difference)
-	- [What is this blue terminal window that opens when I download a repository with the launcher?](#what-is-this-blue-terminal-window-that-opens-when-i-download-a-repository-with-the-launcher)
+	- [What is this terminal window that opens when I download/update a repository with the launcher?](#what-is-this-terminal-window-that-opens-when-i-downloadupdate-a-repository-with-the-launcher)
 - [Attributions](#attributions)
 
 # Preface - "What's different from Mantella?"
@@ -516,8 +516,8 @@ I wanted to make the development process easier and remove compiling the python 
 
 The launcher is compiled to an exe, yes, but the source for building the launcher yourself exists in the [Pantella Launcher repo](https://github.com/Pathos14489/Pantella-Launcher). You can build the launcher yourself if you want, fork it, modify it, etc. I actually forked Mantella in the first place because I didn't like the exe that the dev didn't want to tell people how to compile themselves, it sketched me out. I'm not claiming I think Mantella's dev is sketchy, I just prefer to distribute software in a way that is more transparent and gives users more control because I'm a paranoid person who doesn't like running random exes from the internet even if they're probably completely fine.
 
-## What is this blue terminal window that opens when I download a repository with the launcher?
-That's powershell. The launcher is using powershell to run `git clone` and then `git pull` commands to download and update the repositories. If you see this window, it means the launcher is downloading or updating the repository you selected. If you close this window while it's open, it will likely cause issues with the repository download/update, so I recommend just leaving it open until it closes on its own.
+## What is this terminal window that opens when I download/update a repository with the launcher?
+The launcher is using the console to run `git clone` and then `git pull` commands to download and update the repositories. If you see this window, it means the launcher is downloading or updating the repository you selected. If you close this window while it's open, it will likely cause issues with the repository download/update, so I recommend just leaving it open until it closes on its own.
 
 # Attributions
 Pantella uses material from the "[Skyrim: Characters](https://elderscrolls.fandom.com/wiki/Category:Skyrim:_Characters)" articles on the [Elder Scrolls wiki](https://elderscrolls.fandom.com/wiki/The_Elder_Scrolls_Wiki), [Fallout New Vegas: Characters](https://fallout.fandom.com/wiki/Fallout:_New_Vegas_characters) and [Fallout 3: Characters](https://fallout.fandom.com/wiki/Fallout_3_characters) articles on the [Fallout wiki](https://fallout.fandom.com/wiki/Fallout_Wiki) at [Fandom](https://www.fandom.com/) and is licensed under the [Creative Commons Attribution-Share Alike License](https://creativecommons.org/licenses/by-sa/3.0/).
