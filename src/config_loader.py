@@ -235,19 +235,16 @@ class ConfigLoader:
                 config[key] = default[key]
                 save = True
                 logging.info(f"Saving new key '{key}' to config file")
-            for sub_key in default[key]:
-                if sub_key not in config[key]:
-                    config[key][sub_key] = default[key][sub_key]
-                    save = True
-                    logging.info(f"Saving new subkey '{key}':'{sub_key}' to config file")
-                    
-        for key in default: # Set the config settings to the loader
-            for sub_key in default[key]:
-                # print(f"Setting {sub_key} to {config[key][sub_key]}")
-                if "_path" in sub_key or "_file" in sub_key:
-                    setattr(self, sub_key, config[key][sub_key].replace("\\", "/").replace("/","\\"))
-                else:
-                    setattr(self, sub_key, config[key][sub_key])
+            if default[key] is not None and (type(default[key]) == dict): # If the default setting is a dictionary, check for missing subkeys and set them to the default settings if they are missing
+                for sub_key in default[key]:
+                    if sub_key not in config[key]:
+                        config[key][sub_key] = default[key][sub_key]
+                        save = True
+                        logging.info(f"Saving new subkey '{key}':'{sub_key}' to config file")
+                    if "_path" in sub_key or "_file" in sub_key:
+                        setattr(self, sub_key, config[key][sub_key].replace("\\", "/").replace("/","\\"))
+                    else:
+                        setattr(self, sub_key, config[key][sub_key])
 
         if new:
             def select_tts():
@@ -696,7 +693,7 @@ class ConfigLoader:
                         "sparkling_heart",
                         "blue_heart"
                     ],
-                    "flirtaious": [
+                    "flirtatious": [
                         "wink",
                         "smirk",
                         "musical_note",
