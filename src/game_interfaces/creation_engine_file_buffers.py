@@ -6,6 +6,7 @@ import os
 import shutil
 import sys
 import asyncio
+from src.ui import FolderSelectionDialog, root_context_manager
 logging.info("Imported required libraries in game_interfaces/creation_engine_file_buffers.py")
 
 valid_games = ["fallout4","skyrim","fallout4vr","skyrimvr"]
@@ -28,8 +29,19 @@ class GameInterface(BaseGameInterface):
                     pantella_folder_file_path = self.game_path+f'/_pantella_{self.config.game_id}_folder.txt'
                 if not os.path.exists(pantella_folder_file_path):
                     logging.warn(f'''Warning: Could not find _pantella_{self.config.game_id}_folder.txt in {self.game_path}.\nIf you have not yet activated Pantella in-game you can safely ignore this message.\nIf you have activated Pantella in-game please check that your {self.config.game_id} folder has been set correctly in the associated game interface config.\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/Pathos14489/Pantella\n''')
-        if not os.path.exists(self.mod_voice_dir):
-            raise FileNotFoundError(f"Mod voice directory not found at {self.mod_voice_dir}")
+        save_config = False                    
+        while not os.path.exists(self.mod_voice_dir):
+            def select_mod_directory():
+                with root_context_manager as root:
+                    if self.config.linux_mode:
+                        dlg = FolderSelectionDialog(root, f"Error: Your selected Mod Directory was invalid. Please select a new one!\nSelect Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. /home/user/MO2/mods/PantellaMod/): ")
+                    else:
+                        dlg = FolderSelectionDialog(root, f"Error: Your selected Mod Directory was invalid. Please select a new one!\nSelect Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. C:\\MO2\\mods\\PantellaMod\\): ")
+                    return dlg.result
+            self.config.mod_path = select_mod_directory()
+            save_config = True
+        if save_config:            
+            self.config.save()
         
         self.audio_supported = True
         self.text_supported = True
