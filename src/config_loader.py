@@ -259,6 +259,8 @@ class ConfigLoader:
             selected_tts = select_tts()
             logging.info(f"Selected TTS: {selected_tts}")
             self.tts_engine = [selected_tts]
+        
+        if self.python_binary is None or self.python_binary == "":
             def select_python_binary():
                 root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
                 available_binaries = ["python", "python3", "../../python-3.10.11-embed/python.exe"]
