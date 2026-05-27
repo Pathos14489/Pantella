@@ -38,10 +38,10 @@ class GameInterface(BaseGameInterface):
                     else:
                         dlg = FolderSelectionDialog(root, f"Error: Your selected Mod Directory was invalid. Please select a new one!\nSelect Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. C:\\MO2\\mods\\PantellaMod\\): ")
                     return dlg.result
-            self.config.mod_path = select_mod_directory()
+            self.config.current_interface_config["mod_path"] = select_mod_directory()
             save_config = True
         if save_config:            
-            self.config.save()
+            self.config.save_interface_config()
         
         self.audio_supported = True
         self.text_supported = True
