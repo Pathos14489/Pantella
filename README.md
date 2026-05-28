@@ -84,6 +84,11 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 	- [TTS Addons](#tts-addons)
 	- [Inference Engine Addons](#inference-engine-addons)
 - [Troubleshooting](#troubleshooting)
+	- [AssertionError: Torch not compiled with CUDA enabled](#assertionerror-torch-not-compiled-with-cuda-enabled)
+		- [Installing torch for CUDA 12.8 via Launcher](#installing-torch-for-cuda-128-via-launcher)
+		- [Installing torch for CUDA 12.6 via Launcher](#installing-torch-for-cuda-126-via-launcher)
+		- [Installing torch for CUDA 12.9 via Launcher](#installing-torch-for-cuda-129-via-launcher)
+		- [Installing torch with ROCm support for AMD GPUs via Launcher](#installing-torch-with-rocm-support-for-amd-gpus-via-launcher)
 	- [ChromaDB Memory Editor](#chromadb-memory-editor)
 	- [General Issues Q\&A](#general-issues-qa)
 		- [Conversation ends as soon as spell is cast / \[Errno 2\] No such file or directory: 'path\\to\\Skyrim Special Edition/some\_text\_file.txt'](#conversation-ends-as-soon-as-spell-is-cast--errno-2-no-such-file-or-directory-pathtoskyrim-special-editionsome_text_filetxt)
@@ -360,7 +365,7 @@ Note from pre-tester: This is a good time to get a bagel to reward yourself.
 
 ## 3 - Run Pantella
 
-Now just click start for Pantella and let it perform first time set up. It will popup a bunch of windows and ask you to input a lot of stuff, this is expected, just follow the instructions on the windows and input the requested information. If you have any issues, please reach out on the Discord. We're here to help.
+Now just click start for Pantella and let it perform first time set up. It will popup a bunch of windows and ask you to input a lot of stuff, this is expected, just follow the instructions on the windows and input the requested information. If you have any issues, please check out the [Troubleshooting section](#troubleshooting) or reach out on the Discord for support. We're here to help.reach out on the Discord. We're here to help.
 
 ### 3.1 - Configure LLM Settings
 
@@ -432,6 +437,24 @@ If you have any trouble in getting the repo set up, please reach out on [Discord
 [Pantella-player2](https://github.com/CarlosNahuelcoy/Pantella-player2) (By Gerik Uylerk) adds support for the Player2 inference API and STT API.
 
 # Troubleshooting
+
+## AssertionError: Torch not compiled with CUDA enabled
+
+This error is caused by trying to use a TTS that requires CUDA acceleration without having CUDA installed, or by having an incompatible version of CUDA installed. If you have an NVIDIA GPU and want to use a TTS that requires CUDA acceleration, please make sure to install CUDA 12.8 as described in the prerequisites section. If you have an incompatible version of CUDA installed, you can try installing the correct version, using a different TTS that doesn't require CUDA acceleration, or, if your CUDA version supports `torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0`, you can try installing these versions of torch, torchvision, and torchaudio with the correct CUDA version support for your installed version of CUDA. Currently only `12.6`, `12.8` and `12.9` are supported by these versions of torch, so if you have a different version of CUDA installed, this likely won't work, but you can try it out and see if it works with your version of CUDA. If you have an AMD GPU, you should be able to use the ROCm version of torch, but I have not tested this myself, so I can't guarantee it will work, but you can try it out and see if it works with your AMD GPU. You should need `rocm6.4` to install `torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0` with ROCm support, so if you have an AMD GPU and want to try using the ROCm version of torch, make sure to install ROCm 6.4 and then try installing these versions of torch, torchvision, and torchaudio with ROCm support.
+
+### Installing torch for CUDA 12.8 via Launcher
+This is super easy if you have 12.8, just run the `python3_10_windows_torch_cuda_12-8.bat` script in the launcher to install the correct version of torch with CUDA 12.8 support. 12.8 is the most tested version of CUDA with Pantella, so it's recommended to use this version if you want to use CUDA acceleration with Pantella.
+
+### Installing torch for CUDA 12.6 via Launcher
+
+From the launcher directory, open a powershell window and run `".\python-3.10.11-embed\python.exe" -m pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu126 --no-deps --no-cache-dir --force-reinstall --upgrade`
+
+### Installing torch for CUDA 12.9 via Launcher
+From the launcher directory, open a powershell window and run `".\python-3.10.11-embed\python.exe" -m pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu129 --no-deps --no-cache-dir --force-reinstall --upgrade`
+
+### Installing torch with ROCm support for AMD GPUs via Launcher
+From the launcher directory, open a powershell window and run `".\python-3.10.11-embed\python.exe" -m pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/rocm6.4 --no-deps --no-cache-dir --force-reinstall --upgrade`
+
 ## ChromaDB Memory Editor
 
 Something you might have noticed coming from `summarizing_memory` like Mantella's, is that ChromaDB doesn't store everything in plain text. It's actually kind of a pain in the ass to edit it. As such, I've made a basic memory editor for the ChromaDB memories and included it as a web UI with Pantella. When Pantella is open, and the setting is enabled(it is by default) go to `http://localhost:8022` in your browser to access the memory editor. You can use this to edit memories, delete memories, and add new memories. It's a bit basic, but it should be enough to let you fix any major issues that come up.
