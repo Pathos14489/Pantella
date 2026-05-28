@@ -86,6 +86,7 @@ class ConfigLoader:
         self.load()
         self.interface_configs = interface_configs
         self.current_interface_config = interface_configs[self.game_id]
+        tts.tts_Types["default"] = tts.tts_Types.get(self.current_interface_config.get("default_tts", "xvasynth"), None) # Set the default TTS to the TTS specified in the interface config, or xvasynth if not specified
         # if either "game_path" or "mod_path" are empty or not set, open a prompt to ask the user to set the path for them, and then save the config file with the new paths
         save_interface = False
         if "game_path" in self.current_interface_config and (self.current_interface_config["game_path"] == "" or self.current_interface_config["game_path"] is None):
@@ -316,7 +317,7 @@ class ConfigLoader:
         if self.web_configurator is None:
             def enable_web_configurator():
                 root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-                dlg = OptionDialog(root, "Enable Web Configurator?", "The web configurator is a web interface that allows you to change your config settings in without having to edit the config file manually.\nIt can be accessed by going to http://localhost:8000 in your web browser while Pantella is running.\nDo you want to enable the web configurator?\nWarning: It is not feature complete and you may still have to manually edit your current config file manually for all settings changes.", ["Yes", "No"])
+                dlg = OptionDialog(root, "Enable Web Configurator?", "The web configurator is a web interface that allows you to change your config settings in without having to edit the config file manually.\nIt can be accessed by going to http://localhost:8021/ in your web browser while Pantella is running.\nDo you want to enable the web configurator?\nWarning: It is not feature complete and you may still have to manually edit your current config file manually for all settings changes.", ["Yes", "No"])
                 root.withdraw() # hide the root window again after the dialog is closed
                 return dlg.result
             self.web_configurator = enable_web_configurator() == "Yes"

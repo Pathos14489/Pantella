@@ -9,7 +9,7 @@ logging.info("Imported required libraries in tts.py")
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
     banned_modules = f.read().split("\n")
 
-default = "xvasynth" # The default TTS to use if the one specified in config.json is not found or if default is specified in config.json
+# default = "xvasynth" # The default TTS to use if the one specified in config.json is not found or if default is specified in config.json
 tts_Types = {}
 # Get all TTSes from src/ttses/ and add them to TTS_Types
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "tts_types/")):
@@ -55,7 +55,7 @@ for addon_dir in os.listdir(addons_path):
                     logging.error(f"Failed to import {module_name} from addons.{addon_dir}.tts_types: {e}")
                     logging.error(traceback.format_exc())
                 
-tts_Types["default"] = tts_Types[default]
+# tts_Types["default"] = tts_Types[default]
 logging.info("Imported TTS types in tts.py")
 # print available TTS types
 logging.config(f"Available TTS types: {tts_Types.keys()}")
