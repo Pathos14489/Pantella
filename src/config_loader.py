@@ -88,49 +88,6 @@ class ConfigLoader:
         self.current_interface_config = interface_configs[self.game_id]
         tts.tts_Types["default"] = tts.tts_Types.get(self.current_interface_config.get("default_tts", "xvasynth"), None) # Set the default TTS to the TTS specified in the interface config, or xvasynth if not specified
         # if either "game_path" or "mod_path" are empty or not set, open a prompt to ask the user to set the path for them, and then save the config file with the new paths
-        save_interface = False
-        if "game_path" in self.current_interface_config and (self.current_interface_config["game_path"] == "" or self.current_interface_config["game_path"] is None):
-            logging.error(f"Game path not set for game id {self.game_id} in interface config file. Please set the game path for {self.game_id} to the directory where your game is installed.")
-            if self.linux_mode:
-                # game_path = input(f"Please enter the path to your game directory for {self.game_id} (e.g. /home/user/.steam/steam/steamapps/common/Skyrim Special Edition/): ")
-                def select_game_directory():
-                    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-                    dlg = FolderSelectionDialog(root, f"Select Game Directory for {self.game_id}", f"Please select the game directory for {self.game_id} (e.g. /home/user/.steam/steam/steamapps/common/Skyrim Special Edition/): ")
-                    root.withdraw() # hide the root window again after the dialog is closed
-                    return dlg.result
-            else:
-                # game_path = input(f"Please enter the path to your game directory for {self.game_id} (e.g. C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\): ")
-                def select_game_directory():
-                    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-                    dlg = FolderSelectionDialog(root, f"Select Game Directory for {self.game_id}", f"Please select the game directory for {self.game_id} (e.g. C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\): ")
-                    root.withdraw() # hide the root window again after the dialog is closed
-                    return dlg.result
-            game_path = select_game_directory()
-            save_interface = True
-
-        if "mod_path" in self.current_interface_config and (self.current_interface_config["mod_path"] == "" or self.current_interface_config["mod_path"] is None):
-            logging.error(f"Mod path not set for game id {self.game_id} in interface config file. Please set the mod path for {self.game_id} to the directory where your game mods are located.")
-            if self.linux_mode:
-                # mod_path = input(f"Please enter the path to your game mods folder for {self.game_id} (e.g. /home/user/MO2/mods/PantellaMod/): ")
-                def select_mod_directory():
-                    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-                    dlg = FolderSelectionDialog(root, f"Select Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. /home/user/MO2/mods/PantellaMod/): ")
-                    root.withdraw() # hide the root window again after the dialog is closed
-                    return dlg.result
-            else:
-                # mod_path = input(f"Please enter the path to your game mods folder for {self.game_id} (e.g. C:\\MO2\\mods\\PantellaMod\\): ")
-                def select_mod_directory():
-                    root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
-                    dlg = FolderSelectionDialog(root, f"Select Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. C:\\MO2\\mods\\PantellaMod\\): ")
-                    root.withdraw() # hide the root window again after the dialog is closed
-                    return dlg.result
-            mod_path = select_mod_directory()
-            save_interface = True
-        
-        if save_interface:
-            self.current_interface_config["game_path"] = game_path.replace("\\", "/").replace("/","\\")
-            self.current_interface_config["mod_path"] = mod_path.replace("\\", "/").replace("/","\\")
-            self.save_interface_config()
         logging.config(f"ConfigLoader initialized with config path {config_path}")
         logging.config(f"Current interface config: '{self.current_interface_config}' from game id '{self.game_id}'")
         self.conversation_manager_type = self.current_interface_config["conversation_manager_type"]
@@ -152,14 +109,6 @@ class ConfigLoader:
     @property
     def LLM_Types(self):
         return language_models.LLM_Types
-
-    @property
-    def game_path(self):
-        return self.current_interface_config["game_path"]
-    
-    @property
-    def mod_path(self):
-        return self.current_interface_config["mod_path"]
 
     def save(self):
         """Save the config to the config file"""
@@ -899,6 +848,9 @@ class ConfigLoader:
             if tts_engine_slug != "base_TTS" and tts_engine_slug != "default":
                 if len(tts.tts_Types[tts_engine_slug].default_settings) > 0:
                     default_settings[tts_engine_slug] = tts.tts_Types[tts_engine_slug].default_settings
+        for setting_prop in interface_configs[self.game_id]["settings"]:
+            if setting_prop not in default_settings["Game"]:
+                default_settings["Game"][setting_prop] = interface_configs[self.game_id]["settings"][setting_prop]
         return default_settings
     
     def export(self):
@@ -1095,6 +1047,8 @@ class ConfigLoader:
                     export_values[tts_slug] = {}
                     for setting_key in tts.tts_Types[tts_slug].default_settings:
                         export_values[tts_slug][setting_key] = getattr(self, setting_key)
+        for setting_prop in interface_configs[self.game_id]["settings"]:
+            export_values["Game"][setting_prop] = getattr(self, setting_prop)
         return export_values
     
     def default_types(self):

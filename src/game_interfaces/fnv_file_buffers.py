@@ -47,11 +47,11 @@ class GameInterface(CreationEngineFileBuffersInterface):
         #     if not os.path.exists(self.config.game_path+'\\_pantella_fnv_folder.txt'):
         #         logging.warn(f'''Warning: Could not find _pantella_fnv_folder.txt in {self.config.game_path}.''')
         self.voice_id_map = self.load_voice_id_map()
-        if self.config.current_interface_config.get("ttw_enabled", None) is None:
+        if self.config.ttw_enabled is None:
             with root_context_manager as root:
-                self.config.current_interface_config["ttw_enabled"] = OptionDialog(root, "Enable TTW?", "Do you want to enable support for TTW (Tale of Two Wastelands)? If you have TTW installed, select Yes. If not, select No. You can change this later in the config.", ["Yes", "No"]).result == "Yes"
-                self.config.save_interface_config()
-        if self.config.current_interface_config["ttw_enabled"]:
+                self.config.ttw_enabled = OptionDialog(root, "Enable TTW?", "Do you want to enable support for TTW (Tale of Two Wastelands)? If you have TTW installed, select Yes. If not, select No. You can change this later in the config.", ["Yes", "No"]).result == "Yes"
+                self.config.save()
+        if self.config.ttw_enabled:
             logging.info("TTW support enabled")
             self.ogg_file = f'PantellaQu_PantellaDialogu_000010A1_1.ogg'
             self.lip_file = f'PantellaQu_PantellaDialogu_000010A1_1.lip'
@@ -114,8 +114,19 @@ class GameInterface(CreationEngineFileBuffersInterface):
         self.write_game_info(say_line_file, subtitle.strip())
         
     @property
+    def game_directory_path_example(self):
+        if self.config.linux_mode:
+            return "/home/user/.steam/steam/steamapps/common/Fallout New Vegas/"
+        else:
+            return "C:\\Steam\\steamapps\\common\\Fallout New Vegas\\"
+        
+    @property
+    def game_executable_path(self):
+        return os.path.join(self.game_path, "FalloutNV.exe")
+    
+    @property
     def mod_voice_dir(self):
-        if self.config.current_interface_config["ttw_enabled"]:
+        if self.config.ttw_enabled:
             if self.config.linux_mode:
                 return f"{self.mod_path}/Sound/Voice/PantellaTTW.esm"
             else:

@@ -1,6 +1,4 @@
 {
-    "game_path": "",
-    "mod_path": "",
     "default_prompt_style": "fnv_en_llama3",
     "conversation_manager_type": "fnv_file_buffers",
     "interface_type": "fnv_file_buffers",
@@ -9,6 +7,10 @@
     "character_type": "fnv_pantella",
     "character_manager": "falloutnv",
     "character_db": "fnv_db",
-    "default_tts": "styletts2",
-    "ttw_enabled": null
+    "default_tts": "omnivoice",
+    "settings":{
+        "game_path": "",
+        "mod_path": "",
+        "ttw_enabled": null
+    }
 }

@@ -1,6 +1,4 @@
 {
-    "game_path": "",
-    "mod_path": "",
     "default_prompt_style": "fnv_en_llama3",
     "conversation_manager_type": "creation_engine_file_buffers",
     "interface_type": "creation_engine_file_buffers",
@@ -9,5 +7,9 @@
     "character_type": "skyrim_pantella",
     "character_manager": "skyrim",
     "character_db": "base_db",
-    "default_tts": "xvasynth"
+    "default_tts": "xvasynth",
+    "settings": {
+        "game_path": "",
+        "mod_path": ""
+    }
 }

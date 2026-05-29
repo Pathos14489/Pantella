@@ -29,19 +29,44 @@ class GameInterface(BaseGameInterface):
                     pantella_folder_file_path = self.game_path+f'/_pantella_{self.config.game_id}_folder.txt'
                 if not os.path.exists(pantella_folder_file_path):
                     logging.warn(f'''Warning: Could not find _pantella_{self.config.game_id}_folder.txt in {self.game_path}.\nIf you have not yet activated Pantella in-game you can safely ignore this message.\nIf you have activated Pantella in-game please check that your {self.config.game_id} folder has been set correctly in the associated game interface config.\nIf you are still having issues, a list of solutions can be found here: \nhttps://github.com/Pathos14489/Pantella\n''')
-        save_config = False                    
-        while not os.path.exists(self.mod_voice_dir):
+        save_config = False
+        if self.config.game_path == "":
+            logging.error(f"Game path not set for game id {self.game_id} in interface config file. Please set the game path for {self.game_id} to the directory where your game is installed.")
+            def select_game_directory():
+                with root_context_manager as root:
+                    dlg = FolderSelectionDialog(root, f"Select Game Directory for {self.game_id}", f"Please select the game directory for {self.game_id} (e.g. {self.game_directory_path_example}): ")
+                return dlg.result
+            self.config.game_path = select_game_directory()
+            save_config = True
+
+        if self.config.mod_path == "":
+            logging.error(f"Mod path not set for game id {self.game_id} in interface config file. Please set the mod path for {self.game_id} to the directory where your game mods are located.")
             def select_mod_directory():
                 with root_context_manager as root:
-                    if self.config.linux_mode:
-                        dlg = FolderSelectionDialog(root, f"Error: Your selected Mod Directory was invalid. Please select a new one!\nSelect Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. /home/user/MO2/mods/PantellaMod/): ")
-                    else:
-                        dlg = FolderSelectionDialog(root, f"Error: Your selected Mod Directory was invalid. Please select a new one!\nSelect Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. C:\\MO2\\mods\\PantellaMod\\): ")
-                    return dlg.result
-            self.config.current_interface_config["mod_path"] = select_mod_directory()
+                    dlg = FolderSelectionDialog(root, f"Select Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. {self.mod_directory_path_example}): ")
+                return dlg.result
+            self.config.mod_path = select_mod_directory()
             save_config = True
+
+        while not os.path.exists(self.game_executable_path):
+            logging.error(f"Could not find game executable at {self.game_executable_path}. Please select the correct game directory.")
+            def error_reselect_game_directory():
+                with root_context_manager as root:
+                    dlg = FolderSelectionDialog(root, f"Error: Could not find game executable at {self.game_executable_path}. Please select the correct game directory.", f"Please select the game directory for {self.game_id} (e.g. {self.game_directory_path_example}): ")
+                return dlg.result
+            self.config.game_path = error_reselect_game_directory()
+            save_config = True
+        
+        while not os.path.exists(self.mod_voice_dir):
+            def error_reselect_mod_directory():
+                with root_context_manager as root:
+                    dlg = FolderSelectionDialog(root, f"Error: Could not find mod voice directory at {self.mod_voice_dir}. Your selected Mod Directory was invalid. Please select a new one!\nSelect Mod Directory for {self.game_id}", f"Please select the mod directory for {self.game_id} (e.g. {self.mod_directory_path_example}): ")
+                return dlg.result
+            self.config.mod_path = error_reselect_mod_directory()
+            save_config = True
+            
         if save_config:            
-            self.config.save_interface_config()
+            self.config.save()
         
         self.audio_supported = True
         self.text_supported = True
@@ -79,6 +104,45 @@ class GameInterface(BaseGameInterface):
             mod_path = mod_path.replace("/", "\\")
         return mod_path
     
+    @property
+    def game_directory_path_example(self):
+        if self.config.linux_mode:
+            if self.game_id == "skyrim":
+                return "C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\"
+            elif self.game_id == "fallout4":
+                return "C:\\Steam\\steamapps\\common\\Fallout 4\\"
+            elif self.game_id == "skyrimvr":
+                return "C:\\Steam\\steamapps\\common\\Skyrim VR\\"
+            elif self.game_id == "fallout4vr":
+                return "C:\\Steam\\steamapps\\common\\Fallout 4 VR\\"
+        else:
+            if self.game_id == "skyrim":
+                return "/home/user/.steam/steam/steamapps/common/Skyrim Special Edition/"
+            elif self.game_id == "fallout4":
+                return "/home/user/.steam/steam/steamapps/common/Fallout 4/"
+            elif self.game_id == "skyrimvr":
+                return "/home/user/.steam/steam/steamapps/common/Skyrim VR/"
+            elif self.game_id == "fallout4vr":
+                return "/home/user/.steam/steam/steamapps/common/Fallout 4 VR/"
+            
+    @property
+    def mod_directory_path_example(self):
+        if self.config.linux_mode:
+            return "/home/user/MO2/mods/PantellaMod/"
+        else:
+            return "C:\\MO2\\mods\\PantellaMod\\"
+
+    @property
+    def game_executable_path(self):
+        if self.game_id == "skyrim":
+            return os.path.join(self.game_path, "Skyrim.exe")
+        elif self.game_id == "fallout4":
+            return os.path.join(self.game_path, "Fallout4.exe")
+        elif self.game_id == "skyrimvr":
+            return os.path.join(self.game_path, "SkyrimVR.exe")
+        elif self.game_id == "fallout4vr":
+            return os.path.join(self.game_path, "Fallout4VR.exe")
+
     @property
     def mod_voice_dir(self):
         mod_voice_dir = f"{self.mod_path}/Sound/Voice/Pantella.esp"
