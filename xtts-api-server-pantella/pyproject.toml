@@ -33,7 +33,7 @@ dependencies = [
   "cutlet",
   'fugashi[unidic-lite]',
   'coqui-tts',
-  'transformers==4.57.3'
+  'transformers>=4.57.3'
 ]
 
 [project.urls]

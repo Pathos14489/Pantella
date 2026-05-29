@@ -23,7 +23,7 @@ setup(
         'cutlet',
         'fugashi[unidic-lite]',
         'coqui-tts',
-        'transformers==4.57.3',
+        'transformers>=4.57.3',
         'uuid',
     ],
     entry_points={
