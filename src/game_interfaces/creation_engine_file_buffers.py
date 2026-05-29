@@ -395,6 +395,7 @@ class GameInterface(BaseGameInterface):
         self.write_game_info('_pantella_actor_methods', '')
 
         self.write_game_info('_pantella_radiant_dialogue', 'False')
+        self.write_game_info('_pantella_backend_state', 'idle')
         
     def load_character(self):
         """Wait for character ID to populate then load character name"""
@@ -592,6 +593,7 @@ class GameInterface(BaseGameInterface):
         location = self.load_data_when_available('_pantella_current_location', presume)
         if location.lower() == 'none' or location == "": # location returns none when out in the wild
             location = 'Skyrim'
+        self.write_game_info('_pantella_backend_state', 'loading')
         return location
     
     def get_current_game_time(self):
@@ -796,6 +798,7 @@ class GameInterface(BaseGameInterface):
             self.active_character = None # set active_character to None to allow the conversation to be restarted
             self.write_game_info('_pantella_in_game_events', '') # clear in-game events
             self.write_game_info('_pantella_end_conversation', 'True') # tell Skyrim papyrus script conversation has ended
+            self.write_game_info('_pantella_backend_state', 'idle') # set backend state to idle
             time.sleep(self.conversation_manager.config.end_conversation_wait_time) # wait a few seconds for everything to register
         return None
     

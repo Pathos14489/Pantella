@@ -199,6 +199,7 @@ class GameInterface(CreationEngineFileBuffersInterface):
         self.write_game_info('_pantella_microphone_enabled', 'False')
         self.write_game_info('_pantella_context_string', '')
         self.write_game_info('_pantella_removed_from_conversation', '')
+        self.write_game_info('_pantella_backend_state', 'idle')
         # self.write_game_info('xxx', '')
         
     def get_current_game_time(self):
@@ -359,6 +360,7 @@ class GameInterface(CreationEngineFileBuffersInterface):
         location = self.load_data_when_available('_pantella_current_location', presume)
         if location.lower() == 'none' or location == "": # location returns none when out in the wild
             location = 'Mojave Wasteland'
+        self.write_game_info('_pantella_backend_state', 'loading')
         return location
     
     @utils.time_it

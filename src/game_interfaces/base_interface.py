@@ -243,7 +243,6 @@ class BaseGameInterface:
     def get_current_game_time(self):
         return self.get_dummy_game_time()
     
-    
     def queue_actor_method(self, actor_character, method_name, *args):
         """Queue an arbitrary method to be run on the actor in game via the game interface."""
         raise NotImplementedError

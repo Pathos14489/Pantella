@@ -150,6 +150,7 @@ class ConversationManager(BaseConversationManager):
 
         self.in_conversation = True
         self.conversation_ended = False
+        self.write_game_info('_pantella_backend_state', 'in_conversation')
 
     async def step(self): # process player input and NPC response until conversation ends at each step of the conversation
         """Step through the conversation"""
@@ -180,6 +181,7 @@ class ConversationManager(BaseConversationManager):
         transcript_cleaned = ''
         transcribed_text = None
         if not self.conversation_ended and not self.radiant_dialogue: # check if conversation has ended and isn't radiant, if it's not, get next player input
+            self.write_game_info('_pantella_backend_state', 'waiting_for_player_input')
             logging.info('Getting player response...')
             # transcribed_text = self.transcriber.get_player_response(", ".join(self.character_manager.active_characters.keys()))
             transcribed_text = self.game_interface.get_player_response(self.character_manager.active_characters.keys())
@@ -242,6 +244,7 @@ class ConversationManager(BaseConversationManager):
 
         
         if generate_this_step and ((transcribed_text is not None and transcribed_text != '') or (self.radiant_dialogue and self.character_manager.active_character_count() > 1)) and not self.conversation_ended and self.in_conversation: # if player input is not empty and conversation has not ended, get response from NPC
+            self.write_game_info('_pantella_backend_state', 'generating_response')
             await self.get_response()
         
         # if npc ended conversation
