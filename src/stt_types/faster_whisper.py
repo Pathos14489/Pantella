@@ -60,7 +60,7 @@ class Transcriber(base_Transcriber):
             initial_prompt=prompt,
         )
         result_text = ' '.join(segment.text for segment in segments)
-        if not was_initialized:
+        if not was_initialized and not self.config.pregen_transcriptions_if_necessary:
             self.unload()
 
         return result_text
