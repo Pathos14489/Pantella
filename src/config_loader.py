@@ -1482,7 +1482,7 @@ class ConfigLoader:
                             "version": metadata.get("version", ""),
                             "author": metadata.get("author", ""),
                         })
-            return templates.TemplateResponse(f"./index.html", {"request": request, "inference_engines": inference_engines, "addons_loaded": addons_loaded})
+            return templates.TemplateResponse(request, f"./index.html", {"inference_engines": inference_engines, "addons_loaded": addons_loaded})
                 
 
         
