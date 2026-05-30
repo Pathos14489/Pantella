@@ -282,7 +282,7 @@ class ConfigLoader:
             save = True # Save the open_config_on_startup setting to the config file
 
         if self.narrator_voice is None:
-            self.narrator_voice = interface_configs[game_id].get("default_narrator_voice", None)
+            self.narrator_voice = interface_configs[self.game_id].get("default_narrator_voice", None)
             if self.narrator_voice is not None:
                 save = True
 
