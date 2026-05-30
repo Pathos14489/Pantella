@@ -369,9 +369,9 @@ class GameInterface(CreationEngineFileBuffersInterface):
         """Return the current location"""
         logging.info(f"Waiting for location to populate...")
         location = self.load_data_when_available('_pantella_current_location', presume)
+        self.write_game_info('_pantella_backend_state', 'loading')
         if location.lower() == 'none' or location == "": # location returns none when out in the wild
             location = 'Mojave Wasteland'
-        self.write_game_info('_pantella_backend_state', 'loading')
         return location
     
     @utils.time_it
