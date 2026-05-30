@@ -16,7 +16,7 @@ onnxruntime-gpu==1.23.2
 matplotlib==3.10.9
 matplotlib-inline==0.2.1
 git+https://github.com/Pathos14489/faster-whisper.git
-fastapi==0.112.4
+fastapi>=0.112.4
 torchcodec==0.9.1
 torchmetrics==1.9.0
 contourpy==1.0.1
@@ -29,7 +29,7 @@ soundfile==0.13.1
 numpy==1.26.4
 scipy==1.15.3
 charset-normalizer==3.2.0
-transformers==4.57.3
+transformers==5.3.0
 packaging==26.2
 bitsandbytes==0.45.0
 dxcam==0.0.5
@@ -40,7 +40,9 @@ posthog==3.5.0
 text_unidecode==1.3
 pygame==2.6.0
 emoji==2.8.0
-gradio==4.43.0
+gradio==6.15.2
+gradio-client==2.5.0
+hf-gradio==0.4.1
 pydantic==2.11.7
 cached_path>=1.8.0
 perth==1.0.0
@@ -64,7 +66,7 @@ pyjyutping
 cn2an
 wordsegment
 g2p_en
-huggingface_hub==0.36.2
+huggingface_hub==1.3.0
 ffmpeg-python
 PyInstaller
 scikit-learn
@@ -76,9 +78,9 @@ protobuf>=4.25.9
 jinja-try-catch==0.1.1
 json5==0.14.0
 modelscope==1.36.1
-moshi==0.2.13
+moshi>=0.2.13
 unidecode==1.4.0
-starlette==0.38.6
+starlette==1.2.0
 pynlpir==0.6.1
 weasel==0.4.3
 wasabi==1.1.3
@@ -121,7 +123,7 @@ pyannote.database==5.1.3
 pyannote.metrics==3.2.1
 pyannote.pipeline==3.0.1
 speechbrain==1.0.0
-datasets==2.14.4
+datasets>=2.14.4
 virtualenv==20.35.4
 websockets==12.0
 yarl==1.23.0
@@ -129,9 +131,12 @@ pykakasi==2.3.0
 epitran==1.35.1
 editables==0.6
 -e ./xtts-api-server-pantella
+-e "git+https://github.com/Pathos14489/moshi.git#egg=moshi&subdirectory=moshi"
 anyascii==0.3.3
 coqui-tts==0.27.5
 coqui-tts-trainer==0.3.3
+omnivoice==0.1.5
+accelerate==1.13.0
 --find-links https://download.pytorch.org/whl/cu128
 torch==2.8.0
 torchvision==0.23.0
