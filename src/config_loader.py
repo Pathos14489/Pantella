@@ -281,6 +281,11 @@ class ConfigLoader:
             self.open_config_on_startup = enable_open_config_on_startup() == "Yes"
             save = True # Save the open_config_on_startup setting to the config file
 
+        if self.narrator_voice is None:
+            self.narrator_voice = self.current_interface_config.get("default_narrator_voice", None)
+            if self.narrator_voice is not None:
+                save = True
+
         if save:
             self.save()
             
@@ -795,7 +800,7 @@ class ConfigLoader:
                 ],
                 "end_conversation_wait_time": 1,
                 "sentences_per_voiceline": 2,
-                "narrator_voice": "MaleKhajiit",
+                "narrator_voice": None,
                 "narrator_volume": 0.5, # 50% volume
                 "narrator_delay": 0.2, # 200ms delay
                 "bypass_facefxwrapper": False,
