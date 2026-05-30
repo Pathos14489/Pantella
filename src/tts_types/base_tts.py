@@ -368,7 +368,18 @@ class base_Synthesizer:
             logging.info(f'Loading settings for voice model: {voice_model} from {voice_model_settings_path}')
             with open(voice_model_settings_path, "r") as f:
                 tts_default_settings = json.load(f)
-                settings.update(tts_default_settings) # update with specific voice model settings
+                # settings.update(tts_default_settings) # update with specific voice model settings
+                for key in tts_default_settings:
+                    if key in settings:
+                        if type(settings[key]) == dict and type(tts_default_settings[key]) == dict:
+                            settings[key].update(tts_default_settings[key]) # update nested dictionaries
+                        elif type(settings[key]) == str and type(tts_default_settings[key]) == str:
+                            if tts_default_settings[key].strip() != "":
+                                settings[key] = tts_default_settings[key] # update string settings if the value in the voice model settings is not empty
+                        else:
+                            settings[key] = tts_default_settings[key] # update with specific voice model settings
+                    else:
+                        settings[key] = tts_default_settings[key] # add new settings from the voice model settings that are not in the default settings
         else:
             with open(voice_model_settings_path, "w") as f:
                 json.dump(settings, f, indent=4)
