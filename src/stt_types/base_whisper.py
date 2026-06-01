@@ -25,7 +25,10 @@ class base_Transcriber(BASE_TRANSCRIBER):
     
     def transcribe_audio_file(self, audio_file_path):
         logging.info('Transcribing audio file at path: ' + audio_file_path)
-        return self.whisper_transcribe(audio_file_path, "")
+        transcript = self.whisper_transcribe(audio_file_path, "").strip()
+        while "  " in transcript:
+            transcript = transcript.replace("  ", " ")
+        return transcript
 
     def recognize_input(self, possible_names_list):
         """
@@ -62,7 +65,9 @@ class base_Transcriber(BASE_TRANSCRIBER):
         with open(audio_file, 'wb') as file:
             file.write(audio)
         
-        transcript = self.whisper_transcribe(audio_file, prompt)
+        transcript = self.whisper_transcribe(audio_file, prompt).strip()
+        while "  " in transcript:
+            transcript = transcript.replace("  ", " ")
         logging.info(transcript)
 
         return transcript

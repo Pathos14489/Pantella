@@ -32,4 +32,7 @@ class Transcriber(base_Transcriber):
         response = requests.post(url, headers=headers, files=files, data=data)
         response_data = json.loads(response.text)
         if 'text' in response_data:
-            return response_data['text'].strip()
+            response_text = response_data['text'].strip()
+            while "  " in response_text:
+                response_text = response_text.replace("  ", " ")
+            return response_text
