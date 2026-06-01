@@ -1929,6 +1929,11 @@
                 for (typeCategory in default_settings.types) {
                     newSettings[typeCategory] = {};
                     for (setting in default_settings.types[typeCategory]) {
+                        // check if setting input exists, if not, skip it and use the default value from settings
+                        if (!document.getElementById(setting + "Input")) {
+                            newSettings[typeCategory][setting] = settings[typeCategory][setting];
+                            continue;
+                        }
                         var settingInput = document.getElementById(setting + "Input");
                         switch (default_settings.types[typeCategory][setting]) {
                             case "bool":
@@ -1982,10 +1987,7 @@
                     if (lastLog == data && lastLog != "") return; // No change, skip update
                     document.getElementById("log").innerHTML = data.replace("\n\n","\n").replace(/\n/g, "<br>"); // Replace newlines with <br> for HTML display
                     // Wait for the log to be updated
-                    let scrollDown = document.getElementById("log").scrollTop >= document.getElementById("log").scrollHeight-25; // Check if we are scrolled down
-                    if (scrollDown) {
-                        document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight; // Scroll to the bottom
-                    }
+                    document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight; // Scroll to the bottom
                     lastLog = data;
                 },
                 error: function() {
