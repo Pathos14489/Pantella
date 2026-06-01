@@ -66,6 +66,9 @@ def create_thought_process(conversation_manager):
     thought_process = conversation_manager.config.thought_type
     if thought_process == "default":
         thought_process = "simple"
-    if thought_process == "none":
+    if thought_process == "none" or thought_process == "":
+        return None
+    if thought_process not in Thought_Types:
+        logging.error(f"Thought process {thought_process} not found! Please check your {conversation_manager.config.config_path} file and try again!")
         return None
     return Thought_Types[thought_process].ThoughtProcess
