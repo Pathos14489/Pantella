@@ -352,6 +352,19 @@ class base_Synthesizer:
                 json.dump(settings, f, indent=4)
 
         return settings
+    
+    def set_transcription_for_voice_model(self, voice_model, transcription):
+        """Set the transcription for the voice model in the default settings file"""
+        default_settings_path = self.default_settings_path(voice_model) # Get the default settings path for the voice model (universal for all TTS types)
+        os.makedirs(os.path.dirname(default_settings_path), exist_ok=True) # make sure the directory exists
+        if os.path.exists(default_settings_path):
+            with open(default_settings_path, "r") as f:
+                default_Settings = json.load(f)
+        else:
+            default_Settings = self.default_voice_model_settings.copy()
+        default_Settings["transcription"] = transcription.strip()
+        with open(default_settings_path, "w") as f:
+            json.dump(default_Settings, f, indent=4)
 
     def voice_model_settings(self, character_or_voice_model, generate_transcription_if_necessary=True):
         """Return the settings for the specified voice model"""
