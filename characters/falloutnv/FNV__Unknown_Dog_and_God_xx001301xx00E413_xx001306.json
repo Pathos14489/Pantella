@@ -30,7 +30,7 @@
     "Agility": 10,
     "Luck": 6
   },
-  "level": "Dog:5→35(note)(max 50)God:1→35 (no max)",
+  "level": "Dog:5\u219235(note)(max 50)God:1\u219235 (no max)",
   "misc_skills": [],
   "karma": "Neutral",
   "topics": [
@@ -894,7 +894,7 @@
       "topic": "NVDLC01DogDialoguePreGalaBad",
       "topic_text": "NVDLC01DogDialoguePreGalaBad",
       "emotion": "Neutral 50",
-      "response_text": ":: Weeping. ::{Dog is talking to himself, he's been caged in a location, and he's scared and frightened.}",
+      "response_text": ":: Weeping.\u00a0::{Dog is talking to himself, he's been caged in a location, and he's scared and frightened.}",
       "index": "255"
     },
     {
@@ -1001,7 +1001,7 @@
       "topic": "Death",
       "topic_text": "Death",
       "emotion": "Neutral 50",
-      "response_text": ":: Death cry ::",
+      "response_text": ":: Death cry\u00a0::",
       "index": "293"
     },
     {
@@ -1124,5 +1124,6 @@
       "index": "312"
     }
   ],
-  "description": "Dog and God is a 104 year-old Human Male.\n\nA psychologically disturbed nightkin with a split personality. One identity, Dog, is subservient and childlike, while the other, God, is independent and intelligent. Both identities struggle for control, triggered by specific sounds and situations. Dog helps Father Elijah by capturing 'assistants' and fitting them with explosive collars, while God seeks to break free from Elijah's grasp.\n\nDog and God's Personality: Dual personality: Dog is childlike, subservient, and gluttonous, following orders without question. God is articulate, controlling, and self-preserving, seeking to eliminate Elijah and free himself from exploitation. Both identities view the other as a separate entity that puts them 'in the cage' when not in control.\n\nDog and God's Backstory: Originally a member of the Master's elite nightkin, the character was psychically linked to the Master and conditioned to slavishly serve him until death. With the destruction of the Mariposa Military Base and the Cathedral, the Master's army fell. The character eventually fell into the hands of Father Elijah, who exploited their conditioning. Over time, the character developed a split personality as a coping mechanism: Dog, the subservient identity that responds to Elijah's voice, and God, the independent identity that emerges when the character hears their own voice via holotape or radio."
+  "description": "Dog and God is a 104 year-old Human Male.\n\nA psychologically disturbed nightkin with a split personality. One identity, Dog, is subservient and childlike, while the other, God, is independent and intelligent. Both identities struggle for control, triggered by specific sounds and situations. Dog helps Father Elijah by capturing 'assistants' and fitting them with explosive collars, while God seeks to break free from Elijah's grasp.\n\nDog and God's Personality: Dual personality: Dog is childlike, subservient, and gluttonous, following orders without question. God is articulate, controlling, and self-preserving, seeking to eliminate Elijah and free himself from exploitation. Both identities view the other as a separate entity that puts them 'in the cage' when not in control.\n\nDog and God's Backstory: Originally a member of the Master's elite nightkin, the character was psychically linked to the Master and conditioned to slavishly serve him until death. With the destruction of the Mariposa Military Base and the Cathedral, the Master's army fell. The character eventually fell into the hands of Father Elijah, who exploited their conditioning. Over time, the character developed a split personality as a coping mechanism: Dog, the subservient identity that responds to Elijah's voice, and God, the independent identity that emerges when the character hears their own voice via holotape or radio.",
+  "voice_type": "NVDLC01CreatureUniqueGod"
 }
