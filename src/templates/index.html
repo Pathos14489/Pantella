@@ -16,14 +16,14 @@
     <h1 id="header">Web Configuration GUI</h1>
     <nav>
         <ul>
-            <li><button id="simple_configuration_button" class="active">Simple Configuration</button></li>
-            <li><button id="voice_sample_editor_button">Voice Sample & TTS Editor</button></li>
-            <li><button id="character_manager_button">Character Manager</button></li>
-            <li><button id="llm_settings_button">Inference Engine Settings</button></li>
+            <li><button id="advanced_configuration_button">Configuration</button></li>
+            <!-- <li><button id="simple_configuration_button" class="active">Simple Configuration</button></li> -->
+            <li><button id="character_manager_button">Character Bio Viewer</button></li>
+            <li><button id="voice_sample_editor_button">Test TTS & Voice Sample Editor</button></li>
+            <!-- <li><button id="llm_settings_button">Inference Engine Settings</button></li> -->
             <!-- <li><button id="test_tts_button">Test TTS</button></li> -->
             <li><button id="test_stt_button">Test STT</button></li>
-            <li><button id="advanced_configuration_button">Advanced Configuration</button></li>
-            <li><button id="banned_modules_button">Disabled Modules</button></li>
+            <!-- <li><button id="banned_modules_button">Disabled Modules</button></li> -->
             <li id="debug_li"><button id="debug_button">Debug UI</button></li>
             <li><button id="memory_editor_button">Memory Editor Gradio</button></li>
             <li><button id="restart_button">Apply Settings & Restart</button></li>
@@ -229,9 +229,14 @@
     </div>
     <div id="page_container">
         <div id="advanced_configuration">
+            {% for inference_engine in inference_engines.inference_engines %}
+            {% try %}
+            {% include './inference_engines/' + inference_engine + '/editor.html' %}
+            {% endtry %}
+            {% endfor %}
             <div id="settings"></div>
         </div>
-        <div id="simple_configuration">
+        <!-- <div id="simple_configuration">
             <div id="first_time_setup">
                 <p>
                     <strong>Welcome to the Pantella Web Configuration GUI!</strong> This is a proof of concept for a web-based configuration interface for Pantella. It is still in early development, and we appreciate your feedback and suggestions. Please note that this interface is not yet fully functional and may have some bugs. Thank you for your understanding!
@@ -415,17 +420,7 @@
             {% include './inference_engines/' + inference_engine + '/editor.html' %}
             {% endtry %}
             {% endfor %}
-            
-
-            <div id="thought-process-editor">
-                <h2>Thought Process Configuration</h2>
-                <p>This is a placeholder for thought process configuration. It will be implemented later.</p>
-            </div>
-            <div id="prompt_style_editor">
-                <h2>Prompt Style Configuration</h2>
-                <p>This is a placeholder for prompt style configuration. It will be implemented later.</p>
-            </div>
-        </div>
+        </div> -->
         <div id="memory_editor">
             <iframe id="memory_editor_iframe" style="width: 100%; height: 100dvh;"></iframe>
         </div>
@@ -462,7 +457,7 @@
                             const listItem = document.createElement("li");
                             listItem.innerHTML = `
                                 <h4>${name}</h4>
-                                <button class="btn tooltip right-tooltip right-float" onclick="navigator.clipboard.writeText('${transcription}')">
+                                <button class="btn tooltip right-tooltip right-float" onclick="chooseVoiceSampleFile('${name}'); document.getElementById('voice_sample_name').value='${name}';">
                                     Edit Voice Sample
                                     <span class="tooltiptext">Click to start editing this voice sample.</span>
                                 </button>
@@ -499,107 +494,6 @@
                             Auto-Transcribe Voice Sample
                             <span class="tooltiptext">This will use the configured STT engine to transcribe the voice sample.</span>
                         </button>
-                        <label for="voice_sample_file">
-                            <h4>Voice Sample File for <span class="voice_model_slug">VoiceModel</span>:</h4>
-                        </label>
-                        <input type="file" id="voice_sample_file" accept="audio/*">
-                        <button id="use_voice_sample_file_button" class="btn right-tooltip tooltip">
-                            Upload Voice Sample File for <span class="voice_model_slug">VoiceModel</span>
-                            <span class="tooltiptext">This will upload the selected voice sample file.</span>
-                        </button>
-                        <div class="tab_container">
-                            <h3>Setup your TTSes for <span class="voice_model_slug">VoiceModel</span></h3>
-                            <br>
-                            <nav id="sample_editor_tab_buttons">
-                                <!-- <button id="voice_sample_editor_tts_1_settings_button" class="active">
-                                    TTS 1 Settings
-                                    <i class="fa-solid fa-check" style="color: #4CAF50; margin-left: 5px;"></i>
-                                </button>
-                                <button id="voice_sample_editor_tts_2_settings_button" class="active">
-                                    TTS 2 Settings
-                                    <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
-                                </button>
-                                <button id="voice_sample_editor_tts_3_settings_button" class="active">
-                                    TTS 3 Settings
-                                    <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
-                                </button> -->
-                            </nav>
-                            <div id="sample_editor_tabs">
-                                <!-- <div id="voice_sample_editor_tts_1_settings" class="tab_content active">
-                                    <h4>TTS 1 Settings</h4>
-                                    <label for="tts_1_model">
-                                        <h4>Model:</h4>
-                                    </label>
-                                    <select id="tts_1_model">
-                                        <option value="model_1">Model 1</option>
-                                        <option value="model_2">Model 2</option>
-                                        <option value="model_3">Model 3</option>
-                                    </select>
-                                    <label for="tts_1_voice">
-                                        <h4>Voice:</h4>
-                                    </label>
-                                    <input type="text" id="tts_1_voice" placeholder="Enter voice name here" value="Default Voice">
-                                </div> -->
-                            </div>
-                        </div>
-                        <br>
-                        <button id="save_character_override">Save Voice Model Settings</button>
-                        <br>
-                        <h3>Optional: You can also set up per character overrides for any of these settings.</h3>
-                        <br>
-                        <label for="voice_sample_editor_character_name">
-                            <h4>Character Name:</h4>
-                        </label>
-                        <select id="voice_sample_editor_character_name">
-                            <option value="" disabled selected>Select a character</option>
-                        </select>
-                        <div id="voice_sample_editor_character_settings">
-                            <div class="tab_container">
-                                <h3>Setup your TTSes for <span class="character_name">CharacterName</span></h3>
-                                <br>
-                                <label for="voice_sample_file">
-                                    <h4>Voice Sample File for <span class="character_name">CharacterName</span>:</h4>
-                                </label>
-                                <input type="file" id="voice_sample_file" accept="audio/*">
-                                <button id="use_voice_sample_file_button" class="btn right-tooltip tooltip">
-                                    Upload Voice Sample File for <span class="character_name">CharacterName</span>
-                                    <span class="tooltiptext">This will upload the selected voice sample file.</span>
-                                </button>
-                                <nav id="sample_editor_tab_buttons_2">
-                                    <!-- <button id="voice_sample_editor_tts_1_settings_button" class="active">
-                                        TTS 1 Settings
-                                        <i class="fa-solid fa-check" style="color: #4CAF50; margin-left: 5px;"></i>
-                                    </button>
-                                    <button id="voice_sample_editor_tts_2_settings_button" class="active">
-                                        TTS 2 Settings
-                                        <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
-                                    </button>
-                                    <button id="voice_sample_editor_tts_3_settings_button" class="active">
-                                        TTS 3 Settings
-                                        <i class="fa-solid fa-ban" style="color: #f44336; margin-left: 5px;"></i>
-                                    </button> -->
-                                </nav>
-                                <div id="sample_editor_tabs_2">
-                                    <!-- <div id="voice_sample_editor_tts_1_settings" class="tab_content active">
-                                        <h4>TTS 1 Settings</h4>
-                                        <label for="tts_1_model">
-                                            <h4>Model:</h4>
-                                        </label>
-                                        <select id="tts_1_model">
-                                            <option value="model_1">Model 1</option>
-                                            <option value="model_2">Model 2</option>
-                                            <option value="model_3">Model 3</option>
-                                        </select>
-                                        <label for="tts_1_voice">
-                                            <h4>Voice:</h4>
-                                        </label>
-                                        <input type="text" id="tts_1_voice" placeholder="Enter voice name here" value="Default Voice">
-                                    </div> -->
-                                </div>
-                            </div>
-                            <br>
-                            <button id="save_character_override">Save Character Override</button>
-                        </div>
                         <hr>
                         <div class="flex_row">
                             <div>
@@ -811,7 +705,7 @@
             </style>
         </div>
         <div id="character_manager">
-            <div style="display: flex; gap: 32px;"></div>
+            <div style="display: flex; gap: 32px; width: 100%;">
                 <div id="character_list" style="width: 250px; background: #444; border-radius: 5px; padding: 16px; min-height: 400px;">
                     <button id="add_character_btn" style="margin-top: 16px; width: 100%;">+ Add Character</button>
                     <br>
@@ -833,15 +727,20 @@
                         </label>
                         <label>
                             <h4>Name:</h4>
-                            <input type="text" id="character_name_input" required>
+                            <input type="text" id="character_name_input" required readonly>
                         </label>
-                        <label>
+                        <!-- <label>
                             <h4>Voice Model:</h4>
                             <select id="character_voice_model_input"></select>
+                        </label> -->
+                        <label>
+                            <h4>Voice Model</h4>
+                            <input type="text" id="character_voice_model_input" placeholder="Enter voice model name here" value="Default Voice Model">
                         </label>
                         <label>
                             <h4>Description:</h4>
-                            <textarea id="character_description_input" rows="4"></textarea>
+                            <!-- <textarea id="character_description_input" rows="4"></textarea> -->
+                            <p id="character_description_input" style="background-color: #444; padding: 10px; border-radius: 5px; min-height: 80px;"></p>
                         </label>
                         <label>
                             <h4>Race:</h4>
@@ -853,7 +752,8 @@
                         </label>
                         <label>
                             <h4>Notes:</h4>
-                            <textarea id="character_notes_input" rows="4" placeholder="Enter any additional notes about the character"></textarea>
+                            <!-- <textarea id="character_notes_input" rows="4" placeholder="Enter any additional notes about the character"></textarea> -->
+                            <p id="character_notes_input" style="background-color: #444; padding: 10px; border-radius: 5px; min-height: 80px;"></p>
                         </label>
                         <label>
                             <h4>Gender:</h4>
@@ -862,16 +762,16 @@
                                 <option value="Female">Female</option>
                             </select>
                         </label>
-                        <hr>
-                        <div class="flex_row">
+                        <!-- <hr> -->
+                        <!-- <div class="flex_row">
                             <button type="button" id="character_memory_editor_btn" class="btn">Edit Memory</button>
                             <button type="button" id="character_voice_model_editor_btn" class="btn">Edit Voice Model Settings</button>
                             <button type="button" id="character_voice_settings_editor_btn" class="btn">Edit Voice Settings</button>
-                        </div>
-                        <div style="margin-top: 16px;">
+                        </div> -->
+                        <!-- <div style="margin-top: 16px;">
                             <button type="submit" id="save_character_btn" class="btn">Save</button>
                             <button type="button" id="delete_character_btn" style="background: #ce4c4c; margin-left: 8px;" class="btn right-float">Delete</button>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>
@@ -949,6 +849,16 @@
             </style>
         </div>
         <div id="llm_settings">
+            <!-- <label for="llm_engine">
+                <h3>Inference Engine:</h3>
+            </label>
+            <select id="llm_engine">
+                {% for inference_engine in inference_engines.inference_engines %}
+                    <option value="{{ inference_engine }}" {% if inference_engines.inference_engines[inference_engine].loaded %}selected{% endif %}>
+                        {{ inference_engines.inference_engines[inference_engine].inference_engine_title }}
+                    </option>
+                {% endfor %}
+            </select> -->
             <div class="container">
                 <div class="interface-part">
                     <div class="tab_container" style="border-radius: 0;">
@@ -1163,10 +1073,10 @@
                 }
             </style>
         </div>
-        <div id="banned_modules">
+        <!-- <div id="banned_modules">
             <h2>Banned Modules</h2>
             <p>This is a placeholder for the banned modules list. It will be implemented later.</p>
-        </div>
+        </div> -->
     </div>
     <style>
         #page_container {
@@ -1275,15 +1185,17 @@
 
         // Populate voice model select
         function renderVoiceModelOptions(selected) {
-            const select = document.getElementById("character_voice_model_input");
-            select.innerHTML = "";
-            voiceModels.forEach(vm => {
-                const opt = document.createElement("option");
-                opt.value = vm.voice_model;
-                opt.textContent = vm.voice_model;
-                if (vm.voice_model === selected) opt.selected = true;
-                select.appendChild(opt);
-            });
+            // const select = document.getElementById("character_voice_model_input");
+            // select.innerHTML = "";
+            // voiceModels.forEach(vm => {
+            //     const opt = document.createElement("option");
+            //     opt.value = vm.voice_model;
+            //     opt.textContent = vm.voice_model;
+            //     if (vm.voice_model === selected) opt.selected = true;
+            //     select.appendChild(opt);
+            // });
+            const input = document.getElementById("character_voice_model_input");
+            input.value = selected || "";
         }
 
         let selectedCharacterIdx = null;
@@ -1297,10 +1209,12 @@
             document.getElementById("character_reference_id_input").value = c.ref_id || "";
             document.getElementById("character_name_input").value = c.name;
             renderVoiceModelOptions(c.voice_model);
-            document.getElementById("character_description_input").value = c.bio || "";
+            // document.getElementById("character_description_input").value = c.bio || "";
+            document.getElementById("character_description_input").innerHTML = c.bio.replace(/\n/g, "<br>") || "";
             document.getElementById("character_race_input").value = c.race || "";
             document.getElementById("character_species_input").value = c.species || "";
-            document.getElementById("character_notes_input").value = c.notes || "";
+            // document.getElementById("character_notes_input").value = c.notes || "";
+            document.getElementById("character_notes_input").innerHTML = c.notes.replace(/\n/g, "<br>") || "";
             document.getElementById("character_gender_input").value = c.gender || "";
             renderCharacterList();
         }
@@ -1311,164 +1225,175 @@
             document.getElementById("character_editor_form").style.display = "block";
             document.getElementById("character_name_input").value = "";
             renderVoiceModelOptions();
-            document.getElementById("character_description_input").value = "";
+            // document.getElementById("character_description_input").value = "";
+            document.getElementById("character_description_input").textContent = "";
             renderCharacterList();
         };
 
-        document.getElementById("character_editor_form").onsubmit = function(e) {
-            e.preventDefault();
-            const name = document.getElementById("character_name_input").value.trim();
-            const voice_model = document.getElementById("character_voice_model_input").value;
-            const description = document.getElementById("character_description_input").value;
-            if (!name) return;
-            if (selectedCharacterIdx === null) {
-                // Add new
-                $.ajax({
-                    url: "/characters",
-                    type: "POST",
-                    data: JSON.stringify({ name, voice_model, description }),
-                    contentType: "application/json",
-                    success: function(newChar) {
-                        characters.push(newChar);
-                        selectedCharacterIdx = characters.length - 1;
-                        renderCharacterList();
-                        selectCharacter(selectedCharacterIdx);
-                    }
-                });
-            } else {
-                // Edit existing
-                const char = characters[selectedCharacterIdx];
-                $.ajax({
-                    url: "/characters/" + encodeURIComponent(char.name),
-                    type: "PUT",
-                    data: JSON.stringify({ name, voice_model, description }),
-                    contentType: "application/json",
-                    success: function(updatedChar) {
-                        characters[selectedCharacterIdx] = updatedChar;
-                        renderCharacterList();
-                        selectCharacter(selectedCharacterIdx);
-                    }
-                });
-            }
-        };
+        // document.getElementById("character_editor_form").onsubmit = function(e) {
+        //     e.preventDefault();
+        //     const name = document.getElementById("character_name_input").value.trim();
+        //     const voice_model = document.getElementById("character_voice_model_input").value;
+        //     // const description = document.getElementById("character_description_input").value;
+        //     const description = document.getElementById("character_description_input").textContent;
+        //     if (!name) return;
+        //     if (selectedCharacterIdx === null) {
+        //         // Add new
+        //         $.ajax({
+        //             url: "/characters",
+        //             type: "POST",
+        //             data: JSON.stringify({ name, voice_model, description }),
+        //             contentType: "application/json",
+        //             success: function(newChar) {
+        //                 characters.push(newChar);
+        //                 selectedCharacterIdx = characters.length - 1;
+        //                 renderCharacterList();
+        //                 selectCharacter(selectedCharacterIdx);
+        //             }
+        //         });
+        //     } else {
+        //         // Edit existing
+        //         const char = characters[selectedCharacterIdx];
+        //         $.ajax({
+        //             url: "/characters/" + encodeURIComponent(char.name),
+        //             type: "PUT",
+        //             data: JSON.stringify({ name, voice_model, description }),
+        //             contentType: "application/json",
+        //             success: function(updatedChar) {
+        //                 characters[selectedCharacterIdx] = updatedChar;
+        //                 renderCharacterList();
+        //                 selectCharacter(selectedCharacterIdx);
+        //             }
+        //         });
+        //     }
+        // };
 
-        document.getElementById("delete_character_btn").onclick = function() {
-            if (selectedCharacterIdx === null) return;
-            const char = characters[selectedCharacterIdx];
-            if (!confirm("Delete character '" + char.name + "'?")) return;
-            $.ajax({
-                url: "/characters/" + encodeURIComponent(char.name),
-                type: "DELETE",
-                success: function() {
-                    characters.splice(selectedCharacterIdx, 1);
-                    selectedCharacterIdx = null;
-                    document.getElementById("character_editor_form").style.display = "none";
-                    document.getElementById("character_editor_title").textContent = "Select a character to edit";
-                    renderCharacterList();
-                }
-            });
-        };
+        // document.getElementById("delete_character_btn").onclick = function() {
+        //     if (selectedCharacterIdx === null) return;
+        //     const char = characters[selectedCharacterIdx];
+        //     if (!confirm("Delete character '" + char.name + "'?")) return;
+        //     $.ajax({
+        //         url: "/characters/" + encodeURIComponent(char.name),
+        //         type: "DELETE",
+        //         success: function() {
+        //             characters.splice(selectedCharacterIdx, 1);
+        //             selectedCharacterIdx = null;
+        //             document.getElementById("character_editor_form").style.display = "none";
+        //             document.getElementById("character_editor_title").textContent = "Select a character to edit";
+        //             renderCharacterList();
+        //         }
+        //     });
+        // };
 
         // Initial render
         renderCharacterList();
 
         const voiceSamplesUl = document.getElementById("voice_samples_list");
         voiceSamplesUl.innerHTML = ""; // Clear existing voice samples
+        let voiceModelTranscriptionMap = {};
+        let voiceModelBase64AudioMap = {};
         voiceSamples.forEach(sample => {
+            // Check if exists as a voiceModel
+            if (!voiceModels.some(vm => vm.voice_model === sample.voice_model)) {
+                console.warn("Voice sample has no corresponding voice model:", sample.voice_model);
+                return;
+            }
             addVoiceSample(sample.voice_model, sample.tts_settings.default.transcription, sample.data);
+            voiceModelTranscriptionMap[sample.voice_model] = sample.tts_settings.default.transcription || "";
+            voiceModelBase64AudioMap[sample.voice_model] = sample.data || "";
         });
 
-        const _sampleEditorTabButtons = document.getElementById("sample_editor_tab_buttons");
-        const _sampleEditorTabButtons2 = document.getElementById("sample_editor_tab_buttons_2");
-        const _sampleEditorTabs = document.getElementById("sample_editor_tabs");
-        const _sampleEditorTabs2 = document.getElementById("sample_editor_tabs_2");
-        const sampleEditorTabButtonsList = [
-            _sampleEditorTabButtons,
-            _sampleEditorTabButtons2
-        ]
-        const sampleEditorTabsList = [
-            _sampleEditorTabs,
-            _sampleEditorTabs2
-        ];
-        var firstTTSes = [
-            true, // For the first tab
-            true  // For the second tab
-        ]
-        for (tts_slug in ttsEngines){
-            for (let i = 0; i < sampleEditorTabButtonsList.length; i++) {
-                let sampleEditorTabButtons = sampleEditorTabButtonsList[i];
-                let sampleEditorTabs = sampleEditorTabsList[i];
-                let firstTTS = firstTTSes[i]; // Track if it's the first TTS for this tab
-                let ttsSettings = ttsEngines[tts_slug];
-                let tabContent = document.createElement("div");
-                tabContent.id = "voice_sample_editor_"+(i+1)+"_" + tts_slug + "_settings";
-                tabContent.className = "tab_content";
-                let header = document.createElement("h3");
-                header.textContent = `${tts_slug} - Settings`;
-                tabContent.appendChild(header);
-                tabContent.appendChild(document.createElement("br"));
-                let description = document.createElement("p");
-                description.textContent = ttsSettings.description || "No description available for this TTS engine.";
-                tabContent.appendChild(description);
-                tabContent.appendChild(document.createElement("br"));
-                for (property in ttsSettings.default_settings) {
-                    console.log("Processing property:", property, "with value:", ttsSettings.default_settings[property]);
-                    const label = document.createElement("label");
-                    label.innerHTML = `<h4>${property}:</h4>`;
-                    const input = document.createElement("input");
-                    input.id = `voice_sample_editor_${i+1}_${tts_slug}_${property}`;
-                    switch (typeof ttsSettings.default_settings[property]) {
-                        case "boolean":
-                            console.log("Property is boolean:", property, ttsSettings.default_settings[property]);
-                            input.type = "checkbox";
-                            input.checked = ttsSettings.default_settings[property];
-                            break;
-                        case "number":
-                            console.log("Property is number:", property, ttsSettings.default_settings[property]);
-                            input.type = "number";
-                            input.value = ttsSettings.default_settings[property];
-                            break;
-                        case "string":
-                            console.log("Property is string:", property, ttsSettings.default_settings[property]);
-                            input.type = "text";
-                            input.value = ttsSettings.default_settings[property];
-                            break;
-                        default:
-                            console.log("Property is of unknown type:", property, ttsSettings.default_settings[property]);
-                            input.type = "text";
-                            input.value = JSON.stringify(ttsSettings.default_settings[property]);
-                    }
-                    input.placeholder = `Enter ${property} here`;
-                    tabContent.appendChild(label);
-                    tabContent.appendChild(input);
-                    if (typeof ttsSettings.default_settings[property] == "boolean") {
-                        tabContent.appendChild(document.createElement("br"));
-                    }
-                }
-                sampleEditorTabs.appendChild(tabContent);
-                let button = document.createElement("button");
-                button.id = `voice_sample_editor_${i+1}_${tts_slug}_settings_button`;
-                button.textContent = `${tts_slug}`;
-                // if (!ttsSettings.loaded){
-                //     button.className = "hidden"; // Initially hidden, will be shown if TTS is available
-                // }
-                // button.disabled = !ttsSettings.loaded; // Disable button if TTS is not available
-                button.onclick = function() {
-                    let allTabs = sampleEditorTabs.querySelectorAll(".tab_content");
-                    allTabs.forEach(tab => tab.classList.remove("active"));
-                    let allButtons = sampleEditorTabButtons.querySelectorAll("button");
-                    allButtons.forEach(btn => btn.classList.remove("active"));
-                    tabContent.classList.add("active");
-                    this.classList.add("active");
-                };
-                sampleEditorTabButtons.appendChild(button);
-                if (firstTTS && ttsSettings.loaded) {
-                    tabContent.classList.add("active");
-                    button.classList.add("active");
-                    firstTTS = false;
-                }
-            }
-        }
+        // const _sampleEditorTabButtons = document.getElementById("sample_editor_tab_buttons");
+        // const _sampleEditorTabButtons2 = document.getElementById("sample_editor_tab_buttons_2");
+        // const _sampleEditorTabs = document.getElementById("sample_editor_tabs");
+        // const _sampleEditorTabs2 = document.getElementById("sample_editor_tabs_2");
+        // const sampleEditorTabButtonsList = [
+        //     _sampleEditorTabButtons,
+        //     _sampleEditorTabButtons2
+        // ]
+        // const sampleEditorTabsList = [
+        //     _sampleEditorTabs,
+        //     _sampleEditorTabs2
+        // ];
+        // var firstTTSes = [
+        //     true, // For the first tab
+        //     true  // For the second tab
+        // ]
+        // for (tts_slug in ttsEngines){
+        //     for (let i = 0; i < sampleEditorTabButtonsList.length; i++) {
+        //         let sampleEditorTabButtons = sampleEditorTabButtonsList[i];
+        //         let sampleEditorTabs = sampleEditorTabsList[i];
+        //         let firstTTS = firstTTSes[i]; // Track if it's the first TTS for this tab
+        //         let ttsSettings = ttsEngines[tts_slug];
+        //         let tabContent = document.createElement("div");
+        //         tabContent.id = "voice_sample_editor_"+(i+1)+"_" + tts_slug + "_settings";
+        //         tabContent.className = "tab_content";
+        //         let header = document.createElement("h3");
+        //         header.textContent = `${tts_slug} - Settings`;
+        //         tabContent.appendChild(header);
+        //         tabContent.appendChild(document.createElement("br"));
+        //         let description = document.createElement("p");
+        //         description.textContent = ttsSettings.description || "No description available for this TTS engine.";
+        //         tabContent.appendChild(description);
+        //         tabContent.appendChild(document.createElement("br"));
+        //         for (property in ttsSettings.default_settings) {
+        //             console.log("Processing property:", property, "with value:", ttsSettings.default_settings[property]);
+        //             const label = document.createElement("label");
+        //             label.innerHTML = `<h4>${property}:</h4>`;
+        //             const input = document.createElement("input");
+        //             input.id = `voice_sample_editor_${i+1}_${tts_slug}_${property}`;
+        //             switch (typeof ttsSettings.default_settings[property]) {
+        //                 case "boolean":
+        //                     console.log("Property is boolean:", property, ttsSettings.default_settings[property]);
+        //                     input.type = "checkbox";
+        //                     input.checked = ttsSettings.default_settings[property];
+        //                     break;
+        //                 case "number":
+        //                     console.log("Property is number:", property, ttsSettings.default_settings[property]);
+        //                     input.type = "number";
+        //                     input.value = ttsSettings.default_settings[property];
+        //                     break;
+        //                 case "string":
+        //                     console.log("Property is string:", property, ttsSettings.default_settings[property]);
+        //                     input.type = "text";
+        //                     input.value = ttsSettings.default_settings[property];
+        //                     break;
+        //                 default:
+        //                     console.log("Property is of unknown type:", property, ttsSettings.default_settings[property]);
+        //                     input.type = "text";
+        //                     input.value = JSON.stringify(ttsSettings.default_settings[property]);
+        //             }
+        //             input.placeholder = `Enter ${property} here`;
+        //             tabContent.appendChild(label);
+        //             tabContent.appendChild(input);
+        //             if (typeof ttsSettings.default_settings[property] == "boolean") {
+        //                 tabContent.appendChild(document.createElement("br"));
+        //             }
+        //         }
+        //         sampleEditorTabs.appendChild(tabContent);
+        //         let button = document.createElement("button");
+        //         button.id = `voice_sample_editor_${i+1}_${tts_slug}_settings_button`;
+        //         button.textContent = `${tts_slug}`;
+        //         // if (!ttsSettings.loaded){
+        //         //     button.className = "hidden"; // Initially hidden, will be shown if TTS is available
+        //         // }
+        //         // button.disabled = !ttsSettings.loaded; // Disable button if TTS is not available
+        //         button.onclick = function() {
+        //             let allTabs = sampleEditorTabs.querySelectorAll(".tab_content");
+        //             allTabs.forEach(tab => tab.classList.remove("active"));
+        //             let allButtons = sampleEditorTabButtons.querySelectorAll("button");
+        //             allButtons.forEach(btn => btn.classList.remove("active"));
+        //             tabContent.classList.add("active");
+        //             this.classList.add("active");
+        //         };
+        //         sampleEditorTabButtons.appendChild(button);
+        //         if (firstTTS && ttsSettings.loaded) {
+        //             tabContent.classList.add("active");
+        //             button.classList.add("active");
+        //             firstTTS = false;
+        //         }
+        //     }
+        // }
         
         
         const inferenceEditorTabButtons = document.getElementById("inference_engine_editor_tab_buttons");
@@ -1597,18 +1522,21 @@
             const option = document.createElement("option");
             option.value = sample.voice_model;
             option.textContent = sample.voice_model;
-            if (sample.available) {
-                option.style.color = "#4CAF50"; // Available voice models
-            } else {
-                option.style.color = "#f44336"; // Unavailable voice models
+            // if (sample.available) {
+            //     option.style.color = "#4CAF50"; // Available voice models
+            // } else {
+            //     option.style.color = "#f44336"; // Unavailable voice models
+            // }
+            if (!sample.available) {
+                option.disabled = true; // Disable unavailable voice models
+                option.textContent += " (Unavailable)";
             }
+            // When selecting a voice model, set #voice_sample_transcription to the default transcription for that voice model
             voiceSampleName.appendChild(option);
         });
-        
-        const voiceSampleEditorCharacterName = document.getElementById("voice_sample_editor_character_name");
-        const voiceSampleEditorCharacterSettings = document.getElementById("voice_sample_editor_character_settings");
-        voiceSampleName.onchange = function() {
-            const selectedVoiceModel = voiceModels.find(model => model.voice_model === this.value);
+
+        function chooseVoiceSampleFile(voiceModelOption) {
+            const selectedVoiceModel = voiceModels.find(model => model.voice_model === voiceModelOption);
             console.log("Selected voice model:", selectedVoiceModel);
             const voiceSampleOpened = document.getElementById("voice_sample_opened");
             if (selectedVoiceModel) {
@@ -1616,31 +1544,66 @@
             }else {
                 voiceSampleOpened.classList.remove("active");
             }
-            voiceSampleEditorCharacterName.innerHTML = "<option value=\"\" disabled=\"\" selected=\"\">Select a character</option>"; // Clear existing options
-            voiceSampleEditorCharacterName.value = ""; // Reset the character selection
-            voiceSampleEditorCharacterSettings.classList.remove("active");
-            characters.forEach(character => {
-                if (character.voice_model !== selectedVoiceModel.voice_model) {
-                    return; // Skip characters that don't use this voice model
-                }
-                const option = document.createElement("option");
-                option.value = character.name;
-                option.textContent = character.name;
-                voiceSampleEditorCharacterName.appendChild(option);
-            });
-        };
+            document.getElementById("voice_sample_transcription").value = voiceModelTranscriptionMap[voiceModelOption] || "";
+            document.getElementById('voice_sample_editor_audio').src=`data:audio/wav;base64,${voiceModelBase64AudioMap[voiceModelOption] || ""}`;
+            // voiceSampleEditorCharacterName.innerHTML = "<option value=\"\" disabled=\"\" selected=\"\">Select a character</option>"; // Clear existing options
+            // voiceSampleEditorCharacterName.value = ""; // Reset the character selection
+            // voiceSampleEditorCharacterSettings.classList.remove("active");
+            // characters.forEach(character => {
+            //     if (character.voice_model !== selectedVoiceModel.voice_model) {
+            //         return; // Skip characters that don't use this voice model
+            //     }
+            //     const option = document.createElement("option");
+            //     option.value = character.name;
+            //     option.textContent = character.name;
+            //     voiceSampleEditorCharacterName.appendChild(option);
+            // });
+        }
 
-        voiceSampleEditorCharacterName.onchange = function() {
-            const selectedCharacter = characters.find(character => character.name === this.value);
-            console.log("Selected character:", selectedCharacter);
-            if (selectedCharacter) {
-                voiceSampleEditorCharacterSettings.classList.add("active");
-                // Update the character name in the settings
-                document.querySelectorAll(".character_name").forEach(el => el.textContent = selectedCharacter.name);
-            } else {
-                voiceSampleEditorCharacterSettings.classList.remove("active");
-            }
+        const transcribeVoiceVutton = document.getElementById("transcribe_voice_sample_button");
+        transcribeVoiceVutton.onclick = function() {
+            // Send POST request to server with the selected voice sample
+            const selectedVoiceModel = voiceSampleName.value;
+            $.ajax({
+                url: "/transcribe-voice-sample",
+                type: "POST",
+                data: JSON.stringify({
+                    voice_model: selectedVoiceModel
+                }),
+                contentType: "application/json",
+                success: function(response) {
+                    alert("Transcription updated successfully!");
+                    voiceModelTranscriptionMap[selectedVoiceModel] = document.getElementById("voice_sample_transcription").value; // Update the transcription map with the new value
+                    document.getElementById("log").innerHTML += "<br><span style='color: green;'>Transcription updated for " + selectedVoiceModel + ": " + document.getElementById("voice_sample_transcription").value + "</span>";
+                    document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight; // Scroll to the bottom
+                    document.getElementById("voice_sample_transcription").value = response.transcription; // Update the transcription textarea with the new transcription
+                },
+                error: function(err) {
+                    alert("Failed to update transcription. Please check the logs for more details.");
+                    console.error("Error updating transcription:", err);
+                    document.getElementById("log").innerHTML += "<br><span style='color: red;'>Error updating transcription: " + JSON.stringify(err) + "</span>";
+                    document.getElementById("log").scrollTop = document.getElementById("log").scrollHeight; // Scroll to the bottom
+                }
+            });
+        }
+        voiceSampleName.onchange = function() {
+            chooseVoiceSampleFile(this.value);
         };
+        
+        // const voiceSampleEditorCharacterName = document.getElementById("voice_sample_editor_character_name");
+        // const voiceSampleEditorCharacterSettings = document.getElementById("voice_sample_editor_character_settings");
+
+        // voiceSampleEditorCharacterName.onchange = function() {
+        //     const selectedCharacter = characters.find(character => character.name === this.value);
+        //     console.log("Selected character:", selectedCharacter);
+        //     if (selectedCharacter) {
+        //         voiceSampleEditorCharacterSettings.classList.add("active");
+        //         // Update the character name in the settings
+        //         document.querySelectorAll(".character_name").forEach(el => el.textContent = selectedCharacter.name);
+        //     } else {
+        //         voiceSampleEditorCharacterSettings.classList.remove("active");
+        //     }
+        // };
 
         const voicesAvailableSpan = document.getElementById("voices_available");
         const voicesTotalSpan = document.getElementById("voices_total");
@@ -1650,16 +1613,16 @@
         const voiceSampleFileInput = document.getElementById("voice_sample_file");
 
         const advancedConfigurationButton = document.getElementById("advanced_configuration_button");
-        const simpleConfigurationButton = document.getElementById("simple_configuration_button");
+        // const simpleConfigurationButton = document.getElementById("simple_configuration_button");
         const memoryEditorButton = document.getElementById("memory_editor_button");
         const restartButton = document.getElementById("restart_button");
         const debugButton = document.getElementById("debug_button");
         const voiceSampleEditorButton = document.getElementById("voice_sample_editor_button");
         // const testTTSButton = document.getElementById("test_tts_button");
         const characterManagerButton = document.getElementById("character_manager_button");
-        const llmSettingsButton = document.getElementById("llm_settings_button");
+        // const llmSettingsButton = document.getElementById("llm_settings_button");
         const testSTTButton = document.getElementById("test_stt_button");
-        const bannedModulesButton = document.getElementById("banned_modules_button");
+        // const bannedModulesButton = document.getElementById("banned_modules_button");
         
         const useTestTTSButton = document.getElementById("use_test_tts_button");
         const useTestSTTButton = document.getElementById("use_test_stt_button");
@@ -1669,20 +1632,20 @@
 
         function removeActiveClass() {
             advancedConfigurationButton.classList.remove("active");
-            simpleConfigurationButton.classList.remove("active");
+            // simpleConfigurationButton.classList.remove("active");
             memoryEditorButton.classList.remove("active");
             voiceSampleEditorButton.classList.remove("active");
-            bannedModulesButton.classList.remove("active");
+            // bannedModulesButton.classList.remove("active");
             testSTTButton.classList.remove("active");
             // testTTSButton.classList.remove("active");
         }
 
         var pages = [
             document.getElementById("advanced_configuration"),
-            document.getElementById("simple_configuration"),
+            // document.getElementById("simple_configuration"),
             document.getElementById("memory_editor"),
             document.getElementById("voice_sample_editor"),
-            document.getElementById("banned_modules"),
+            // document.getElementById("banned_modules"),
             document.getElementById("test_stt"),
             document.getElementById("character_manager"),
             document.getElementById("llm_settings"),
@@ -1704,14 +1667,14 @@
             blockTransition(document.getElementById("advanced_configuration"));
             removeActiveClass();
             this.classList.add("active");
-            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+            // simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
         };
-        simpleConfigurationButton.onclick = function() {
-            blockTransition(document.getElementById("simple_configuration"));
-            removeActiveClass();
-            this.classList.add("active");
-            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
-        };
+        // simpleConfigurationButton.onclick = function() {
+        //     blockTransition(document.getElementById("simple_configuration"));
+        //     removeActiveClass();
+        //     this.classList.add("active");
+        //     advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+        // };
         memoryEditorButton.onclick = function() {
             blockTransition(document.getElementById("memory_editor"));
             removeActiveClass();
@@ -1749,14 +1712,14 @@
             removeActiveClass();
             this.classList.add("active");
             advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
-            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+            // simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
         };
         testSTTButton.onclick = function() {
             blockTransition(document.getElementById("test_stt"));
             removeActiveClass();
             this.classList.add("active");
             advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
-            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+            // simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
         };
         // testTTSButton.onclick = function() {
         //     blockTransition(document.getElementById("test_tts"));
@@ -1770,28 +1733,28 @@
             removeActiveClass();
             this.classList.add("active");
             advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
-            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+            // simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
         };
-        llmSettingsButton.onclick = function() {
-            blockTransition(document.getElementById("llm_settings"));
-            removeActiveClass();
-            this.classList.add("active");
-            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
-            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
-        };
-        bannedModulesButton.onclick = function() {
-            document.getElementById("advanced_configuration").style.display = "none";
-            document.getElementById("simple_configuration").style.display = "none";
-            document.getElementById("memory_editor").style.display = "none";
-            document.getElementById("voice_sample_editor").style.display = "none";
-            document.getElementById("banned_modules").style.display = "block";
-            document.getElementById("test_stt").style.display = "none";
-            document.getElementById("test_tts").style.display = "none";
-            removeActiveClass();
-            this.classList.add("active");
-            advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
-            simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
-        };
+        // llmSettingsButton.onclick = function() {
+        //     blockTransition(document.getElementById("llm_settings"));
+        //     removeActiveClass();
+        //     this.classList.add("active");
+        //     advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+        //     // simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        // };
+        // bannedModulesButton.onclick = function() {
+        //     document.getElementById("advanced_configuration").style.display = "none";
+        //     document.getElementById("simple_configuration").style.display = "none";
+        //     document.getElementById("memory_editor").style.display = "none";
+        //     document.getElementById("voice_sample_editor").style.display = "none";
+        //     document.getElementById("banned_modules").style.display = "block";
+        //     document.getElementById("test_stt").style.display = "none";
+        //     document.getElementById("test_tts").style.display = "none";
+        //     removeActiveClass();
+        //     this.classList.add("active");
+        //     advancedConfigurationButton.style.backgroundColor = ""; // Reset other button
+        //     // simpleConfigurationButton.style.backgroundColor = ""; // Reset other button
+        // };
         
         useTestSTTButton.onclick = function() {
             var audioInput = document.getElementById("stt_audio_input").files[0];
@@ -1828,14 +1791,16 @@
             $.ajax({
                 url: "/test_tts",
                 type: "POST",
-                data: JSON.stringify({ text: ttsText }),
+                data: JSON.stringify({
+                    text: ttsText,
+                    voice_model: document.getElementById("voice_sample_name").value,
+                }),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function(data) {
                     var audioElement = document.getElementById("tts_output_audio");
-                    audioElement.src = data.audio_url; // Assuming the server returns the URL of the generated audio
+                    audioElement.src = "data:audio/wav;base64," + data.audio_data; // Assuming the server returns the URL of the generated audio
                     audioElement.play();
-                    console.log("TTS Output:", data.audio_url);
                 },
                 error: function(err) {
                     alert("Failed to test TTS. Please check the logs for more details.");
@@ -1853,6 +1818,7 @@
         // }
         console.log(default_settings.types);
         console.log(settings);
+        blockTransition(document.getElementById("advanced_configuration"));
         for (typeCategory in default_settings.types) {
             // var typeCategoryDiv = document.createElement("div");
             // typeCategoryDiv.id = typeCategory;
@@ -1865,6 +1831,7 @@
 
             document.getElementById("settings").appendChild(typeCategoryDetails);
             for (setting in default_settings.types[typeCategory]) {
+                if (setting == "game_id" && typeCategory == "Game") continue; // Hide game_id setting as it's not useful and can cause issues if changed by the user
                 let settingDiv = document.createElement("div");
                 settingDiv.id = setting;
                 let settingTitle = setting.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");

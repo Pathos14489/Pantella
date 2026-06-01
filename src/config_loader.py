@@ -6,19 +6,19 @@ import traceback
 import base64
 import src.tts as tts
 import src.language_model as language_models
-import src.tokenizer as tokenizers
 import importlib
 from main import restart_manager
 
 from fastapi import FastAPI, Request
 import uvicorn
-from fastapi.responses import HTMLResponse, FileResponse, StreamingResponse, Response, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel
 
 from jinja_try_catch import TryCatchExtension
 
-from src.ui import root, OptionDialog, FolderSelectionDialog, MessageBox
+from src.ui import root, OptionDialog
 
 logging.info("Imported required libraries in config_loader.py")
 
@@ -1144,9 +1144,9 @@ class ConfigLoader:
             return config
         
         @self.config_server_app.post('/config')
-        def post_config(request: Request):
+        async def post_config(request: Request):
             default_types = self.default_types()
-            data = request.json()
+            data = await request.json()
             for key in data:
                 for sub_key in data[key]:
                     if type(getattr(self,sub_key)) is not type(data[key][sub_key]):
@@ -1200,30 +1200,56 @@ class ConfigLoader:
             else:
                 tts_settings_relative_path = "..\\data\\tts_settings"
             voice_samples_dirs_dir = os.path.join(os.path.dirname(__file__), voice_samples_relative_path)
+            voice_samples_dirs_dirs = [voice_samples_dirs_dir]
+            # Add addon_samples directories to the list of directories to search for voice samples
+            addons_dir = os.path.join(os.path.dirname(__file__), "..", "addons")
+            if os.path.exists(addons_dir):
+                for addon_dir in os.listdir(addons_dir):
+                    addon_samples_dir = os.path.join(addons_dir, addon_dir, "voice_samples")
+                    if os.path.exists(addon_samples_dir) and os.path.isdir(addon_samples_dir):
+                        voice_samples_dirs_dirs.append(addon_samples_dir)
+            print("Voice samples directories to search:", voice_samples_dirs_dirs)
             voice_samples = []
-            for language_dir in os.listdir(voice_samples_dirs_dir):
-                voice_sample_path = os.path.join(voice_samples_dirs_dir, language_dir)
-                if os.path.isdir(voice_sample_path):
-                    for voice_sample_file in os.listdir(voice_sample_path):
-                        if voice_sample_file.endswith(".wav"):
-                            voice_sample_full_path = os.path.join(voice_sample_path, voice_sample_file)
-                            voice_sample_obj = {
-                                "voice_model": voice_sample_file.split(".")[0],
-                                "file_name": voice_sample_file,
-                                "language": language_dir,
-                                "tts_settings": {},
-                            }
-                            with open(voice_sample_full_path, 'rb') as f: # Read the wave file and encode it to base64
-                                voice_sample_obj["data"] = base64.b64encode(f.read()).decode('utf-8')
-                            # Read all tts_settings JSON files to get the inference settings for the voice sample for each TTS engine
-                            for tts_engine_dir in os.listdir(os.path.join(os.path.dirname(__file__), tts_settings_relative_path)):
-                                tts_settings_path = os.path.join(os.path.dirname(__file__), tts_settings_relative_path, tts_engine_dir, language_dir, f"{voice_sample_file.split('.')[0]}.json")
-                                tts_settings_path = os.path.abspath(tts_settings_path)
-                                if os.path.exists(tts_settings_path):
-                                    with open(tts_settings_path, 'r') as tts_f:
-                                        tts_settings = json.load(tts_f)
-                                        voice_sample_obj["tts_settings"][tts_engine_dir] = tts_settings
-                            voice_samples.append(voice_sample_obj)
+            for voice_samples_dirs_dir_dir in voice_samples_dirs_dirs:
+                game_voice_samples_dir = os.path.join(voice_samples_dirs_dir_dir, self.game_id)
+                if os.path.exists(game_voice_samples_dir) and os.path.isdir(game_voice_samples_dir):
+                    for language_dir in os.listdir(game_voice_samples_dir):
+                        voice_sample_path = os.path.join(game_voice_samples_dir, language_dir)
+                        if os.path.isdir(voice_sample_path):
+                            print("Searching for voice samples in:", voice_sample_path)
+                            for voice_sample_file in os.listdir(voice_sample_path):
+                                if voice_sample_file.endswith(".wav"):
+                                    voice_sample_full_path = os.path.join(voice_sample_path, voice_sample_file)
+                                    voice_sample_obj = {
+                                        "voice_model": voice_sample_file.split(".")[0],
+                                        "file_name": voice_sample_file,
+                                        "language": language_dir,
+                                        "tts_settings": {},
+                                    }
+                                    with open(voice_sample_full_path, 'rb') as f: # Read the wave file and encode it to base64
+                                        voice_sample_obj["data"] = base64.b64encode(f.read()).decode('utf-8')
+                                    # Read all tts_settings JSON files to get the inference settings for the voice sample for each TTS engine
+                                    for tts_engine_dir in os.listdir(os.path.join(os.path.dirname(__file__), tts_settings_relative_path)):
+                                        tts_settings_path = os.path.join(os.path.dirname(__file__), tts_settings_relative_path, tts_engine_dir, self.game_id, language_dir, f"{voice_sample_file.split('.')[0]}.json")
+                                        tts_settings_path = os.path.abspath(tts_settings_path)
+                                        if os.path.exists(tts_settings_path):
+                                            with open(tts_settings_path, 'r') as tts_f:
+                                                tts_settings = json.load(tts_f)
+                                                voice_sample_obj["tts_settings"][tts_engine_dir] = tts_settings
+                                    default_tts_settings_path = os.path.join(os.path.dirname(__file__), tts_settings_relative_path, "default", self.game_id, language_dir, f"{voice_sample_file.split('.')[0]}.json")
+                                    default_tts_settings_path = os.path.abspath(default_tts_settings_path)
+                                    if os.path.exists(default_tts_settings_path):
+                                        with open(default_tts_settings_path, 'r') as tts_f:
+                                            tts_settings = json.load(tts_f)
+                                            voice_sample_obj["tts_settings"]["default"] = tts_settings
+                                    # if "default" not in voice_sample_obj["tts_settings"]:
+                                    #     voice_sample_obj["tts_settings"]["default"] = {
+                                    #         "transcription": None
+                                    #     }
+                                    # for tts_engine_slug in voice_sample_obj["tts_settings"]:
+                                    #     if "transcription" in voice_sample_obj["tts_settings"][tts_engine_slug] and voice_sample_obj["tts_settings"][tts_engine_slug]["transcription"] is not None and (voice_sample_obj["tts_settings"]["default"]["transcription"] is None or len(voice_sample_obj["tts_settings"]["default"]["transcription"].strip()) == 0):
+                                    #         voice_sample_obj["tts_settings"]["default"]["transcription"] = voice_sample_obj["tts_settings"][tts_engine_slug]["transcription"]
+                                    voice_samples.append(voice_sample_obj)
             return voice_samples
         
         @self.config_server_app.get('/voice-models')
@@ -1239,6 +1265,47 @@ class ConfigLoader:
                 voice_models.append(voice_model_obj)
             return voice_models
         
+        class TTSRequest(BaseModel):
+            text: str
+            voice_model: str
+
+        @self.config_server_app.post('/test_tts')
+        def post_tts_tts(request: TTSRequest): # (self, voiceline, voice_model="Female Sultry", volume=0.5, play_voiceline=True):
+            text = request.text
+            voice_model = request.voice_model
+            audio_path = self.conversation_manager.synthesizer._say(text, voice_model=voice_model, volume=0.5, play_voiceline=False)
+            with open(audio_path, 'rb') as f:
+                audio_data = f.read()
+            return {"audio_data": base64.b64encode(audio_data).decode('utf-8')}
+        
+        # Test STT route - Accepts form data with "audio" field containing a wav file. Returns the transcription of the audio using the configured STT engine.
+        @self.config_server_app.post('/test_stt')
+        async def post_test_stt(request: Request):
+            form = await request.form()
+            if 'audio' not in form:
+                return {"error": "No audio file provided"}
+            audio_file = form['audio']
+            audio_bytes = await audio_file.read()
+            # save to temp file
+            temp_audio_path = os.path.join(os.path.dirname(__file__), "temp_audio.wav")
+            with open(temp_audio_path, 'wb') as f:
+                f.write(audio_bytes)
+            transcription = self.conversation_manager.game_interface.transcriber.transcribe_audio_file(temp_audio_path)
+            return {"transcription": transcription}
+        
+        class TranscriptionRequest(BaseModel):
+            voice_model: str
+            
+        @self.config_server_app.post('/transcribe-voice-sample')
+        def post_transcribe_voice_sample(request: TranscriptionRequest):
+            voice_model = request.voice_model
+            voice_sample_path = conversation_manager.synthesizer.get_speaker_wav_path(voice_model)
+            if voice_sample_path is None:
+                return {"error": "No voice sample found for the specified voice model"}
+            transcription = self.conversation_manager.game_interface.transcriber.transcribe_audio_file(voice_sample_path).strip()
+            self.conversation_manager.synthesizer.set_transcription_for_voice_model(voice_model, transcription)
+            return {"transcription": transcription}
+
         @self.config_server_app.get('/tts-engines')
         def get_tts_engines(request: Request):
             tts_engines = {}
