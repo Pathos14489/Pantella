@@ -132,6 +132,7 @@ epitran==1.35.1
 editables==0.6
 -e ./xtts-api-server-pantella
 -e "git+https://github.com/Pathos14489/moshi.git#egg=moshi&subdirectory=moshi"
+llama-cpp-python @ git+https://github.com/JamePeng/llama-cpp-python.git
 anyascii==0.3.3
 coqui-tts==0.27.5
 coqui-tts-trainer==0.3.3
