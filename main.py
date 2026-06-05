@@ -205,7 +205,7 @@ def restart_manager(conf, conv_manager):
 
 async def conversation_loop():
     global conversation_manager
-    if config.open_config_on_startup:
+    if config.open_config_on_startup and config.web_configurator:
         url = f"http://localhost:{config.config_port}/"
         webbrowser.open(url, new=0, autoraise=True)
     if config.play_startup_announcement:
