@@ -181,13 +181,17 @@ class base_LLM():
             if loaded_dxcam:
                 self.camera = dxcam.create()
             else:
-                logging.error(f"Error loading dxcam for vision enabled inference engine. Please check that you have installed dxcam correctly.")
-                input("Press Enter to exit.")
-                raise Exception("DXCam not installed, install DXCam to use vision enabled LLM(Windows only).")
+                logging.error(f"Error loading dxcam for vision enabled inference engine. Please check that you have installed dxcam correctly to use vision enabled LLM(Windows only).")
+                # input("Press Enter to exit.")
+                # raise Exception("DXCam not installed, install DXCam to use vision enabled LLM(Windows only).")
+                self.vision_enabled = False
             if not loaded_pygetwindow:
-                logging.error(f"Error loading pygetwindow for vision enabled inference engine. Please check that you have installed pygetwindow correctly.")
-                input("Press Enter to exit.")
-                raise Exception("PyGetWindow not installed, install PyGetWindow to use vision enabled LLM(Windows only).")
+                logging.error(f"Error loading pygetwindow for vision enabled inference engine. Please check that you have installed pygetwindow correctly to use vision enabled LLM(Windows only).")
+                # input("Press Enter to exit.")
+                # raise Exception("PyGetWindow not installed, install PyGetWindow to use vision enabled LLM(Windows only).")
+                self.vision_enabled = False
+
+        if self.vision_enabled:
             self.get_game_window()
 
     def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model, location):
