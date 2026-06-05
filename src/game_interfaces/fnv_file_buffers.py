@@ -308,54 +308,60 @@ class GameInterface(CreationEngineFileBuffersInterface):
     def load_unnamed_npc(self, character_name):
         """Load generic NPC if character cannot be found in character database"""
 
-        male_voice_models = self.conversation_manager.character_database.male_voice_models
-        female_voice_models = self.conversation_manager.character_database.female_voice_models
-        voice_model_ids = self.conversation_manager.character_database.voice_model_ids
+        # male_voice_models = self.conversation_manager.character_database.male_voice_models
+        # female_voice_models = self.conversation_manager.character_database.female_voice_models
+        # voice_model_ids = self.conversation_manager.character_database.voice_model_ids
 
         # actor_voice_model = self.load_data_when_available('_pantella_actor_voice', '')
         # actor_voice_model_id = actor_voice_model.split('(')[1].split(')')[0]
         # actor_voice_model_name = actor_voice_model.split('<')[1].split(' ')[0]
         actor_voice_model_id, actor_voice_model_name = self.load_actor_voice_model()
 
-        actor_race = self.load_data_when_available('_pantella_actor_race', '')
-        actor_race = actor_race.split('<')[1].split(' ')[0]
+        actor_race = self.load_data_when_available('_pantella_current_actor_race', '')
 
-        actor_sex = self.load_data_when_available('_pantella_actor_gender', '')
+        actor_sex = self.load_data_when_available('_pantella_current_actor_gender', '')
 
-        voice_model = ''
-        for key in voice_model_ids:
-            # using endswith because sometimes leading zeros are ignored
-            if actor_voice_model_id.endswith(key):
-                voice_model = voice_model_ids[key]
-                break
+        # voice_model = ''
+        # for key in voice_model_ids:
+        #     # using endswith because sometimes leading zeros are ignored
+        #     if key in actor_voice_model_name or key.endswith(actor_voice_model_name) or key.startswith(actor_voice_model_name):
+        #         voice_model = voice_model_ids[key]
+        #         break
+
+        # if voice_model == '':
+        #     logging.warn(f"Could not find voice model for actor voice model name: {actor_voice_model_name}, actor voice model id: {actor_voice_model_id}. Defaulting to generic voice model based on race and gender.")
+        #     if actor_sex == 'Female':
+        #         voice_model = "FemaleAdult01Default" # Default
+        #     else:
+        #         voice_model = "MaleAdult01Default" # Default
         
         # if voice_model not found in the voice model ID list
-        if voice_model == '':
-            voice_model = self.conversation_manager.character_database.get_character_by_voice_folder(actor_voice_model_name)["voice_model"] # return voice model from actor_voice_model_name
-        else:    
-            if actor_sex == 'Female':
-                try:
-                    # voice_model = random.choice(female_voice_models[actor_race]) # Get random voice model from list of generic female voice models
-                    # TODO: Enable this after adding random name generation to generic NPCs, otherwise all generic NPCs will share the same info I think
-                    voice_model = female_voice_models[actor_race+ "Race"][0] # Default to the first for now, change later
-                except:
-                    voice_model = 'Female '+actor_race # Default to Same Sex Racial Equivalent
-            else:
-                try: 
-                    # voice_model = random.choice(male_voice_models[actor_race]) # Get random voice model from list of generic male voice models
-                    # TODO: Enable this after adding random name generation to generic NPCs, otherwise all generic NPCs will share the same info I think
-                    voice_model = male_voice_models[actor_race+ "Race"][0] # Default to the first for now, change later
-                except:
-                    voice_model = 'Male '+actor_race # Default to Same Sex Racial Equivalent
+        # if voice_model == '':
+        #     voice_model = self.conversation_manager.character_database.get_character_by_voice_folder(actor_voice_model_name)["voice_model"] # return voice model from actor_voice_model_name
+        # else:    
+        #     if actor_sex == 'Female':
+        #         try:
+        #             # voice_model = random.choice(female_voice_models[actor_race]) # Get random voice model from list of generic female voice models
+        #             # TODO: Enable this after adding random name generation to generic NPCs, otherwise all generic NPCs will share the same info I think
+        #             voice_model = female_voice_models[actor_race+ "Race"][0] # Default to the first for now, change later
+        #         except:
+        #             voice_model = 'Female '+actor_race # Default to Same Sex Racial Equivalent
+        #     else:
+        #         try: 
+        #             # voice_model = random.choice(male_voice_models[actor_race]) # Get random voice model from list of generic male voice models
+        #             # TODO: Enable this after adding random name generation to generic NPCs, otherwise all generic NPCs will share the same info I think
+        #             voice_model = male_voice_models[actor_race+ "Race"][0] # Default to the first for now, change later
+        #         except:
+        #             voice_model = 'Male '+actor_race # Default to Same Sex Racial Equivalent
 
-        voice_folder = self.conversation_manager.character_database.get_voice_folder_by_voice_model(voice_model)
+        voice_folder = self.conversation_manager.character_database.get_voice_folder_by_voice_model(actor_voice_model_name)
         
         character_info = {
             'name': character_name, # TODO: Generate random names for generic NPCs and figure out how to apply them in-game
             'bio': f'{character_name} is a {actor_race} {"Woman" if actor_sex=="1" else "Man"}.', # TODO: Generate more detailed background for generic NPCs
-            "gender":{"Female" if actor_sex=="1" else "Male"},
-            "race":actor_race,
-            'voice_model': voice_model,
+            "gender": actor_sex,
+            "race": actor_race,
+            'voice_model': actor_voice_model_name,
             'voice_folder': voice_folder[0], # Default to the first for now, maybe change later?
         }
 
@@ -467,10 +473,18 @@ class GameInterface(CreationEngineFileBuffersInterface):
         character_info['in_game_voice_model'] = actor_voice_model_name
         character_info['refid_int'] = character_ref_id
         if (character_ref_id is not None and character_ref_id != "0" and character_ref_id != "") and ("ref_id" not in character_info or character_info["ref_id"].strip() == ""):
-            character_info["ref_id"] = str(hex(int(character_ref_id)))[2:]
+            try:
+                character_info["ref_id"] = str(hex(int(character_ref_id)))[2:]
+            except:
+                logging.warn(f"Could not convert character ref ID {character_ref_id} to hex for character {character_name}. Storing ref ID as string.")
+                character_info["ref_id"] = character_ref_id[2:]
         character_info['baseid_int'] = character_base_id
         if (character_base_id is not None and character_base_id != "0" and character_base_id != "") and ("base_id" not in character_info or character_info["base_id"].strip() == ""):
-            character_info["base_id"] = str(hex(int(character_base_id)))[2:]
+            try:
+                character_info["base_id"] = str(hex(int(character_base_id)))[2:]
+            except:
+                logging.warn(f"Could not convert character base ID {character_base_id} to hex for character {character_name}. Storing base ID as string.")
+                character_info["base_id"] = character_base_id[2:]
         character_info["in_game_race"] = character_in_game_race
         character_info["in_game_gender"] = character_in_game_gender
         # character_info["is_guard"] = character_is_guard
