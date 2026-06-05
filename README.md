@@ -60,6 +60,8 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 		- [Mod Organizer 2 (Recommended)](#mod-organizer-2-recommended)
 		- [Vortex (Not Recommended)](#vortex-not-recommended)
 	- [8 - Install Requirements in Game](#8---install-requirements-in-game)
+		- [Windows Users](#windows-users)
+		- [Linux Users](#linux-users)
 	- [9 - Restart Your Computer](#9---restart-your-computer)
 - [Installation (Launcher) - Windows Only at this time](#installation-launcher---windows-only-at-this-time)
 	- [1 - Getting Started - Installing the Launcher](#1---getting-started---installing-the-launcher)
@@ -299,7 +301,13 @@ Depending on which game you want to get Pantella working for, you will need to i
 - [PantellaNV](https://github.com/Pathos14489/PantellaNV) for Fallout New Vegas
 - [Pantella Spell](https://github.com/Pathos14489/Pantella-Spell) for Skyrim SE/AE/VR
 
-Note: Don't install the plugins from the above pages yet, just the requirements. The plugins themselves will be installed via the launcher in the next steps. You can install them manually, but the launcher will automatically install them for you and keep them updated, so it's recommended to just install the requirements manually and let the launcher handle the plugins themselves.
+### Windows Users
+
+Don't install the plugins from the above pages yet, just the requirements. The plugins themselves will be installed via the launcher in the next steps. You can install them manually, but the launcher will automatically install them for you and keep them updated, so it's recommended to just install the requirements manually and let the launcher handle the plugins themselves.
+
+### Linux Users
+
+Do install the plugins from the above pages if you're on Linux, as the launcher is currently only supported on Windows. You can install the plugins manually by following the instructions on the plugin pages. If you have any issues with installing the plugins on Linux, feel free to reach out to me on Discord or GitHub and I can try to help you troubleshoot any issues you may have.
 
 ## 9 - Restart Your Computer
 
