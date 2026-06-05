@@ -157,7 +157,6 @@ class ConfigLoader:
         """Load the config from the config file and set the settings to the loader. If the config file does not exist, create it with the default settings. If a setting is missing from the config file, set it to the default setting."""
         logging.info(f"Loading config from {self.config_path}")
         save = False
-        new = True
         default = self.default()
         if os.path.exists(self.config_path):
             # If the config file does not exist, create it
@@ -173,7 +172,6 @@ class ConfigLoader:
                     logging.error(f"Could not load config file from {self.config_path}.")
                     input("Press enter to continue...")
                     raise ValueError(f"Could not load config file from {self.config_path}. Exiting...")
-            new = False
         else:
             logging.error(f"\"{self.config_path}\" does not exist! Creating default config file...")
             config = self.default()
@@ -196,16 +194,29 @@ class ConfigLoader:
                     else:
                         setattr(self, sub_key, config[key][sub_key])
 
-        if new:
+        if self.tts_engine is None or self.tts_engine == []:
             def select_tts():
                 root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
                 available_tts = tts.tts_Types.keys()
-                dlg = OptionDialog(root, f"Select Default TTS", f"Select the default TTS to use with Pantella. This will be the default TTS used on startup if 'Always Open TTS Selection' is set to false. You can change this later in your interface's {self.config_path} file.", available_tts)
+                dlg = OptionDialog(root, f"Select Default TTS", f"Select the default TTS to use with this game interface for Pantella.\nYou can change this later in your interface's {self.config_path} file.", available_tts)
                 root.withdraw() # hide the root window again after the dialog is closed
                 return dlg.result
             selected_tts = select_tts()
             logging.info(f"Selected TTS: {selected_tts}")
             self.tts_engine = [selected_tts]
+            save = True # Save the selected TTS to the config file
+
+        if self.inference_engine is None or self.inference_engine == "":
+            def select_inference_engine():
+                root.deiconify() # show the root window so the dialog shows up, we'll hide it again after the dialog is closed
+                available_inference_engines = language_models.LLM_Types.keys()
+                dlg = OptionDialog(root, f"Select Default Language Model", f"Select the default language model to use with this game interface for Pantella.\nYou can change this later in your interface's {self.config_path} file.\nllama_cpp_python is recommended, but openai_api is also available if you want to use a remote API or connect to another local computer hosting an LLM API.", available_inference_engines)
+                root.withdraw() # hide the root window again after the dialog is closed
+                return dlg.result
+            selected_inference_engine = select_inference_engine()
+            logging.info(f"Selected language model: {selected_inference_engine}")
+            self.inference_engine = selected_inference_engine
+            save = True # Save the selected inference engine to the config file
         
         if self.python_binary is None or self.python_binary == "":
             def select_python_binary():
@@ -215,6 +226,7 @@ class ConfigLoader:
                 root.withdraw() # hide the root window again after the dialog is closed
                 return dlg.result
             self.python_binary = select_python_binary()
+            save = True # Save the selected python binary to the config file
 
         if self.game_id not in interface_configs:
             if self.game_id == "":
@@ -232,7 +244,7 @@ class ConfigLoader:
                         return dlg.result
                     self.game_id = select_game_id()
                     logging.info(f"Selected game id: {self.game_id}")
-                self.save()
+                self.save() # TODO: Can I just set save = true and let it save normally...?
                 return self.load() # Reload the config after setting the game id
             else:
                 logging.error(f"Game id {self.game_id} not found in interface_configs directory. Please add a interface config file for {self.game_id} or change the game_id in {self.config_path} to a valid game id.")
@@ -711,7 +723,7 @@ class ConfigLoader:
                 "auto_save_generated_characters": True,
             },
             "LanguageModel": {
-                "inference_engine": "default",
+                "inference_engine": None, # "default",
                 "tokenizer_type": "default",
                 "maximum_local_tokens": 20480,
                 "max_response_sentences": 999,
@@ -797,9 +809,7 @@ class ConfigLoader:
                 "reverse_proxy": False,
             },
             "Speech": {
-                "tts_engine": [
-                    "piper_binary"
-                ],
+                "tts_engine": None, # ["piper_binary"]
                 "end_conversation_wait_time": 1,
                 "sentences_per_voiceline": 2,
                 "narrator_voice": None,

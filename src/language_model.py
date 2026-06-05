@@ -10,7 +10,7 @@ logging.info("Imported required libraries in language_model.py")
 with open(os.path.join(os.path.dirname(__file__), "module_banlist"), "r") as f:
     banned_modules = f.read().split("\n")
 
-default = "openai_api" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
+default = "llama_cpp_python" # The default LLM to use if the one specified in config.json is not found or if default is specified in config.json
 LLM_Types = {}
 # Get all LLMs from src/inference_engines/ and add them to LLM_Types
 for file in os.listdir(os.path.join(os.path.dirname(__file__), "inference_engines/")):
