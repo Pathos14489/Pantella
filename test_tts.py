@@ -46,7 +46,13 @@ if __name__ == '__main__':
     
     logging.info("Config loaded successfully - Available TTS engines:")
     for tts_engine in config.tts_Types:
-        logging.info(f"- {config.tts_Types[tts_engine].tts_name} (slug: {config.tts_Types[tts_engine].tts_slug})")  
+        try:
+            logging.info(f"- {config.tts_Types[tts_engine].tts_name} (slug: {config.tts_Types[tts_engine].tts_slug})")  
+        except Exception as e:
+            logging.error(f"Error loading TTS engine '{tts_engine}' - skipping:")
+            logging.error(e)
+            tb = traceback.format_exc()
+            logging.error(tb)
 
     utils.cleanup_mei(config.remove_mei_folders) # clean up old instances of exe runtime files
     
