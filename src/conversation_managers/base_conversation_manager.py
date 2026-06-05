@@ -153,7 +153,8 @@ class BaseConversationManager:
     def post_initialization(self):
         self.thought_process = thought_process.create_thought_process(self) # Create Thought Process Manager based on config
         self.character_generator_schema = character_generator.create_generator_schema(self) # Create Character Manager based on config
-        self.config.set_prompt_style(self.inference_engine, self.tokenizer) # Set prompt based on LLM and config settings
+        # self.config.set_prompt_style(self.inference_engine, self.tokenizer) # Set prompt based on LLM and config settings
+        self.tokenizer.set_prompt_style(self.config._prompt_style)
         self.behavior_manager = behavior_manager.create_manager(self) # Create Behavior Manager based on config
         
     def get_context(self): # Returns the current context(in the form of a list of messages) for the given active characters in the ongoing conversation

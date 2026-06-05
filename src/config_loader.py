@@ -74,6 +74,7 @@ class ConfigLoader:
         self.conversation_manager = None
         self.selected_interface = selected_interface
         self.game_id = ""
+        self._prompt_style = None
         if selected_interface is not None:
             self.game_id = selected_interface
             logging.info(f"Selected interface: {self.selected_interface}, setting game id to selected interface")
@@ -96,7 +97,6 @@ class ConfigLoader:
         logging.log_file = self.logging_file_path # Set the logging file path
         self.manager_types = {}
         self.get_prompt_styles()
-        self._prompt_style = None
         self.addons = {}
         self.load_addons()
         self.ready = True
@@ -191,7 +191,7 @@ class ConfigLoader:
                         config[key][sub_key] = default[key][sub_key]
                         save = True
                         logging.info(f"Saving new subkey '{key}':'{sub_key}' to config file")
-                    if "_path" in sub_key or "_file" in sub_key:
+                    if ("_path" in sub_key or "_file" in sub_key) and config[key][sub_key] is not None:
                         setattr(self, sub_key, config[key][sub_key].replace("\\", "/").replace("/","\\"))
                     else:
                         setattr(self, sub_key, config[key][sub_key])
@@ -294,7 +294,7 @@ class ConfigLoader:
             # Fix paths for linux
             for key in default:
                 for sub_key in default[key]:
-                    if "_path" in sub_key or "_file" in sub_key or "_dir" in sub_key:
+                    if ("_path" in sub_key or "_file" in sub_key or "_dir" in sub_key) and config[key][sub_key] is not None:
                         setattr(self, sub_key, config[key][sub_key].replace("\\", "/"))
             logging.config("Paths fixed for linux")
         
@@ -339,6 +339,7 @@ class ConfigLoader:
                     self.prompt_styles[slug] = self._raw_prompt_styles[slug]
         style_names = [f"{slug} ({self._raw_prompt_styles[slug]['name']})" for slug in self.prompt_styles]
         # self._prompt_style = self.prompt_styles["normal_en"]
+        self._prompt_style = self.prompt_styles[self.current_interface_config.get("default_prompt_style", self.prompt_style_override if self.prompt_style_override is not None and self.prompt_style_override in self.prompt_styles else "normal_en")]
         logging.config(f"Prompt styles loaded: "+str(style_names))
 
     def load_addons(self):
@@ -494,21 +495,21 @@ class ConfigLoader:
         #     logging.error(f"Prompt style not set in config file. Using default prompt style.")
         #     self._prompt_style = self.prompt_styles["normal_en"]
 
-        prompt_style = self.prompt_style_override
-        if prompt_style == "" or prompt_style is None:
-            if llm.prompt_style in self.prompt_styles:
-                prompt_style = llm.prompt_style
-                logging.config(f"Setting prompt style to recommended prompt style for {llm.slug}: {prompt_style}")
-            elif self.current_interface_config["default_prompt_style"] in self.prompt_styles:
-                prompt_style = self.current_interface_config["default_prompt_style"]
-                logging.config(f"Setting prompt style to default prompt style for {self.game_id} from interface config: {prompt_style}")
-        if prompt_style in self.prompt_styles:
-            logging.config(f"Setting prompt style to {prompt_style} from config file")
-        else:
-            logging.error(f"Prompt style {prompt_style} not found in prompt_styles directory.")
-            raise ValueError(f"Prompt style {prompt_style} not found in prompt_styles directory. Please set a valid prompt style in the config file or use a compatible LLM with a recommended prompt style.")
+        # prompt_style = self.prompt_style_override
+        # if prompt_style == "" or prompt_style is None:
+        #     if llm.prompt_style in self.prompt_styles:
+        #         prompt_style = llm.prompt_style
+        #         logging.config(f"Setting prompt style to recommended prompt style for {llm.slug}: {prompt_style}")
+        #     elif self.current_interface_config["default_prompt_style"] in self.prompt_styles:
+        #         prompt_style = self.current_interface_config["default_prompt_style"]
+        #         logging.config(f"Setting prompt style to default prompt style for {self.game_id} from interface config: {prompt_style}")
+        # if prompt_style in self.prompt_styles:
+        #     logging.config(f"Setting prompt style to {prompt_style} from config file")
+        # else:
+        #     logging.error(f"Prompt style {prompt_style} not found in prompt_styles directory.")
+        #     raise ValueError(f"Prompt style {prompt_style} not found in prompt_styles directory. Please set a valid prompt style in the config file or use a compatible LLM with a recommended prompt style.")
 
-        self._prompt_style = self.prompt_styles[prompt_style]
+        # self._prompt_style = self.prompt_styles[prompt_style]
 
         tokenizer.set_prompt_style(self._prompt_style) # Set the prompt style for the tokenizer
         # self.get_tokenizer_settings_from_prompt_style()
@@ -712,7 +713,7 @@ class ConfigLoader:
             "LanguageModel": {
                 "inference_engine": "default",
                 "tokenizer_type": "default",
-                "maximum_local_tokens": 4096,
+                "maximum_local_tokens": 20480,
                 "max_response_sentences": 999,
                 "wait_time_buffer": 1.0,
                 "same_output_limit": 30,
@@ -756,6 +757,7 @@ class ConfigLoader:
                 "mirostat_eta": 0.1,
                 "mirostat_tau": 5,
                 "max_tokens": 512,
+                "thinking": True,
                 "logit_bias":{}
             },
             "Vision": {
@@ -972,6 +974,7 @@ class ConfigLoader:
                 "mirostat_eta": self.mirostat_eta,
                 "mirostat_tau": self.mirostat_tau,
                 "max_tokens": self.max_tokens,
+                "thinking": self.thinking,
                 "logit_bias": self.logit_bias,
             },
             "Vision": {
