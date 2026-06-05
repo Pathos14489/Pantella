@@ -63,7 +63,7 @@ class base_Tokenizer(): # Tokenizes(only availble for counting the tokens in a s
 
     def num_tokens_from_messages(self, messages): # Returns the number of tokens used by a list of messages
         """Returns the number of tokens used by a list of messages"""
-        context, _images = self.get_string_from_messages(messages)
+        context = self.get_string_from_messages(messages)
         context += self.start_message("assistant") # Simulate the assistant replying to add a little more to the token count to be safe (this is a bit of a hack, but it should work 99% of the time I think) TODO: Determine if needed
         return self.get_token_count(context)
     

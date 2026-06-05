@@ -67,7 +67,6 @@ class LLM(base_LLM):
         global inference_engine_name, default_settings, loaded, tokenizer_slug
         super().__init__(conversation_manager, vision_enabled=vision_enabled)
         self.inference_engine_name = inference_engine_name
-        default_settings = self.default_inference_engine_settings
         self.tokenizer_slug = tokenizer_slug # Fastest tokenizer for OpenAI models, change if you want to use a different tokenizer (use 'embedding' for compatibility with any model using the openai API)
         
         def get_completions_type_options():
@@ -353,19 +352,6 @@ class LLM(base_LLM):
             self.prefill_supported = self.config.supports_prefill_override
         loaded = True
 
-    @property
-    def default_inference_engine_settings(self):
-        """Returns the default settings for this inference engine"""
-        return {
-            "openai_model": self.config.openai_model, # The model to use for completions. This can be changed in config.json.
-            "openai_character_generator_model": self.config.openai_character_generator_model, # The model to use for character generation. This can be changed in config.json. If blank, the main model will be used.
-            "openai_completions_type": self.config.openai_completions_type, # The type of completions to use. This can be changed in config.json. Options are "text" or "chat". If "text", the model must support text completions. If "chat", the model must support chat completions.
-            "alternative_openai_api_base": self.config.alternative_openai_api_base, # The base URL for the OpenAI API. This can be changed in config.json. If 'none', the default OpenAI API will be used.
-            "openai_api_key_path": self.config.openai_api_key_path, # The path to the file containing the OpenAI API key. This can be changed in config.json.
-            "banned_samplers": self.config.banned_samplers, # Examples: "min_p", "typical_p", "top_p", "top_k", "temperature", "frequency_penalty", "presence_penalty", "repeat_penalty", "tfs_z", "mirostat_mode", "mirostat_eta", "mirostat_tau", "max_tokens"
-            "api_log_dir": self.config.api_log_dir, # The directory to save API logs to. This can be changed in config.json.
-        }
-
     def generate_character(self, character_name, character_ref_id, character_base_id, character_in_game_race, character_in_game_gender, character_is_guard, character_is_ghost, in_game_voice_model=None, location=None):
         """Generate a character based on the prompt provided"""
         if not self.character_generation_supported:
@@ -434,7 +420,7 @@ class LLM(base_LLM):
         while character is None and tries > 0:
             try:
                 if self.config.openai_completions_type == "text" and self.completions_supported:
-                    prompt, images = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message("assistant")
+                    prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message("assistant")
                     completion = self.client.completions.create(prompt,
                         model=generation_model, 
                         max_tokens=self.config.max_tokens,
@@ -557,7 +543,7 @@ class LLM(base_LLM):
                     if kwarg in extra_body_kwargs:
                         del extra_body_kwargs[kwarg]
                 if self.config.openai_completions_type == "text" and self.completions_supported:
-                    prompt, images = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message("assistant")
+                    prompt = self.tokenizer.get_string_from_messages(messages) + self.tokenizer.start_message("assistant")
                     logging.info(f"Raw Prompt: {prompt}")
                     completion = self.client.completions.create(prompt=prompt,
                         model=self.config.openai_model, 
@@ -691,7 +677,7 @@ class LLM(base_LLM):
 
 
                 if self.config.openai_completions_type == "text" and self.completions_supported:
-                    prompt, images = self.tokenizer.get_string_from_messages(messages)
+                    prompt = self.tokenizer.get_string_from_messages(messages)
                     prompt += self.tokenizer.start_message("assistant")
                     symbol_insert = ""
                     if force_speaker is not None and self._prompt_style["force_speaker"]:

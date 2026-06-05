@@ -154,7 +154,6 @@ class base_LLM():
         global inference_engine_name, tokenizer_slug, default_settings, loaded
         self.conversation_manager = conversation_manager
         self.config = self.conversation_manager.config
-        default_settings = self.default_inference_engine_settings
         self.tokenizer = None
         
         self.inference_engine_name = inference_engine_name
@@ -216,11 +215,6 @@ class base_LLM():
         return self.cot_supported
 
     @property
-    def default_inference_engine_settings(self):
-        """Default voice model settings for the LLM"""
-        return {}
-
-    @property
     def cot_enabled(self):
         return self.config.cot_enabled
 
@@ -250,11 +244,6 @@ class base_LLM():
     def replacements(self):
         replacements = self._prompt_style["replacements"]
         return replacements
-    
-    @property
-    def undo(self): # strings that will cause the whole sentence to be retried if they're encountered
-        undo_chars = self._prompt_style["undo"]
-        return undo_chars
     
     @property
     def _prompt_style(self):
@@ -289,6 +278,10 @@ class base_LLM():
     @property
     def maximum_local_tokens(self):
         return self.config.maximum_local_tokens
+    
+    @property
+    def thinking(self):
+        return self.config.thinking
 
     @property
     def player_name(self):
@@ -302,11 +295,7 @@ class base_LLM():
             logging.warning("EOS_token is empty, returning BOS_token instead.")
             return self._prompt_style['BOS_token']
         else: # Return the first stop string if EOS_token and BOS_token are both empty
-            return self.stop[0]        
-    
-    @property
-    def thinking_transitions(self):
-        return self._prompt_style['thinking_transitions']
+            return self.stop[0]
     
     @property
     def BOS_token(self):
@@ -1050,10 +1039,26 @@ class base_LLM():
             try:
                 content = chunk['choices'][0]['text']
             except:
+                logging.error("Could not get text from chunk:", chunk)
+                content = None
+            if content is None:
                 try:
                     content = chunk.choices[0].text
                 except:
-                    logging.error("Could not get text from chunk.")
+                    logging.error("Could not get text from chunk:", chunk)
+                    content = None
+            if content is None:
+                try:
+                    content = chunk.choices[0]['content']
+                except:
+                    logging.error("Could not get content from chunk:", chunk)
+                    content = None
+            if content is None:
+                try:
+                    content = chunk.choices[0]['delta']['content']
+                except:
+                    logging.error("Could not get content from chunk:", chunk)
+                    content = None
         elif type(chunk) == str:
             # logging.info(chunk)
             content = chunk
@@ -1123,6 +1128,15 @@ class base_LLM():
                 except Exception as e:
                     logging.debug(error + str(e))
                     raise e
+            if content is None:
+                try:
+                    content = chunk['choices'][0]['delta']['content']
+                except Exception as e:
+                    logging.debug(error + str(e))
+                    raise e
+        if content is None:
+            logging.error(f"Could not get content from chunk:", chunk)
+            raise ValueError("Could not get content from chunk.")
         return content
     
     def split_and_preverse_strings_on_end_of_sentence(self, sentence, next_sentence=""):
@@ -1251,11 +1265,6 @@ class base_LLM():
                 num_sentences = 0 # used to keep track of how many sentences have been generated total
                 voice_line_sentences = 0 # used to keep track of how many sentences have been generated for the current voice line
                 send_voiceline = False # used to determine if the current sentence should be sent early
-                        
-                reason = ""        
-                reasoning = False
-                if len(self.thinking_transitions) > 0:
-                    reasoning = True
 
                 voice_lines = [] # used to store the voice lines generated
                 same_roleplay_symbol = self._prompt_style["roleplay_suffix"] == self._prompt_style["roleplay_prefix"] # used to determine if the roleplay symbol is the same for both the prefix and suffix
@@ -1282,17 +1291,6 @@ class base_LLM():
                     else:
                         content = self.format_content(chunk) # example: ".* Hello"
                     content = content.replace("“", "\"").replace("”", "\"").replace("‘", "'").replace("’", "'").replace("—", "-").replace("…", "...")
-                    if reasoning: # if reasoning is enabled, then the LLM will generate a reason for the response before the response, so just funnel the reason into the reason variable until a thinking_transition is detected
-                        logging.info(f"Reasoning: {reasoning}")
-                        reason += content
-                        for thinking_transition in self.thinking_transitions:
-                            if thinking_transition in content:
-                                reasoning = False
-                                reason, content = reason.split(thinking_transition,1)
-                                logging.info(f"Full Reasoning: {reason}")
-                                break
-                        if content == "":
-                            continue
                     logging.out(f"Content: {content}")
                     if content is None:
                         logging.error(chunk)
