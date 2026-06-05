@@ -86,6 +86,71 @@ class FolderSelectionDialog(Toplevel): # Popup to let the user select a folder, 
         self.result = None
         self.destroy()
 
+class FileSelectionDialog(Toplevel): # Popup to let the user select a file, returns the path to the file selected
+    def __init__(self, parent, title, question, button_text, filetypes=(("All files", "*.*"),)):
+        Toplevel.__init__(self, parent)
+        self.title(title)
+        self.question = question
+        self.transient(parent)
+        self.button_text = button_text
+        self.protocol("WM_DELETE_WINDOW", self.cancel)
+        self.result = None
+        self.filetypes = filetypes
+        self.createWidgets()
+        self.grab_set()
+        self.wait_window()
+    def createWidgets(self):
+        frmQuestion = Frame(self)
+        Label(frmQuestion, text=self.question).grid()
+        frmQuestion.grid(row=1)
+        frmButtons = Frame(self)
+        frmButtons.grid(row=2)
+        btnSelectFile = Button(frmButtons, text=self.button_text, command=self.selectFile)
+        btnSelectFile.grid(column=0, row=0)
+    def selectFile(self):
+        from tkinter import filedialog
+        file_selected = filedialog.askopenfilename(filetypes=self.filetypes)
+        if file_selected:
+            self.result = file_selected
+            self.destroy()
+    def cancel(self):
+        self.result = None
+        self.destroy()
+
+class SliderDialog(Toplevel): # Popup to let the user select a value from a slider, returns the value selected
+    def __init__(self, parent, title, question, from_, to, resolution=1):
+        Toplevel.__init__(self, parent)
+        self.title(title)
+        self.question = question
+        self.transient(parent)
+        self.protocol("WM_DELETE_WINDOW", self.cancel)
+        self.from_ = from_
+        self.to = to
+        self.resolution = resolution
+        self.result = None
+        self.createWidgets()
+        self.grab_set()
+        self.wait_window()
+    def createWidgets(self):
+        from tkinter import Scale, HORIZONTAL
+        frmQuestion = Frame(self)
+        Label(frmQuestion, text=self.question).grid()
+        frmQuestion.grid(row=1)
+        frmSlider = Frame(self)
+        self.slider = Scale(frmSlider, from_=self.from_, to=self.to, orient=HORIZONTAL, resolution=self.resolution)
+        self.slider.grid()
+        frmSlider.grid(row=2)
+        frmButtons = Frame(self)
+        frmButtons.grid(row=3)
+        btnSubmit = Button(frmButtons, text="Submit", command=self.submit)
+        btnSubmit.grid(column=0, row=0)
+    def submit(self):
+        self.result = self.slider.get()
+        self.destroy()
+    def cancel(self):
+        self.result = None
+        self.destroy()
+
 class ConfirmationBox(Toplevel):
     def __init__(self, parent, title, question):
         Toplevel.__init__(self, parent)
