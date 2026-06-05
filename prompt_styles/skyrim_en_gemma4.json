@@ -1,49 +1,25 @@
 {
-    "name": "Normal - English",
+    "name": "Skyrim - English - Gemma 4",
     "style": {
-        "stop": ["</|Assistant|>","\n"],
-        "thinking_transitions": ["</think>"],
-        "undo": ["{", "}"],
         "replacements": [
             {
                 "char": "“",
-                "replacement": "\""
+                "replacement": ""
             },
             {
                 "char": "”",
-                "replacement": "\""
+                "replacement": ""
             },
             {
                 "char": "\"",
                 "replacement": ""
-            }
-        ],
-        "end_of_sentence_chars": [".", "?", "!"],
-        "BOS_token": "",
-        "EOS_token": "<|end_of_sentence|>",
-        "message_signifier": ": ",
-        "role_separator": "",
-        "message_separator": "",
-        "message_format": "[BOS_token][role_prefix_insert][role_seperator][name][message_signifier][content][role_suffix_insert][EOS_token][message_seperator]",
-        "chat_format": "[messages]",
-        "message_roles": [
-            {
-                "role_name": "user",
-                "role_prefix_insert": "<|User|>",
-                "role_suffix_insert": ""
             },
             {
-                "role_name": "assistant",
-                "role_prefix_insert": "<|Assistant|>",
-                "role_suffix_insert": ""
-            },
-            {
-                "role_name": "system",
-                "role_prefix_insert": "<|User|>",
-                "role_suffix_insert": ""
+                "char": "\n",
+                "replacement": " "
             }
         ],
-        "force_speaker": false,
+        "force_speaker": true,
         "roleplay_inverted": false,
         "roleplay_prefix": "*",
         "roleplay_prefix_aliases": [
@@ -52,6 +28,39 @@
         "roleplay_suffix": "*",
         "roleplay_suffix_aliases": [
             ")"
+        ],
+        "banned_chars": [],
+        "end_of_sentence_chars": [".", "?", "!"],
+        "stop": ["<|turn>", "<turn|>", "<channel|>"],
+        "BOS_token": "<|turn>",
+        "EOS_token": "<turn|>",
+        "message_signifier": ": ",
+        "role_seperator": "\n",
+        "message_seperator": "\n",
+        "thinking": true,
+        "no_think_empty_thoughts": true,
+        "start_thinking_token": "<|channel>thought\n",
+        "end_thinking_token": "<channel|>",
+        "thinking_token_prefix": "",
+        "thinking_token_suffix": "",
+        "message_format": "[BOS_token][role_prefix_insert][role_seperator][thinking_token_prefix][start_thinking_token][thought_content][end_thinking_token][thinking_token_suffix][name][message_signifier][content][role_suffix_insert][EOS_token][message_seperator]",
+        "chat_format": "[messages]",
+        "message_roles": [
+            {
+                "role_name": "user",
+                "role_prefix_insert": "user",
+                "role_suffix_insert": ""
+            },
+            {
+                "role_name": "assistant",
+                "role_prefix_insert": "model",
+                "role_suffix_insert": ""
+            },
+            {
+                "role_name": "system",
+                "role_prefix_insert": "system",
+                "role_suffix_insert": ""
+            }
         ]
     },
     "language":{

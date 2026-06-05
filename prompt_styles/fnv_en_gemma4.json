@@ -1,46 +1,24 @@
 {
-    "name": "Normal - English",
+    "name": "FNV - English - Gemma 4",
     "style": {
-        "stop": ["<im_end>","<im_end>", "\"", "<", "<im", "im_", "<im_end"],
-        "thinking_transitions": [],
-        "undo": ["{", "}"],
         "replacements": [
             {
                 "char": "“",
-                "replacement": "\""
-            }
-        ],
-        "end_of_sentence_chars": [".", "?", "!"],
-        "BOS_token": "<im_start>",
-        "EOS_token": "<im_end>",
-        "message_signifier": ": ",
-        "role_separator": "\n",
-        "message_separator": "\n",
-        "message_format": "[BOS_token][role_prefix_insert][role_seperator][name][message_signifier][content][role_suffix_insert][EOS_token][message_seperator]",
-        "chat_format": "[messages]",
-        "message_roles": [
-            {
-                "role_name": "user",
-                "role_prefix_insert": "user",
-                "role_suffix_insert": ""
+                "replacement": ""
             },
             {
-                "role_name": "assistant",
-                "role_prefix_insert": "assistant",
-                "role_suffix_insert": ""
+                "char": "”",
+                "replacement": ""
             },
             {
-                "role_name": "system",
-                "role_prefix_insert": "system",
-                "role_suffix_insert": ""
+                "char": "\"",
+                "replacement": ""
+            },
+            {
+                "char": "\n",
+                "replacement": " "
             }
         ],
-        "system_name": "system",
-        "user_name": "user",
-        "assistant_name": "assistant",
-        "system_EOS_token":  "",
-        "user_EOS_token": "",
-        "assistant_EOS_token": "",
         "force_speaker": true,
         "roleplay_inverted": false,
         "roleplay_prefix": "*",
@@ -50,15 +28,48 @@
         "roleplay_suffix": "*",
         "roleplay_suffix_aliases": [
             ")"
+        ],
+        "banned_chars": [],
+        "end_of_sentence_chars": [".", "?", "!"],
+        "stop": ["<|turn>", "<turn|>", "<channel|>"],
+        "BOS_token": "<|turn>",
+        "EOS_token": "<turn|>",
+        "message_signifier": ": ",
+        "role_seperator": "\n",
+        "message_seperator": "\n",
+        "thinking": true,
+        "no_think_empty_thoughts": true,
+        "start_thinking_token": "<|channel>thought\n",
+        "end_thinking_token": "<channel|>",
+        "thinking_token_prefix": "",
+        "thinking_token_suffix": "",
+        "message_format": "[BOS_token][role_prefix_insert][role_seperator][thinking_token_prefix][start_thinking_token][thought_content][end_thinking_token][thinking_token_suffix][name][message_signifier][content][role_suffix_insert][EOS_token][message_seperator]",
+        "chat_format": "[messages]",
+        "message_roles": [
+            {
+                "role_name": "user",
+                "role_prefix_insert": "user",
+                "role_suffix_insert": ""
+            },
+            {
+                "role_name": "assistant",
+                "role_prefix_insert": "model",
+                "role_suffix_insert": ""
+            },
+            {
+                "role_name": "system",
+                "role_prefix_insert": "system",
+                "role_suffix_insert": ""
+            }
         ]
     },
     "language":{
         "prompts":{
-            "single_player_with_npc": "*{name} is a {race} {gendered_age} that lives in Skyrim. {name} can only speak {language}.\n\n{bio}*\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n{player_name}: *{player_name} picked up a pair of gloves* What do you think about these gloves?\n\nHere is another:\n\n{name}: Here, you can have my sword. *{name} dropped a Steel Sword*\n\n{name} is having a conversation with {perspective_player_name} in {location}.\n\nIt is {time12} {time_group}.\n\nContext:\n{context}\n\n\n\nThe following is a conversation that will be spoken aloud between {name} and {perspective_player_name}. {name} will not respond with numbered lists, code, etc. only natural responses to the conversation. Responses should not contain any new lines.",
-            "single_npc_with_npc": "*{name1} is a {race1} {gendered_age1} that lives in Skyrim. {name1} can only speak {language1}.\n\n{bio1}\n\n{name2} is a {race2} {gendered_age2} that lives in Skyrim. {name2} can only speak {language2}.\n\n{bio2}*\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n*{name2} picked up a pair of gloves*\n\nHere is another:\n\n*{name1} dropped a Steel Sword*\n\n{name2} is having a conversation with {name2} in {location}.\n\nIt is {time12} {time_group}.Context:\n{context}\n\nThe following is a conversation that will be spoken aloud between {name1} and {name2}. Neither {name1} or {name2} will not respond with numbered lists, code, etc. only natural responses to the conversation. Responses should not contain any new lines.",
-            "multi_npc": "*{bios}*\n\nContext:\n{context}\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n*{player_name} picked up a pair of gloves*\n\nHere is another:\n\n*{player_name} dropped a Steel Sword*\n\n{names_w_player} are having a conversation in {location} in {language}.\nIt is {time12} {time_group}. Responses should not contain any new lines."
+            "single_player_with_npc": "*{name} is a(n) {race} {gendered_age} that lives in the post nuclear American Wasteland. {name} can only speak {language}.*\n\n*{bio}*\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n{player_name}: *{player_name} picked up a pair of gloves* What do you think about these gloves?\n\nHere is another:\n\n{name}: Here, you can have my sword. *{name} dropped a Steel Sword*\n\n{name} is having a conversation with {perspective_player_name} in {location}.\n\nIt is {time12} {time_group}.\n\nContext:\n{context}\n\n\n\nThe following is a conversation that will be spoken aloud between {name} and {perspective_player_name}. {name} will not respond with numbered lists, code, etc. only natural responses to the conversation. Responses should not contain any new lines.",
+            "single_npc_with_npc": "",
+            "multi_npc": ""
         },
-        "in_game_language_name": "Tamrielic",
+        "in_game_language_name": "English",
         "language_name": "English",
         "language_code": "en",
         "tts_language_code": "en",

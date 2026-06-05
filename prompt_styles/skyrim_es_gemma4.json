@@ -1,46 +1,22 @@
 {
-    "name": "FNV - English",
+    "name": "Skyrim - Español - Gemma 4",
     "style": {
-        "stop": ["<|eot_id|>","<|end_header_id|>", "<", "<im", "im_", "<im_end", "\n"],
-        "thinking_transitions": [],
-        "undo": ["{", "}"],
         "replacements": [
             {
                 "char": "“",
-                "replacement": "\""
+                "replacement": ""
             },
             {
                 "char": "”",
-                "replacement": "\""
+                "replacement": ""
             },
             {
                 "char": "\"",
                 "replacement": ""
-            }
-        ],
-        "end_of_sentence_chars": [".", "?", "!"],
-        "BOS_token": "<|start_header_id|>",
-        "EOS_token": "<|eot_id|>",
-        "message_signifier": ": ",
-        "role_separator": "<|end_header_id|>\n\n",
-        "message_separator": "",
-        "message_format": "[BOS_token][role_prefix_insert][role_seperator][name][message_signifier][content][role_suffix_insert][EOS_token][message_seperator]",
-        "chat_format": "[messages]",
-        "message_roles": [
-            {
-                "role_name": "user",
-                "role_prefix_insert": "user",
-                "role_suffix_insert": ""
             },
             {
-                "role_name": "assistant",
-                "role_prefix_insert": "assistant",
-                "role_suffix_insert": ""
-            },
-            {
-                "role_name": "system",
-                "role_prefix_insert": "system",
-                "role_suffix_insert": ""
+                "char": "\n",
+                "replacement": " "
             }
         ],
         "force_speaker": true,
@@ -52,92 +28,124 @@
         "roleplay_suffix": "*",
         "roleplay_suffix_aliases": [
             ")"
+        ],
+        "banned_chars": [],
+        "end_of_sentence_chars": [".", "?", "!"],
+        "stop": ["<|turn>", "<turn|>", "<channel|>"],
+        "BOS_token": "<|turn>",
+        "EOS_token": "<turn|>",
+        "message_signifier": ": ",
+        "role_seperator": "\n",
+        "message_seperator": "\n",
+        "thinking": true,
+        "no_think_empty_thoughts": true,
+        "start_thinking_token": "<|channel>thought\n",
+        "end_thinking_token": "<channel|>",
+        "thinking_token_prefix": "",
+        "thinking_token_suffix": "",
+        "message_format": "[BOS_token][role_prefix_insert][role_seperator][thinking_token_prefix][start_thinking_token][thought_content][end_thinking_token][thinking_token_suffix][name][message_signifier][content][role_suffix_insert][EOS_token][message_seperator]",
+        "chat_format": "[messages]",
+        "message_roles": [
+            {
+                "role_name": "user",
+                "role_prefix_insert": "user",
+                "role_suffix_insert": ""
+            },
+            {
+                "role_name": "assistant",
+                "role_prefix_insert": "model",
+                "role_suffix_insert": ""
+            },
+            {
+                "role_name": "system",
+                "role_prefix_insert": "system",
+                "role_suffix_insert": ""
+            }
         ]
     },
     "language":{
         "prompts":{
-            "single_player_with_npc": "*{name} is a(n) {race} {gendered_age} that lives in the post nuclear American Wasteland. {name} can only speak {language}.*\n\n*{bio}*\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n{player_name}: *{player_name} picked up a pair of gloves* What do you think about these gloves?\n\nHere is another:\n\n{name}: Here, you can have my sword. *{name} dropped a Steel Sword*\n\n{name} is having a conversation with {perspective_player_name} in {location}.\n\nIt is {time12} {time_group}.\n\nContext:\n{context}\n\n\n\nThe following is a conversation that will be spoken aloud between {name} and {perspective_player_name}. {name} will not respond with numbered lists, code, etc. only natural responses to the conversation. Responses should not contain any new lines.",
-            "single_npc_with_npc": "",
-            "multi_npc": ""
+            "single_player_with_npc_prompt": "*{name} is a {race} {gendered_age} that lives in Skyrim. {name} can only speak {language}.\n\n{bio}*\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n*{player_name} picked up a pair of gloves*\n\nHere is another:\n\n*{name} dropped a Steel Sword*\n\n{name} is having a conversation with {perspective_player_name} in {location}.\n\nIt is {time12} {time_group}.\n\nContext:\n{context}\n\n\n\nThe following is a conversation that will be spoken aloud between {name} and {perspective_player_name}. {name} will not respond with numbered lists, code, etc. only natural responses to the conversation.",
+            "single_npc_with_npc_prompt": "*{name1} is a {race1} {gendered_age1} that lives in Skyrim. {name1} can only speak {language1}.\n\n{bio1}\n\n{name2} is a {race2} {gendered_age2} that lives in Skyrim. {name2} can only speak {language2}.\n\n{bio2}*\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n*{name2} picked up a pair of gloves*\n\nHere is another:\n\n*{name1} dropped a Steel Sword*\n\n{name2} is having a conversation with {name2} in {location}.\n\nIt is {time12} {time_group}.Context:\n{context}\n\nThe following is a conversation that will be spoken aloud between {name1} and {name2}. Neither {name1} or {name2} will not respond with numbered lists, code, etc. only natural responses to the conversation.",
+            "multi_npc_prompt": "*{bios}*\n\nContext:\n{context}\n\nSometimes in-game events will be sent as system messages with the text between * symbols. System is not really there, no one will hear what System said, they will just know it. System is the narrator explaining the state of the world. Here is an example:\n\n*{player_name} picked up a pair of gloves*\n\nHere is another:\n\n*{player_name} dropped a Steel Sword*\n\n{names_w_player} are having a conversation in {location} in {language}.\nIt is {time12} {time_group}."
         },
-        "in_game_language_name": "English",
-        "language_name": "English",
-        "language_code": "en",
-        "tts_language_code": "en",
+        "in_game_language_name": "Tamrielic",
+        "language_name": "Spanish",
+        "language_code": "es",
+        "tts_language_code": "es",
         "race_titles":{
             "Altmer":"Altmer",
-            "Argonian":"Argonian",
+            "Argonian":"Argoniano",
             "Bosmer":"Bosmer",
-            "Breton":"Breton",
+            "Breton":"Bretón",
             "Dark Elf":"Dunmer",
             "Dunmer":"Dunmer",
             "High Elf":"Altmer",
             "Imperial":"Imperial",
-            "Khajiit":"Khajiit",
-            "Nord":"Nord",
-            "Orc":"Orsimer",
-            "Orsimer":"Orsimer",
-            "Redguard":"Redguard",
+            "Khajiit":"Khajiita",
+            "Nord":"Nórdico",
+            "Orc":"Orco",
+            "Orsimer":"Orco",
+            "Redguard":"Guardia rojo",
             "Wood Elf":"Bosmer"
         },
         "age_titles":{
-            "child":"Child",
-            "teen":"Teen",
-            "young_adult":"Young Adult",
-            "adult":"Adult",
-            "old":"Old"
+            "child":"Niño",
+            "teen":"Adolescente",
+            "young_adult":"Adulto joven",
+            "adult":"Adulto",
+            "old":"Viejo"
         },
         "aged_gendered_titles":{
             "Male":{
-                "child":"Boy",
-                "teen":"Teenage Boy",
-                "young_adult":"Young Man",
-                "adult":"Man",
-                "old":"Old Man"
+                "child":"Chico",
+                "teen":"Adolescente",
+                "young_adult":"Adulto joven",
+                "adult":"Hombre",
+                "old":"Hombre viejo"
             },
             "Female":{
-                "child":"Girl",
-                "teen":"Teenage Girl",
-                "young_adult":"Young Woman",
-                "adult":"Woman",
-                "old":"Old Woman"
+                "child":"Chica",
+                "teen":"Adolescente",
+                "young_adult":"Adulta joven",
+                "adult":"Mujer",
+                "old":"Mujer viaja"
             }
         },
         "trust_titles":{
-            "stranger":"stranger",
-            "archnemesis":"archnemesis",
-            "enemy":"enemy",
-            "foe":"foe",
-            "rival":"rival",
-            "acquaintance":"acquaintance",
-            "friend":"friend",
-            "confidant":"confidant",
-            "ally":"ally",
-            "lover":"lover"
+            "stranger":"el extraño",
+            "archnemesis":"el archienemigo",
+            "enemy":"el enemigo",
+            "foe":"el enemigo",
+            "rival":"el rival",
+            "acquaintance":"el conocido",
+            "friend":"el amigo",
+            "confidant":"la persona segura",
+            "ally":"el aliado",
+            "lover":"el amante"
         },
         "unknown_perspective_name":{
-            "stranger":"A {other_race} {other_gender} stranger",
-            "archnemesis":"{self_name}'s {other_race} {other_gender} archnemesis",
-            "enemy":"{self_name}'s {other_race} {other_gender} enemy",
-            "foe":"{self_name}'s {other_race} {other_gender} foe",
-            "rival":"{self_name}'s {other_race} {other_gender} rival",
-            "acquaintance":"{other_race} {other_gender} acquaintance of {self_name}",
-            "friend":"{self_name}'s mysterious {other_race} {other_gender} friend",
-            "confidant":"{self_name}'s mysterious {other_race} {other_gender} confidant",
-            "ally":"{self_name}'s mysterious {other_race} {other_gender} ally",
-            "lover":"{self_name}'s mysterious {other_race} {other_gender} lover"
+            "stranger":"el extraño",
+            "archnemesis":"el archienemigo {other_race} {other_gender} de {self_name}",
+            "enemy":"el enemigo {other_race} {other_gender} de {self_name}",
+            "foe":"el enemigo {other_race} {other_gender} de {self_name}",
+            "rival":"el rival {other_race} {other_gender} de {self_name}",
+            "acquaintance":"el conocido {other_race} {other_gender} de {self_name}",
+            "friend":"el amigo {other_race} {other_gender} de {self_name}",
+            "confidant":"la persona segura misteriosa {other_race} {other_gender} de {self_name}",
+            "ally":"el misterioso {other_race} {other_gender} de {self_name}",
+            "lover":"el amante {other_race} {other_gender} de {self_name}"
         },
         "known_perspective_name":{
-            "stranger":"{other_name}, a {other_race} {other_gender} stranger to {self_name}",
-            "archnemesis":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
-            "enemy":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
-            "foe":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
-            "rival":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
-            "acquaintance":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
-            "friend":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
-            "confidant":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
-            "ally":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}",
-            "lover":"{other_name} {other_race} {other_gender} {trust_title} of {self_name}"
+            "archnemesis":"{other_name}, {trust_title} {other_race} {other_gender} de {self_name}",
+            "enemy":"{other_name}, {trust_title} {other_race} {other_gender} de {self_name}",
+            "foe":"{other_name}, {trust_title} {other_race} {other_gender} de {self_name}",
+            "rival":"{other_name}, {trust_title} {other_race} {other_gender} de {self_name}",
+            "acquaintance":"{other_name}, {trust_title} {other_race} {other_gender} de {self_name}",
+            "friend":"{other_name}, {trust_title} {other_race} {other_gender} de {self_name}",
+            "confidant":"{other_name}, {trust_title} {other_race} {other_gender} de {self_name}",
+            "ally":"{other_name}, {trust_title} {other_race} {other_gender} de {self_name}",
+            "lover":"{other_name}, {trust_title} {other_race} {other_gender} de {self_name}"
         },
         "meet_string":"{self_name} remembered {other_character_name}'s name.",
         "memory_present_separator":"A NEW CONVERSATION HAS STARTED. The rest of the messages below this are from the current conversation, the present. Everything above this is a memory from the past. DO NOT DIRECTLY RESPOND TO MEMORY MESSAGES. They are for reference only, but you CAN bring them up in conversation. If you want to do an action, please use asterisks to indicate the action. Do not use asterisks to emphasize words in a spoken sentence. For example: Do you get to the Cloud District very often? Oh, what am I saying, of course you don't. *Nazeem scowls bitterly at the filthy adventurer.*",
@@ -153,8 +161,6 @@
             "player":{
                 "OnItemAdded":"[player] picked up {item_name}.",
                 "OnItemAddedFromDestination":"[player] picked up {item_name} from {source_name}.",
-                "OnItemRemoved":"[player] dropped {item_name}.",
-                "OnItemRemovedToDestination":"[player] put {item_name} in/on {source_name}.",
                 "OnSpellCast":"[player] casted the spell {spell_cast}.",
                 "OnHit":"{aggressor} punched [player].",
                 "OnHitFromSource":"{aggressor} hit [player] with a/an {hit_source}.",
@@ -177,8 +183,6 @@
             "npc":{
                 "OnItemAdded":"{name} picked up {item_name}.",
                 "OnItemAddedFromDestination":"{name} picked up {item_name} from {source_name}.",
-                "OnItemRemoved":"{name} dropped {item_name}.",
-                "OnItemRemovedToDestination":"{name} put {item_name} in/on {source_name}.",
                 "OnSpellCast":"{name} casted the spell {spell_cast}.",
                 "OnHit":"{aggressor} punched {name}.",
                 "OnHitFromSource":"{aggressor} hit {name} with a/an {hit_source}.",
@@ -383,49 +387,21 @@
             "Dawnstar Guard"
         ],
         "predetermined_npc_greetings": [
-            "Hey there. How can I help you?",
-            "Hello.",
-            "What's up?"
+            "Hola. Puedo ayudarte en algo?",
+            "Hola.",
+            "Que tal?"
         ],
         "predetermined_player_greetings": [
-            "Hello [character].",
-            "Greetings.",
-            "Hey [character]."
+            "Hola [character].",
+            "Oye [character]."
         ],
         "end_conversation_keywords": [
-            "Goodbye",
-            "Farewell",
-            "Bye",
-            "Good bye",
-            "Have a good day",
-            "Have a good night",
-            "Goodnight",
-            "Good night",
-            "See you later",
-            "See yah later",
-            "See yah",
-            "Seeyah later",
-            "See you soon.",
-            "Be seeing you.",
-            "Safe travels.",
-            "Enjoy the rest of your day",
-            "Be seeing you",
-            "Be careful out there",
-            "May your road lead you to warm sands",
-            "Lets go.",
-            "Let's go.",
-            "We better get a move on.",
-            "May the road rise up to meet you, and may your journey be safe and prosperous."
+            "Adios",
+            "Hasta luego"
         ],
         "goodbye_npc_responses": [
-            "Safe travels",
-            "Be seeing you",
-            "Take care",
-            "Goodbye",
-            "See you later",
-            "Be careful out there",
-            "Be safe",
-            "Stay safe"
+            "Que tengas un buen viaje",
+            "Hasta luego"
         ],
         "first_message_hidden_symbol":[],
         "message_hidden_symbol":[],
@@ -436,27 +412,27 @@
     "racial_language":{
         "Argonian":{
             "age_titles":{
-                "child":"Hatchling"
+                "child":"Nidada"
             },
             "aged_gendered_titles":{
                 "Male":{
-                    "child":"Hatchling"
+                    "child":"Nidada"
                 },
                 "Female":{
-                    "child":"Hatchling"
+                    "child":"Nidada"
                 }
             }
         },
         "Khajiit":{
             "age_titles":{
-                "child":"Kitten"
+                "child":"Gatito"
             },
             "aged_gendered_titles":{
                 "Male":{
-                    "child":"Kitten"
+                    "child":"Gatito"
                 },
                 "Female":{
-                    "child":"Kitten"
+                    "child":"Gatita"
                 }
             }
         }
