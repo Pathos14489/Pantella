@@ -61,7 +61,7 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 		- [Vortex (Not Recommended)](#vortex-not-recommended)
 	- [8 - Install Requirements in Game](#8---install-requirements-in-game)
 	- [9 - Restart Your Computer](#9---restart-your-computer)
-- [Installation (Launcher)](#installation-launcher)
+- [Installation (Launcher) - Windows Only at this time](#installation-launcher---windows-only-at-this-time)
 	- [1 - Getting Started - Installing the Launcher](#1---getting-started---installing-the-launcher)
 	- [2 - Configuring the Launcher](#2---configuring-the-launcher)
 		- [2.1 - Setting Up Your Game and Mod Manager](#21---setting-up-your-game-and-mod-manager)
@@ -74,11 +74,11 @@ Note: Pantella is not yet bug free or ready for all users. Please read the entir
 		- [3.3 - Configure TTS Settings (Optional)](#33---configure-tts-settings-optional)
 		- [3.4 - Configure Vision Settings (Optional)](#34---configure-vision-settings-optional)
 	- [4 - Have Fun!](#4---have-fun)
-- [Installation (Development)](#installation-development)
-	- [Adding New NPCs](#adding-new-npcs)
+- [Installation (Non-Launcher) - Linux and Windows](#installation-non-launcher---linux-and-windows)
 	- [Running with Conda (recommended)](#running-with-conda-recommended)
 	- [Running with venv](#running-with-venv)
 	- [Running without venv (generally not recommended)](#running-without-venv-generally-not-recommended)
+	- [Adding New NPCs](#adding-new-npcs)
 - [Addons](#addons)
 	- [Skyrim SE/AE/VR Addons](#skyrim-seaevr-addons)
 	- [TTS Addons](#tts-addons)
@@ -305,7 +305,7 @@ Note: Don't install the plugins from the above pages yet, just the requirements.
 
 After installing the above requirements, it's required to restart your computer to ensure all the changes take effect and are usable by Pantella. If you don't restart your computer, you may encounter errors when trying to run Pantella, and it may not work correctly until you do. Especially for FFmpeg and the Microsoft C++ Build Tools, a restart is required for them to work correctly with Pantella.
 
-# Installation (Launcher)
+# Installation (Launcher) - Windows Only at this time
 ## 1 - Getting Started - Installing the Launcher
 
 First things first, you'll need the latest launcher. You can find that here: https://github.com/Pathos14489/Pantella-Launcher/releases
@@ -386,17 +386,8 @@ Normally you won't be using this. Most cloud based models are not very good at v
 ## 4 - Have Fun!
 You should be good to go! Whenever you want to use Pantella, please start the launcher, and click start for Pantella. If you have any issues, please reach out on the Discord. We're here to help. Note: Vision support has to be started after the game Window is already open, and might depend on windowed/windowed borderless mode to work correctly. It's not completely solid yet, and might have some bugs. If you're having issues with vision, try changing your game to windowed mode or reach out in the Discord. On the first time you load Pantella into your save, even on a new game, load in, save, and reload the save you just made to initialize the plugin.
 
-# Installation (Development)
+# Installation (Non-Launcher) - Linux and Windows
 The source code for Pantella is included in this repo. Here are the quick steps to get set up:
-
-## Adding New NPCs
-Pantella allows you to talk to any NPC, but expects you to make sure they're set up(Or use a model that supports character generation!). If you start a Pantella conversation with an unknown/unsupported NPC (eg a modded NPC), Pantella will typically error and you will be asked to fill out the character information for this character.
-
-Of course, if you are unhappy with Pantella's assumptions, you can add full support for modded NPCs to `./characters/[game_id]/` by adding a new JSON file containing the NPC's name (`name`), `base_id`, `ref_id`(the IDs are optional but very recommended!) background description (`bio`), and voice model (`voice_model`). You can also add this as an addon pack released seperate from Pantella, and users can download it and place it in the `./addons/` folder to add support for the modded NPC. Check the Developer Documentation for more information on how to do this and for the format of the JSON file.
-
-Note that if the modded NPC is custom voiced there may not be a model available, and you will either need to assign the NPC a vanilla voice, or use a voice sampling TTS and provide a voice sample in `./data/voice_samples/`.
-
-For further support and examples of how other users have added modded NPCs, ask in the [Discord](https://discord.gg/M7Zw8mBY6r).
 
 ## Running with Conda (recommended)
 1. Clone the repo to your machine
@@ -418,6 +409,15 @@ For further support and examples of how other users have added modded NPCs, ask 
 3. Run Pantella via `main.py` in the parent directory and follow the first time setup instructions like normal.
 
 If you have any trouble in getting the repo set up, please reach out on [Discord](https://discord.gg/M7Zw8mBY6r)!
+
+## Adding New NPCs
+Pantella allows you to talk to any NPC, but expects you to make sure they're set up(Or use a model that supports character generation!). If you start a Pantella conversation with an unknown/unsupported NPC (eg a modded NPC), Pantella will typically error and you will be asked to fill out the character information for this character.
+
+Of course, if you are unhappy with Pantella's assumptions, you can add full support for modded NPCs to `./characters/[game_id]/` by adding a new JSON file containing the NPC's name (`name`), `base_id`, `ref_id`(the IDs are optional but very recommended!) background description (`bio`), and voice model (`voice_model`). You can also add this as an addon pack released seperate from Pantella, and users can download it and place it in the `./addons/` folder to add support for the modded NPC. Check the Developer Documentation for more information on how to do this and for the format of the JSON file.
+
+Note that if the modded NPC is custom voiced there may not be a model available, and you will either need to assign the NPC a vanilla voice, or use a voice sampling TTS and provide a voice sample in `./data/voice_samples/`.
+
+For further support and examples of how other users have added modded NPCs, ask in the [Discord](https://discord.gg/M7Zw8mBY6r).
 
 # Addons
 
