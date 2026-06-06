@@ -323,7 +323,7 @@ First click on the latest release under Releases. And follow the installation in
 2. Download the Python environment necessary for your repo of choice. You can download only one or both, but at least one of them is necessary for the launcher to uh, do anything.
 	- **Pantella** requires `python-3.10.11-embed.7z`.
 	- **Mantella** requires `python-3.11.6-embed.7z`. 
-I recommend somewhere on the same drive as your game of choice, this will reduce latency caused by moving the voicelines from Pantella into the game directory, and also likely reduce how many writes are occurring to your drives, but somewhere like your desktop is also probably fine if you only use SSDs. Once you've unpacked the release, go open the launcher.
+I recommend somewhere on the same drive as your game of choice, this will reduce latency caused by moving the voicelines from Pantella into the game directory, and also likely reduce how many writes are occurring to your drives, but somewhere like your desktop is also probably fine if you only have one drive. Once you've unpacked the release, go open the launcher.
 
 ## 2 - Configuring the Launcher
 
@@ -398,21 +398,21 @@ You should be good to go! Whenever you want to use Pantella, please start the la
 The source code for Pantella is included in this repo. Here are the quick steps to get set up:
 
 ## Running with Conda (recommended)
-1. Clone the repo to your machine
+1. Clone the repo to your machine with `git clone https://github.com/Pathos14489/Pantella` where you want the backend to be installed. This should be on the same drive as your game to reduce latency and drive wear, but somewhere like your desktop is also probably fine if you only have one drive.
 2. Create a conda environment via `conda create -n pantella python=3.10` in your console
 3. Start the environment in your console (`conda activate pantella`)
 4. Install the required packages via `pip install -r requirements.txt`
 5. Run Pantella via `main.py` in the parent directory and follow the first time setup instructions like normal.
 
 ## Running with venv
-1. Clone the repo to your machine
+1. Clone the repo to your machine with `git clone https://github.com/Pathos14489/Pantella` where you want the backend to be installed. This should be on the same drive as your game to reduce latency and drive wear, but somewhere like your desktop is also probably fine if you only have one drive.
 2. Create a virtual environment via `py -3.10 -m venv PantellaEnv` in your console (Pantella requires Python 3.10.11, I've not had a chance to test it with 3.11 yet)
 3. Start the environment in your console (`.\PantellaEnv\Scripts\Activate`)
 4. Install the required packages via `pip install -r requirements.txt`
 5. Run Pantella via `main.py` in the parent directory and follow the first time setup instructions like normal.
 
 ## Running without venv (generally not recommended)
-1. Clone the repo to your machine
+1. Clone the repo to your machine with `git clone https://github.com/Pathos14489/Pantella` where you want the backend to be installed. This should be on the same drive as your game to reduce latency and drive wear, but somewhere like your desktop is also probably fine if you only have one drive.
 2. Install the required packages via `pip install -r requirements.txt`
 3. Run Pantella via `main.py` in the parent directory and follow the first time setup instructions like normal.
 
