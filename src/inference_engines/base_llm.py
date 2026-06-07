@@ -241,7 +241,7 @@ class base_LLM():
         if not self.character_manager.language["allow_npc_roleplay"]:
             stop.append(prompt_style["roleplay_prefix"])
             stop.append(prompt_style["roleplay_suffix"])
-        stop = [char for char in stop if char != '' and char != None and char != "'"]
+        stop = [char for char in stop if char != '' and char != None and char != "'" and char != "\n"]
         return stop
     
     @property
