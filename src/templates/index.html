@@ -1486,7 +1486,7 @@
                 input.placeholder = `Enter ${property} here`;
             }
             {{inference_engine}}_tabContent.appendChild(label);
-            if (settingsDescription.length > 0) {
+            if (settingsDescription && settingsDescription.length > 0) {
                 let descriptionText = document.createElement("p");
                 descriptionText.textContent = settingsDescription;
                 {{inference_engine}}_tabContent.appendChild(descriptionText);
