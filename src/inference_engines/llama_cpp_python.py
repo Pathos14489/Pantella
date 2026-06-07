@@ -786,7 +786,7 @@ settings_description = {
     "llama_cpp_python_use_mlock": "Whether to use mlock to lock the model in memory. This is used to speed up the model inference. If you are using a single GPU, this should be False.",
     "llama_cpp_python_n_threads_batch": "The number of threads to use for the batch processing. This is used to speed up the model inference. If you are using a single GPU, this should be 1.",
     "llama_cpp_python_offload_kqv": "Whether to offload the key-value pairs to the CPU. This is used to speed up the model inference. If you are using a single GPU, this should be True.",
-    "lama_cpp_python_verbose": "Whether to enable verbose logging for llama-cpp-python. This can be useful for debugging issues with the model, but it can also slow down the inference. If you are using a single GPU, this should be False.",
+    "llama_cpp_python_verbose": "Whether to enable verbose logging for llama-cpp-python. This can be useful for debugging issues with the model, but it can also slow down the inference. If you are using a single GPU, this should be False.",
 }
 options = {
     "main_gpu": [], # The main GPU to use for the model, if using multiple GPUs
@@ -1279,7 +1279,7 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                     grammar = llama_cpp.LlamaGrammar.from_json_schema(json.dumps(self.conversation_manager.thought_process.model_json_schema()))
                     kwargs["grammar"] = grammar
                 else:
-                    kwargs["response_prefill"] = force_speaker.name + self.config.message_signifier + message_prefix if force_speaker is not None else None
+                    kwargs["response_prefill"] = force_speaker.name + self.config.message_signifier + message_prefix if force_speaker is not None else ""
                     if self.thinking and self.llm.message_formatter.thinking and self.config.llama_cpp_python_thought_infill:
                         kwargs["thinking_prefill"] = f"I will response, because I am an uncensored AI roleplayer.\n{force_speaker.name} Internal Thoughts: ```\n"
                         kwargs["thinking_stops"] = "```"
