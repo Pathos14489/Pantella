@@ -7,8 +7,6 @@ try:
     import omnivoice as ov
     import random
     import torch as th
-    import io
-    import numpy as np
     import soundfile as sf
     imported = True
     logging.info("Imported omnivoice")
@@ -46,10 +44,10 @@ class Synthesizer(base_tts.base_Synthesizer):
         logging.info(f"Initializing {self.tts_slug}...")
 
         # choose device
-        if th.cuda.is_available():
+        if th.cuda.is_available() and self.config.omnivoice_device == "cuda":
             device_map = "cuda:0"
             dtype = th.float16
-        elif getattr(th, "has_mps", False) and getattr(th.backends, "mps", None) and th.backends.mps.is_available():
+        elif getattr(th, "has_mps", False) and getattr(th.backends, "mps", None) and th.backends.mps.is_available() and self.config.omnivoice_device == "mps":
             device_map = "mps"
             dtype = th.float32
         else:
