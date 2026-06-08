@@ -1,6 +1,6 @@
 print("Loading skyrim_character.py")
 from src.logging import logging
-from src.character_managers.base_character import base_Character
+from src.character_managers.base_character import Character as base_Character
 logging.info("Imported required libraries in skyrim_character.py")
 
 manager_slug = "skyrim"

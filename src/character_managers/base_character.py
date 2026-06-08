@@ -7,9 +7,9 @@ import random
 logging.info("Imported required libraries in base_character.py")
 
 manager_slug = "base"
-valid_games = ["fallout4"]
+valid_games = ["falloutnv"]
 
-class base_Character:
+class Character:
     def __init__(self, characters_manager, info):
         self.characters_manager = characters_manager
         self.info = info
