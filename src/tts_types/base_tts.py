@@ -282,7 +282,7 @@ class base_Synthesizer:
         default_settings_path = self.default_settings_path(voice_model) # Get the default settings path for the voice model (universal for all TTS types)
         os.makedirs(os.path.dirname(default_settings_path), exist_ok=True) # make sure the directory exists
         if os.path.exists(default_settings_path):
-            logging.info(f'Loading default settings for voice model: {voice_model} from {default_settings_path}')
+            # logging.info(f'Loading default settings for voice model: {voice_model} from {default_settings_path}')
             with open(default_settings_path, "r") as f:
                 default_Settings = json.load(f)
                 settings.update(default_Settings) # update with specific TTS default settings
@@ -344,8 +344,8 @@ class base_Synthesizer:
                         logging.warning(f'No transcription found for voice model: {voice_model}, and unable to generate transcription using STT. This may cause issues with synthesis because your TTS type requires transcriptions for the voice models.')
                 else:
                     logging.info(f'TTS engine {self.tts_slug} does not require transcriptions for its voice models, so no transcription is needed for voice model: {voice_model}.')
-            else:
-                logging.info(f'Transcription found for voice model: {voice_model}, no need to generate transcription using STT.')
+            # else:
+            #     logging.info(f'Transcription found for voice model: {voice_model}, no need to generate transcription using STT.')
 
         if save_changes:
             with open(default_settings_path, "w") as f:
@@ -378,7 +378,7 @@ class base_Synthesizer:
         voice_model_settings_path = self.voice_model_settings_path(voice_model) # Get the voice model settings path for the specific TTS type
         os.makedirs(os.path.dirname(voice_model_settings_path), exist_ok=True) # make sure the directory exists
         if os.path.exists(voice_model_settings_path):
-            logging.info(f'Loading settings for voice model: {voice_model} from {voice_model_settings_path}')
+            # logging.info(f'Loading settings for voice model: {voice_model} from {voice_model_settings_path}')
             with open(voice_model_settings_path, "r") as f:
                 tts_default_settings = json.load(f)
                 # settings.update(tts_default_settings) # update with specific voice model settings

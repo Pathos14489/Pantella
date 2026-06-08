@@ -1292,8 +1292,8 @@ class LLM(base_LLM): # Uses llama-cpp-python as the LLM inference engine
                 if thinking:
                     logging.info(f"Started thinking (this might take a while if the model is large and/or running on CPU)...:", )
                 for chunk in generator:
+                    # logging.info(f"Chunk: {chunk}")
                     if thinking and "thinking_choices" in chunk and len(chunk["thinking_choices"]) > 0:
-                        logging.info(f"Chunk: {chunk}")
                         thoughts += chunk["thinking_choices"][0]["delta"]["content"]
                     else:
                         if thinking:
