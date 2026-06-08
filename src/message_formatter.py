@@ -98,7 +98,7 @@ class MessageFormatter(): # Tokenizes(only availble for counting the tokens in a
 
     def _version(self): # Returns the version of the message formatter
         """Returns the version of the message formatter"""
-        return "0.0.12"
+        return "0.0.13"
     
     def get_role_prefix(self, role: str) -> str: # Returns the prefix for a role
         """Returns the prefix for a role"""
