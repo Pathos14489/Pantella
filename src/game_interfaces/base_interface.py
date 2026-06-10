@@ -58,7 +58,8 @@ class BaseGameInterface:
         """Get the player's response from the game"""
         logging.info(f"Getting player response...")
         try:
-            if self.audio_supported and self.check_mic_status() and "transcriber" in locals(): # listen for response
+            logging.info(f"Audio supported: {self.audio_supported}, Mic status: {self.check_mic_status()}, Transcriber in locals: {self.transcriber is not None}")
+            if self.audio_supported and self.check_mic_status() and self.transcriber is not None: # listen for response
                 logging.info('Listening for player response...')
                 if "transcriber" in locals() and not self.transcriber.initialized:
                     logging.info('Microphone requested but not initialized. Initializing...')

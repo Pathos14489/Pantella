@@ -207,7 +207,11 @@ class GameInterface(CreationEngineFileBuffersInterface):
         self.write_game_info('_pantella_moon_phase', '')
         self.write_game_info('_pantella_player_karma', '')
 
-        self.write_game_info('_pantella_microphone_enabled', 'False')
+        microphone_path = f'{self.game_path}\\_pantella_microphone_enabled.txt'
+        if self.config.linux_mode:
+            microphone_path = f'{self.game_path}/_pantella_microphone_enabled.txt'
+        if not os.path.exists(microphone_path):
+            self.write_game_info('_pantella_microphone_enabled', 'False')
         self.write_game_info('_pantella_context_string', '')
         self.write_game_info('_pantella_removed_from_conversation', '')
         self.write_game_info('_pantella_backend_state', 'idle')

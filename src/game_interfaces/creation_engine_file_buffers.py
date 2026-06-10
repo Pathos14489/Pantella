@@ -448,10 +448,16 @@ class GameInterface(BaseGameInterface):
         self.write_game_info('_pantella_caster_spells', '')
         self.write_game_info('_pantella_removed_from_conversation', '')
 
-        if not os.path.exists(f'{self.game_path}\\_pantella_microphone_enabled.txt'):
+        microphone_path = f'{self.game_path}\\_pantella_microphone_enabled.txt'
+        if self.config.linux_mode:
+            microphone_path = f'{self.game_path}/_pantella_microphone_enabled.txt'
+        if not os.path.exists(microphone_path):
             self.write_game_info('_pantella_microphone_enabled', 'false')
 
-        if not os.path.exists(f'{self.game_path}\\_pantella_context_string.txt'):
+        context_string_path = f'{self.game_path}\\_pantella_context_string.txt'
+        if self.config.linux_mode:
+            context_string_path = f'{self.game_path}/_pantella_context_string.txt'
+        if not os.path.exists(context_string_path):
             self.write_game_info('_pantella_context_string', '')
 
         # self.write_game_info('_pantella_player_input', '')
@@ -810,11 +816,16 @@ class GameInterface(BaseGameInterface):
     
     def check_mic_status(self):
         """Check if the microphone is enabled in the MCM"""
-        if os.path.exists(f'{self.config.game_path}\\_pantella_microphone_enabled.txt'):
-            with open(f'{self.config.game_path}\\_pantella_microphone_enabled.txt', 'r', encoding='utf-8') as f:
+        microphone_path = f'{self.game_path}\\_pantella_microphone_enabled.txt'
+        if self.config.linux_mode:
+            microphone_path = f'{self.game_path}/_pantella_microphone_enabled.txt'
+        if os.path.exists(microphone_path):
+            with open(microphone_path, 'r', encoding='utf-8') as f:
                 mcm_mic_enabled = f.readline().strip()
-            return mcm_mic_enabled == 'TRUE'
-        else:   
+            logging.info(f'MCM Microphone Enabled: {mcm_mic_enabled}')
+            return mcm_mic_enabled.lower() == 'true'
+        else:
+            logging.info(f'MCM Microphone Enabled file not found at {microphone_path} - defaulting to False')
             return False
     
     @utils.time_it
